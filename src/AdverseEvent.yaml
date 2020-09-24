@@ -1,28 +1,40 @@
 description: Actual or  potential/avoided event causing unintended physical injury resulting from or contributed to by medical care, a research study or other healthcare setting factors that requires additional monitoring, treatment, or hospitalization, or that results in death.
-kind: resource
 elements:
   extension:
     AZEmployeeReporter:
       type: string
+      description: AZ Employee Reporter
+      url: urn:extension:AZEmployeeReporter
     reporterType:
       type: string
+      description: Reporter Type
+      url: urn:extension:reporterType
     programNumber:
       description: Program Number
       type: string
+      url: urn:extension:programNumber
     localReference:
       description: Local Ref No
       type: string
+      url: urn:extension:localReference
     sourceType:
       description: Source Type
       type: code
-      valueset: {id: intelligent-source}
+      valueset: 
+        id: intelligent-source
+        description: The value should be from the valueset intelligent-source
+      url: urn:extension:sourceType
     surveyStatus:
       description: Survey Status
       type: code
-      valueset: {id: survey-status}
+      valueset: 
+        id: survey-status        
+        description: The value should be from the valueset survey-status
+      url: urn:extension:surveyStatus
     lateReason:
       description: Late reason for raising adverse event
       type: string
+      url: urn:extension:lateReason
   suspectEntity:
     elements:
       causality:
@@ -30,7 +42,13 @@ elements:
           extension:
             positiveDechallenge:
               type: string
+              description: Positive Dechallenge
+              url: urn:extension:causalityPositiveDechallenge
             positiveRechallenge:
               type: string
+              description: Positive Rechallenge
+              url: urn:extension:causalityPositiveRechallenge
             rechallenge:
               type: string
+              description: Rechallenge
+              url: urn:extension:causalityRechallenge
