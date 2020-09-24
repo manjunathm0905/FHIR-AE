@@ -1,0 +1,147 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "hl7.fhir.ae-AdverseEvent-AZEmployeeReporter",
+  "description": "This is the AZ extension definition (StructureDefinition) for AdverseEvent",
+  "url": "https://healthsamurai.github.io/ig-ae/profiles/AdverseEvent/basic",
+  "name": "AZEmployeeReporter",
+  "status": "active",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "context": [{
+      "type": "element",
+      "expression": "AdverseEvent"
+    }
+  ],
+  "snapshot": {
+    "element": [{
+        "id": "Extension",
+        "path": "Extension",
+        "short": "AdverseEvent Employee Reporter",
+        "definition": "AdverseEvent AZ Employee Reporter",
+        "mustSupport": true,
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension",
+        "min": 0,
+        "max": "*"}
+      },{
+        "id": "Extension.id",
+        "path": "Extension.id",
+        "short": "Unique id for inter-element referencing",
+        "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "mustSupport": true,
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "1"}
+      },{
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "short": "Extension",
+        "definition": "An Extension",
+        "mustSupport": true,
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"},
+        "type": [{"code": "Extension"}]
+      },{
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "short": "Identifies the meaning of the extension",
+        "definition": "Source of the definition for the extension code - a logical name or
+      a URL.",
+        "mustSupport": true,
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"},
+        "fixedUri": "https://healthsamurai.github.io/ig-ae/profiles/AdverseEvent/basic"
+      }, {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "short": "Value of extension",
+        "definition": "Value of extension - must be one of a constrained set of the data
+      types (see [Extensibility](http://hl7.org/fhir/extensibility.html) for a list).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"},
+        "mustSupport": true,
+        "type": [{"code": "string"}]
+      }
+    ]
+  },
+  "differential": {
+    "element": [{
+        "id": "Extension",
+        "path": "Extension",
+        "short": "AdverseEvent Employee Reporter",
+        "definition": "AdverseEvent AZ Employee Reporter",
+        "mustSupport": true,
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension",
+        "min": 0,
+        "max": "*"}
+      }, {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "short": "Extension",
+        "definition": "An Extension",
+        "mustSupport": true,
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"},
+        "type": [{"code": "Extension"}]
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "short": "Identifies the meaning of the extension",
+        "definition": "Source of the definition for the extension code - a logical name or
+      a URL.",
+        "mustSupport": true,
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"},
+        "fixedUri": "http://test.fhir.org/r4/StructureDefinition/22"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "short": "Value of extension",
+        "definition": "Value of extension - must be one of a constrained set of the data
+      types (see [Extensibility](http://hl7.org/fhir/extensibility.html) for a list).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"},
+        "mustSupport": true,
+        "type": [{"code": "string"}]
+      }
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+description:  This is the AZ extension definition (StructureDefinition) for AdverseEvent
+elements:
+  url:
+    required: true
+    constant: "https://healthsamurai.github.io/ig-ae/profiles/StructureDefinition/AZAdverseEvent-EmployeeReporter"
+  identifier: {}
+  version: {}
+  name:
+    required: true
+    constant: "adverseevent-employeereporter"
+  title: {}
+  status:
+    required: true
+    constant: active
+  description:
+    constant: This is the AZ extension definition (StructureDefinition) for AdverseEvent
+  fhirVersion:
+    constant: '4.0.1'
+  kind:
+    required: true
+    constant: complex-type
+  abstract:
+    required: true
+    constant: "false"
+  type:
+    constant: Extension
+  baseDefinition:
+    constant: "http://hl7.org/fhir/StructureDefinition/Extension"
+  derivation:
+    constant: constraint
+  context: {}
