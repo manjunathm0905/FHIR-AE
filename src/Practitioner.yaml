@@ -1,17 +1,86 @@
 description: A person who is directly or indirectly involved in the provisioning of healthcare.
-kind: resource
+
+# resourceType: StructureDefinition
+# url: "urn:profile:AZPractitioner"
+# name: "az-practitioner"
+# status: active
+# fhirVersion: '4.0.1'
+# kind: resource
+# abstract: "false"
+# type: Practitioner
+# baseDefinition: "http://hl7.org/fhir/StructureDefinition/Practitioner"
+# derivation: constraint
+# title: ''
+# identifier: {}
+# version: ''
+# experimental: false
+# date: "2020-09-30"
+# publisher: "AstraZeneca"
+# contact: []
+# jurisdiction: []
+
 elements:
   extension:
     consentToContactPractitioner:
-      description: Adverse Event Consent to Contact Extension
+      description: Practitioner Consent to Contact Extension
       type: boolean
+      url: urn:extension:practitioner-consentToContactPractitioner
+      # name: "consentToContactPractitioner"
+      # fixedUri: urn:extension:practitioner-consentToContactPractitioner
+      # status: active
+      # fhirVersion: '4.0.1'
+      # kind: complex-type
+      # abstract: "false"
+      # type: Extension
+      # baseDefinition: "http://hl7.org/fhir/StructureDefinition/Extension"
+      # derivation: constraint
+      # title: ''
+      # context:
+        # type: element
+        # expression: Practitioner
+      # identifier: {}
+      # version: ''
   address:
     elements:
       extension:
         region:
           type: CodeableConcept
+          description: Address region
+          url: urn:extension:address-region
+          # name: "region"
+          # fixedUri: urn:extension:address-region
+          # status: active
+          # fhirVersion: '4.0.1'
+          # kind: complex-type
+          # abstract: "false"
+          # type: Extension
+          # baseDefinition: "http://hl7.org/fhir/StructureDefinition/Extension"
+          # derivation: constraint
+          # title: ''
+          # context:
+            # type: element
+            # expression: Address
+          # identifier: {}
+          # version: ''
   name:
     elements:
       extension:
         salutation:
           type: CodeableConcept
+          description: Name salutation
+          url: urn:extension:name-salutation
+          # name: "salutation"
+          # fixedUri: urn:extension:name-salutation
+          # status: active
+          # fhirVersion: '4.0.1'
+          # kind: complex-type
+          # abstract: "false"
+          # type: Extension
+          # baseDefinition: "http://hl7.org/fhir/StructureDefinition/Extension"
+          # derivation: constraint
+          # title: ''
+          # context:
+            # type: element
+            # expression: HumanName
+          # identifier: {}
+          # version: ''

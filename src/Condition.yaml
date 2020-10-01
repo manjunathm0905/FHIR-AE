@@ -1,18 +1,108 @@
-description: |
-  This profile sets minimum expectations for the Condition resource to record,
-  search and fetch a list of problems and health concerns associated with a patient.
-  It identifies which core elements,
-  extensions, vocabularies and value sets SHALL be present in the resource when using this profile.
+description: Defines AZ constraints and extensions on the Condition resource
+
+# resourceType: StructureDefinition  
+# url: "urn:profile:AZCondition"
+# name: "AZConditionProfile"
+# status: active
+# fhirVersion: '4.0.1'
+# kind: resource
+# abstract: "false"
+# type: Condition
+# baseDefinition: "http://hl7.org/fhir/StructureDefinition/Condition"
+# derivation: constraint
+# title: ''
+# identifier: {}
+# version: ''
+# experimental: false
+# date: "2020-09-30"
+# publisher: "AstraZeneca"
+# contact: []
+# jurisdiction: []
+  
 elements:
   extension:
     duration:
       type: string
+      description: Condition Duration
+      url: urn:extension:condition-duration
+      # name: "duration"
+      # fixedUri: urn:extension:condition-duration
+      # status: active
+      # fhirVersion: '4.0.1'
+      # kind: complex-type
+      # abstract: "false"
+      # type: Extension
+      # baseDefinition: "http://hl7.org/fhir/StructureDefinition/Extension"
+      # derivation: constraint
+      # title: ''
+      # context:
+        # type: element
+        # expression: Condition
+      # identifier: {}
+      # version: ''
     seriousness:
       type: code
-      valueset: {id: condition-seriousness}
+      valueset:
+        id: condition-seriousness
+        description: The value should be from the valueset detailed-ethnicity
+      description: Condition Seriousness
+      url: urn:extension:condition-seriousness
+      # name: "seriousness"
+      # fixedUri: urn:extension:condition-seriousness
+      # status: active
+      # fhirVersion: '4.0.1'
+      # kind: complex-type
+      # abstract: "false"
+      # type: Extension
+      # baseDefinition: "http://hl7.org/fhir/StructureDefinition/Extension"
+      # derivation: constraint
+      # title: ''
+      # context:
+        # type: element
+        # expression: Condition
+      # identifier: {}
+      # version: ''
     resultingCondition:
       type: code
-      valueset: {id: resulting-condition}
+      valueset:
+        id: resulting-condition
+        description: The value should be from the valueset detailed-ethnicity
+      description: Resulting Condition
+      url: urn:extension:condition-resultingCondition
+      # name: "resultingCondition"
+      # fixedUri: urn:extension:condition-resultingCondition
+      # status: active
+      # fhirVersion: '4.0.1'
+      # kind: complex-type
+      # abstract: "false"
+      # type: Extension
+      # baseDefinition: "http://hl7.org/fhir/StructureDefinition/Extension"
+      # derivation: constraint
+      # title: ''
+      # context:
+        # type: element
+        # expression: Condition
+      # identifier: {}
+      # version: ''
     outcome:
       type: CodableConcept
-      valueset: {id: condition-outcome}
+      valueset:
+        id: condition-outcome
+        description: The value should be from the valueset detailed-ethnicity
+      description: Condition Outcome
+      url: urn:extension:condition-outcome
+      # name: "outcome"
+      # fixedUri: urn:extension:condition-outcome
+      # status: active
+      # fhirVersion: '4.0.1'
+      # kind: complex-type
+      # abstract: "false"
+      # type: Extension
+      # baseDefinition: "http://hl7.org/fhir/StructureDefinition/Extension"
+      # derivation: constraint
+      # title: ''
+      # context:
+        # type: element
+        # expression: Condition
+      # identifier: {}
+      # version: ''

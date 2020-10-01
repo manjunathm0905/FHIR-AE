@@ -1,18 +1,140 @@
-kind: resource
+description: Defines AZ constraints and extensions on the MedicationAdministration resource
+
+# resourceType: StructureDefinition
+# url: "urn:profile:AZMedicationAdministration"
+# name: "az-medicationadministration"
+# status: active
+# fhirVersion: '4.0.1'
+# kind: resource
+# abstract: "false"
+# type: MedicationAdministration
+# baseDefinition: "http://hl7.org/fhir/StructureDefinition/MedicationAdministration"
+# derivation: constraint
+# title: ''
+# identifier: {}
+# version: ''
+# experimental: false
+# date: "2020-09-30"
+# publisher: "AstraZeneca"
+# contact: []
+# jurisdiction: []
+
 elements:
   extension:
     actionTaken:
       type: CodeableConcept
+      description: MedicationAdministration Action Taken
+      url: urn:extension:medicationadministration-actionTaken
+      # name: "actionTaken"
+      # fixedUri: urn:extension:medicationadministration-actionTaken
+      # status: active
+      # fhirVersion: '4.0.1'
+      # kind: complex-type
+      # abstract: "false"
+      # type: Extension
+      # baseDefinition: "http://hl7.org/fhir/StructureDefinition/Extension"
+      # derivation: constraint
+      # title: ''
+      # context:
+        # type: element
+        # expression: MedicationAdministration
+      # identifier: {}
+      # version: ''
     operatorDevice:
       type: CodeableConcept
+      description: MedicationAdministration Operator Device
+      url: urn:extension:medicationadministration-operatorDevice
+      # name: "operatorDevice"
+      # fixedUri: urn:extension:medicationadministration-operatorDevice
+      # status: active
+      # fhirVersion: '4.0.1'
+      # kind: complex-type
+      # abstract: "false"
+      # type: Extension
+      # baseDefinition: "http://hl7.org/fhir/StructureDefinition/Extension"
+      # derivation: constraint
+      # title: ''
+      # context:
+        # type: element
+        # expression: MedicationAdministration
+      # identifier: {}
+      # version: ''
     operatorDeviceOther:
       type: string
+      description: MedicationAdministration Operator Device Other
+      url: urn:extension:medicationadministration-operatorDeviceOther
+      # name: "operatorDeviceOther"
+      # fixedUri: urn:extension:medicationadministration-operatorDeviceOther
+      # status: active
+      # fhirVersion: '4.0.1'
+      # kind: complex-type
+      # abstract: "false"
+      # type: Extension
+      # baseDefinition: "http://hl7.org/fhir/StructureDefinition/Extension"
+      # derivation: constraint
+      # title: ''
+      # context:
+        # type: element
+        # expression: MedicationAdministration
+      # identifier: {}
+      # version: ''
     productType:
       type: string
+      description: MedicationAdministration Product Type
+      url: urn:extension:medicationadministration-productType
+      # name: "productType"
+      # fixedUri: urn:extension:medicationadministration-productType
+      # status: active
+      # fhirVersion: '4.0.1'
+      # kind: complex-type
+      # abstract: "false"
+      # type: Extension
+      # baseDefinition: "http://hl7.org/fhir/StructureDefinition/Extension"
+      # derivation: constraint
+      # title: ''
+      # context:
+        # type: element
+        # expression: MedicationAdministration
+      # identifier: {}
+      # version: ''
   dosage:
     elements:
       extension:
         frequency:
           type: CodeableConcept
+          description: MedicationAdministration Dosage Frequency
+          url: urn:extension:medicationadministration-dosageFrequency
+          # name: "dosage"
+          # fixedUri: urn:extension:medicationadministration-dosageFrequency
+          # status: active
+          # fhirVersion: '4.0.1'
+          # kind: complex-type
+          # abstract: "false"
+          # type: Extension
+          # baseDefinition: "http://hl7.org/fhir/StructureDefinition/Extension"
+          # derivation: constraint
+          # title: ''
+          # context:
+            # type: element
+            # expression: MedicationAdministration.dosage
+          # identifier: {}
+          # version: ''
         unit:
           type: CodeableConcept
+          description: MedicationAdministration Dosage Unit
+          url: urn:extension:medicationadministration-dosageUnit
+          # name: "unit"
+          # fixedUri: urn:extension:medicationadministration-dosageUnit
+          # status: active
+          # fhirVersion: '4.0.1'
+          # kind: complex-type
+          # abstract: "false"
+          # type: Extension
+          # baseDefinition: "http://hl7.org/fhir/StructureDefinition/Extension"
+          # derivation: constraint
+          # title: ''
+          # context:
+            # type: element
+            # expression: MedicationAdministration.dosage
+          # identifier: {}
+          # version: ''

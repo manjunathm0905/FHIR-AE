@@ -1,0 +1,22 @@
+description: Defines AZ constraints and extensions on the Address data type
+elements:
+  extension:
+    region:
+      type: CodeableConcept
+      description: Address region
+      url: urn:extension:address-region
+      # name: "region"
+      # fixedUri: urn:extension:address-region
+      # status: active
+      # fhirVersion: '4.0.1'
+      # kind: complex-type
+      # abstract: "false"
+      # type: Extension
+      # baseDefinition: "http://hl7.org/fhir/StructureDefinition/Extension"
+      # derivation: constraint
+      # title: ''
+      # context:
+        # type: element
+        # expression: Address
+      # identifier: {}
+      # version: ''

@@ -1,31 +1,165 @@
-description:
-  This profile sets minimum expectations for the Patient resource to record,
-  search and fetch basic demographics and other administrative information about
-  an individual patient. It identifies which core elements, extensions,
-  vocabularies and value sets SHALL be present in the resource when using this
-  profile.
+description: Defines AZ constraints and extensions on the Patient resource
+
+# resourceType: StructureDefinition
+# url: "urn:profile:AZPatient"
+# name: "az-patient"
+# status: active
+# fhirVersion: '4.0.1'
+# kind: resource
+# abstract: "false"
+# type: Patient
+# baseDefinition: "http://hl7.org/fhir/StructureDefinition/Patient"
+# derivation: constraint
+# title: ''
+# identifier: {}
+# version: ''
+# experimental: false
+# date: "2020-09-30"
+# publisher: "AstraZeneca"
+# contact: []
+# jurisdiction: []
+
 elements:
   extension:
     ethnicity:
-      description: Adverse Event Ethnicity Extension
+      description: Patient Ethnicity Extension
       type: CodeableConcept
-      valueset: { id: detailed-ethnicity }
+      valueset:
+        id: detailed-ethnicity
+        description: The value should be from the valueset detailed-ethnicity
+      url: urn:extension:patient-ethnicity
+      # name: "ethnicity"
+      # fixedUri: urn:extension:patient-ethnicity
+      # status: active
+      # fhirVersion: '4.0.1'
+      # kind: complex-type
+      # abstract: "false"
+      # type: Extension
+      # baseDefinition: "http://hl7.org/fhir/StructureDefinition/Extension"
+      # derivation: constraint
+      # title: ''
+      # context:
+        # type: element
+        # expression: Patient
+      # identifier: {}
+      # version: ''
     consentToContactPatient:
-      description: Adverse Event Consent to Contact Extension
+      description: Patient Consent to Contact Extension
       type: boolean
+      url: urn:extension:patient-consentToContactPatient
+      # name: "consentToContactPatient"
+      # fixedUri: urn:extension:patient-consentToContactPatient
+      # status: active
+      # fhirVersion: '4.0.1'
+      # kind: complex-type
+      # abstract: "false"
+      # type: Extension
+      # baseDefinition: "http://hl7.org/fhir/StructureDefinition/Extension"
+      # derivation: constraint
+      # title: ''
+      # context:
+        # type: element
+        # expression: Patient
+      # identifier: {}
+      # version: ''
     gender:
-      type: CodeableConcept
+      type: CodeableConcept      
+      description: Patient Gender
+      url: urn:extension:patient-gender
+      # name: "gender"
+      # fixedUri: urn:extension:patient-gender
+      # status: active
+      # fhirVersion: '4.0.1'
+      # kind: complex-type
+      # abstract: "false"
+      # type: Extension
+      # baseDefinition: "http://hl7.org/fhir/StructureDefinition/Extension"
+      # derivation: constraint
+      # title: ''
+      # context:
+        # type: element
+        # expression: Patient
+      # identifier: {}
+      # version: ''
     ageGroup:
-      type: CodeableConcept
+      type: CodeableConcept     
+      description: Patient Age Group
+      url: urn:extension:patient-ageGroup
+      # name: "ageGroup"
+      # fixedUri: urn:extension:patient-ageGroup
+      # status: active
+      # fhirVersion: '4.0.1'
+      # kind: complex-type
+      # abstract: "false"
+      # type: Extension
+      # baseDefinition: "http://hl7.org/fhir/StructureDefinition/Extension"
+      # derivation: constraint
+      # title: ''
+      # context:
+        # type: element
+        # expression: Patient
+      # identifier: {}
+      # version: ''
     patientAge:
-      type: integer
+      type: integer     
+      description: Patient Age
+      url: urn:extension:patient-patientAge
+      # name: "patientAge"
+      # fixedUri: urn:extension:patient-patientAge
+      # status: active
+      # fhirVersion: '4.0.1'
+      # kind: complex-type
+      # abstract: "false"
+      # type: Extension
+      # baseDefinition: "http://hl7.org/fhir/StructureDefinition/Extension"
+      # derivation: constraint
+      # title: ''
+      # context:
+        # type: element
+        # expression: Patient
+      # identifier: {}
+      # version: ''
   address:
     elements:
       extension:
         region:
           type: CodeableConcept
+          description: Address region
+          url: urn:extension:address-region
+          # name: "region"
+          # fixedUri: urn:extension:address-region
+          # status: active
+          # fhirVersion: '4.0.1'
+          # kind: complex-type
+          # abstract: "false"
+          # type: Extension
+          # baseDefinition: "http://hl7.org/fhir/StructureDefinition/Extension"
+          # derivation: constraint
+          # title: ''
+          # context:
+            # type: element
+            # expression: Address
+          # identifier: {}
+          # version: ''
   name:
     elements:
       extension:
         salutation:
           type: CodeableConcept
+          description: Name salutation
+          url: urn:extension:name-salutation
+          # name: "salutation"
+          # fixedUri: urn:extension:name-salutation
+          # status: active
+          # fhirVersion: '4.0.1'
+          # kind: complex-type
+          # abstract: "false"
+          # type: Extension
+          # baseDefinition: "http://hl7.org/fhir/StructureDefinition/Extension"
+          # derivation: constraint
+          # title: ''
+          # context:
+            # type: element
+            # expression: HumanName
+          # identifier: {}
+          # version: ''

@@ -1,17 +1,86 @@
 description: Information about a person that is involved in the care for a patient, but who is not the target of healthcare, nor has a formal responsibility in the care process.
-kind: resource
+
+# resourceType: StructureDefinition
+# url: "urn:profile:AZRelatedPerson"
+# name: "az-relatedperson"
+# status: active
+# fhirVersion: '4.0.1'
+# kind: resource
+# abstract: "false"
+# type: RelatedPerson
+# baseDefinition: "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
+# derivation: constraint
+# title: ''
+# identifier: {}
+# version: ''
+# experimental: false
+# date: "2020-09-30"
+# publisher: "AstraZeneca"
+# contact: []
+# jurisdiction: []
+
 elements:
   extension:
     consentToContactReporter:
-      description: Adverse Event Consent to Contact Extension
+      description: RelatedPerson Consent to Contact Extension
       type: boolean
+      url: urn:extension:relatedperson-consentToContactReporter
+      # name: "consentToContactReporter"
+      # fixedUri: urn:extension:relatedperson-consentToContactReporter
+      # status: active
+      # fhirVersion: '4.0.1'
+      # kind: complex-type
+      # abstract: "false"
+      # type: Extension
+      # baseDefinition: "http://hl7.org/fhir/StructureDefinition/Extension"
+      # derivation: constraint
+      # title: ''
+      # context:
+        # type: element
+        # expression: RelatedPerson
+      # identifier: {}
+      # version: ''
   address:
     elements:
       extension:
         region:
           type: CodeableConcept
+          description: Address region
+          url: urn:extension:address-region
+          # name: "region"
+          # fixedUri: urn:extension:address-region
+          # status: active
+          # fhirVersion: '4.0.1'
+          # kind: complex-type
+          # abstract: "false"
+          # type: Extension
+          # baseDefinition: "http://hl7.org/fhir/StructureDefinition/Extension"
+          # derivation: constraint
+          # title: ''
+          # context:
+            # type: element
+            # expression: Address
+          # identifier: {}
+          # version: ''
   name:
     elements:
       extension:
         salutation:
           type: CodeableConcept
+          description: Name salutation
+          url: urn:extension:name-salutation
+          # name: "salutation"
+          # fixedUri: urn:extension:name-salutation
+          # status: active
+          # fhirVersion: '4.0.1'
+          # kind: complex-type
+          # abstract: "false"
+          # type: Extension
+          # baseDefinition: "http://hl7.org/fhir/StructureDefinition/Extension"
+          # derivation: constraint
+          # title: ''
+          # context:
+            # type: element
+            # expression: HumanName
+          # identifier: {}
+          # version: ''

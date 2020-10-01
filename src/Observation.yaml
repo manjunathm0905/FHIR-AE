@@ -1,13 +1,80 @@
 description: Measurements and simple assertions made about a patient, device or other subject.
-kind: resource
+
+# resourceType: StructureDefinition
+# url: "urn:profile:AZObservation"
+# name: "AZObservationProfile"
+# status: active
+# fhirVersion: '4.0.1'
+# kind: resource
+# abstract: "false"
+# type: Observation
+# baseDefinition: "http://hl7.org/fhir/StructureDefinition/Observation"
+# derivation: constraint
+# title: ''
+# identifier: {}
+# version: ''
+# experimental: false
+# date: "2020-09-30"
+# publisher: "AstraZeneca"
+# contact: []
+# jurisdiction: []
+
 elements:
   extension:
     pregnancyFlag:
       description: Pregnancy
-      type: boolean
+      type: boolean 
+      url: urn:extension:observation-pregnancyFlag
+      # name: "pregnancyFlag"
+      # fixedUri: urn:extension:observation-pregnancyFlag
+      # status: active
+      # fhirVersion: '4.0.1'
+      # kind: complex-type
+      # abstract: "false"
+      # type: Extension
+      # baseDefinition: "http://hl7.org/fhir/StructureDefinition/Extension"
+      # derivation: constraint
+      # title: ''
+      # context:
+        # type: element
+        # expression: Observation
+      # identifier: {}
+      # version: ''
     pregnancyDueDate:
       description: Pregnancy Due Date
-      type: date
+      type: date  
+      url: urn:extension:observation-pregnancyDueDate
+      # name: "pregnancyDueDate"
+      # fixedUri: urn:extension:observation-pregnancyDueDate
+      # status: active
+      # fhirVersion: '4.0.1'
+      # kind: complex-type
+      # abstract: "false"
+      # type: Extension
+      # baseDefinition: "http://hl7.org/fhir/StructureDefinition/Extension"
+      # derivation: constraint
+      # title: ''
+      # context:
+        # type: element
+        # expression: Observation
+      # identifier: {}
+      # version: ''
     previousPregnanciesDetails:
       description: Details of previous pregnancies
-      type: string
+      type: string 
+      url: urn:extension:observation-previousPregnanciesDetails
+      # name: "previousPregnanciesDetails"
+      # fixedUri: urn:extension:observation-previousPregnanciesDetails
+      # status: active
+      # fhirVersion: '4.0.1'
+      # kind: complex-type
+      # abstract: "false"
+      # type: Extension
+      # baseDefinition: "http://hl7.org/fhir/StructureDefinition/Extension"
+      # derivation: constraint
+      # title: ''
+      # context:
+        # type: element
+        # expression: Observation
+      # identifier: {}
+      # version: ''

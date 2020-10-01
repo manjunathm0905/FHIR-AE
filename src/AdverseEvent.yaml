@@ -1,40 +1,165 @@
 description: Actual or  potential/avoided event causing unintended physical injury resulting from or contributed to by medical care, a research study or other healthcare setting factors that requires additional monitoring, treatment, or hospitalization, or that results in death.
+
+# resourceType: StructureDefinition
+# url: "urn:profile:AZAdverseEvent"
+# name: "AZAdverseEventProfile"
+# status: active
+# fhirVersion: '4.0.1'
+# kind: resource
+# abstract: "false"
+# type: AdverseEvent
+# baseDefinition: "http://hl7.org/fhir/StructureDefinition/AdverseEvent"
+# derivation: constraint
+# title: 'AZ AdverseEvent Profile'
+# identifier: {}
+# version: ''
+# experimental: false
+# date: "2020-09-30"
+# publisher: "AstraZeneca"
+# contact: []
+# jurisdiction: []
+
 elements:
   extension:
     AZEmployeeReporter:
       type: string
       description: AZ Employee Reporter
-      url: urn:extension:AZEmployeeReporter
+      url: urn:extension:adverseevent-employeeReporter
+      # name: "AZEmployeeReporter"
+      # fixedUri: urn:extension:adverseevent-employeeReporter
+      # status: active
+      # fhirVersion: '4.0.1'
+      # kind: complex-type
+      # abstract: "false"
+      # type: Extension
+      # baseDefinition: "http://hl7.org/fhir/StructureDefinition/Extension"
+      # derivation: constraint
+      # title: ''
+      # context:
+        # type: element
+        # expression: AdverseEvent
+      # identifier: {}
+      # version: ''
     reporterType:
       type: string
       description: Reporter Type
-      url: urn:extension:reporterType
+      url: urn:extension:adverseevent-reporterType
+      # name: "reporterType"
+      # fixedUri: urn:extension:adverseevent-reporterType
+      # status: active
+      # fhirVersion: '4.0.1'
+      # kind: complex-type
+      # abstract: "false"
+      # type: Extension
+      # baseDefinition: "http://hl7.org/fhir/StructureDefinition/Extension"
+      # derivation: constraint
+      # title: ''
+      # context:
+        # type: element
+        # expression: AdverseEvent
+      # identifier: {}
+      # version: ''
     programNumber:
       description: Program Number
       type: string
-      url: urn:extension:programNumber
+      url: urn:extension:adverseevent-programNumber
+      # name: "programNumber"
+      # fixedUri: urn:extension:adverseevent-programNumber
+      # status: active
+      # fhirVersion: '4.0.1'
+      # kind: complex-type
+      # abstract: "false"
+      # type: Extension
+      # baseDefinition: "http://hl7.org/fhir/StructureDefinition/Extension"
+      # derivation: constraint
+      # title: ''
+      # context:
+        # type: element
+        # expression: AdverseEvent
+      # identifier: {}
+      # version: ''
     localReference:
       description: Local Ref No
       type: string
-      url: urn:extension:localReference
+      url: urn:extension:adverseevent-localReference
+      # name: "localReference"
+      # fixedUri: urn:extension:adverseevent-localReference
+      # status: active
+      # fhirVersion: '4.0.1'
+      # kind: complex-type
+      # abstract: "false"
+      # type: Extension
+      # baseDefinition: "http://hl7.org/fhir/StructureDefinition/Extension"
+      # derivation: constraint
+      # title: ''
+      # context:
+        # type: element
+        # expression: AdverseEvent
+      # identifier: {}
+      # version: ''
     sourceType:
       description: Source Type
       type: code
       valueset: 
         id: intelligent-source
         description: The value should be from the valueset intelligent-source
-      url: urn:extension:sourceType
+      url: urn:extension:adverseevent-sourceType
+      # name: "sourceType"
+      # fixedUri: urn:extension:adverseevent-sourceType
+      # status: active
+      # fhirVersion: '4.0.1'
+      # kind: complex-type
+      # abstract: "false"
+      # type: Extension
+      # baseDefinition: "http://hl7.org/fhir/StructureDefinition/Extension"
+      # derivation: constraint
+      # title: ''
+      # context:
+        # type: element
+        # expression: AdverseEvent
+      # identifier: {}
+      # version: ''
     surveyStatus:
       description: Survey Status
       type: code
       valueset: 
         id: survey-status        
         description: The value should be from the valueset survey-status
-      url: urn:extension:surveyStatus
+      url: urn:extension:adverseevent-surveyStatus
+      # name: "surveyStatus"
+      # fixedUri: urn:extension:adverseevent-surveyStatus
+      # status: active
+      # fhirVersion: '4.0.1'
+      # kind: complex-type
+      # abstract: "false"
+      # type: Extension
+      # baseDefinition: "http://hl7.org/fhir/StructureDefinition/Extension"
+      # derivation: constraint
+      # title: ''
+      # context:
+        # type: element
+        # expression: AdverseEvent
+      # identifier: {}
+      # version: ''
     lateReason:
       description: Late reason for raising adverse event
       type: string
-      url: urn:extension:lateReason
+      url: urn:extension:adverseevent-lateReason
+      # name: "lateReason"
+      # fixedUri: urn:extension:adverseevent-lateReason
+      # status: active
+      # fhirVersion: '4.0.1'
+      # kind: complex-type
+      # abstract: "false"
+      # type: Extension
+      # baseDefinition: "http://hl7.org/fhir/StructureDefinition/Extension"
+      # derivation: constraint
+      # title: ''
+      # context:
+        # type: element
+        # expression: AdverseEvent
+      # identifier: {}
+      # version: ''
   suspectEntity:
     elements:
       causality:
@@ -43,12 +168,57 @@ elements:
             positiveDechallenge:
               type: string
               description: Positive Dechallenge
-              url: urn:extension:causalityPositiveDechallenge
+              url: urn:extension:adverseevent-causalityPositiveDechallenge
+              # name: "positiveDechallenge"
+              # fixedUri: urn:extension:adverseevent-causalityPositiveDechallenge
+              # status: active
+              # fhirVersion: '4.0.1'
+              # kind: complex-type
+              # abstract: "false"
+              # type: Extension
+              # baseDefinition: "http://hl7.org/fhir/StructureDefinition/Extension"
+              # derivation: constraint
+              # title: ''
+              # context:
+                # type: element
+                # expression: AdverseEvent.suspectEntity.causality
+              # identifier: {}
+              # version: ''
             positiveRechallenge:
               type: string
               description: Positive Rechallenge
-              url: urn:extension:causalityPositiveRechallenge
+              url: urn:extension:adverseevent-causalityPositiveRechallenge
+              # name: "positiveRechallenge"
+              # fixedUri: urn:extension:adverseevent-causalityPositiveRechallenge
+              # status: active
+              # fhirVersion: '4.0.1'
+              # kind: complex-type
+              # abstract: "false"
+              # type: Extension
+              # baseDefinition: "http://hl7.org/fhir/StructureDefinition/Extension"
+              # derivation: constraint
+              # title: ''
+              # context:
+                # type: element
+                # expression: AdverseEvent.suspectEntity.causality
+              # identifier: {}
+              # version: ''
             rechallenge:
               type: string
               description: Rechallenge
-              url: urn:extension:causalityRechallenge
+              url: urn:extension:adverseevent-causalityRechallenge
+              # name: "rechallenge"
+              # fixedUri: urn:extension:adverseevent-causalityRechallenge
+              # status: active
+              # fhirVersion: '4.0.1'
+              # kind: complex-type
+              # abstract: "false"
+              # type: Extension
+              # baseDefinition: "http://hl7.org/fhir/StructureDefinition/Extension"
+              # derivation: constraint
+              # title: ''
+              # context:
+                # type: element
+                # expression: AdverseEvent.suspectEntity.causality
+              # identifier: {}
+              # version: ''

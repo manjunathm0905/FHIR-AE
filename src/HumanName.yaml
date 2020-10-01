@@ -1,0 +1,22 @@
+description: Defines AZ constraints and extensions on the HumanName data type
+elements:
+  extension:
+    salutation:
+      type: CodeableConcept
+      description: Name salutation
+      url: urn:extension:name-salutation
+      # name: "salutation"
+      # fixedUri: urn:extension:name-salutation
+      # status: active
+      # fhirVersion: '4.0.1'
+      # kind: complex-type
+      # abstract: "false"
+      # type: Extension
+      # baseDefinition: "http://hl7.org/fhir/StructureDefinition/Extension"
+      # derivation: constraint
+      # title: ''
+      # context:
+        # type: element
+        # expression: HumanName
+      # identifier: {}
+      # version: ''
