@@ -1,4 +1,4 @@
-description: A person who is directly or indirectly involved in the provisioning of healthcare.
+description: Defines AZ constraints and extensions on the Practitioner resource
 
 # resourceType: StructureDefinition
 # url: "urn:profile:AZPractitioner"

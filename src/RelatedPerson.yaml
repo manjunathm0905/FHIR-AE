@@ -1,4 +1,4 @@
-description: Information about a person that is involved in the care for a patient, but who is not the target of healthcare, nor has a formal responsibility in the care process.
+description: Defines AZ constraints and extensions on the RelatedPerson resource
 
 # resourceType: StructureDefinition
 # url: "urn:profile:AZRelatedPerson"

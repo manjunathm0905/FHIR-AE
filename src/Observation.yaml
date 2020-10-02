@@ -1,4 +1,4 @@
-description: Measurements and simple assertions made about a patient, device or other subject.
+description: Defines AZ constraints and extensions on the Observation resource
 
 # resourceType: StructureDefinition
 # url: "urn:profile:AZObservation"

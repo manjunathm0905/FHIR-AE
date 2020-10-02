@@ -5,6 +5,7 @@ original-\*.json - sample FHIR StructureDefinition files
 To run FHIR validator:
 
 $ java -jar validator_cli.jar -version 4.0.1 AZAdverseEvent.json -no-extensible-binding-warnings
+
 $ java -jar validator_cli.jar -version 4.0.1 AZEmployeeReporter.json -no-extensible-binding-warnings
 
 
