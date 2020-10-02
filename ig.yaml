@@ -1,5 +1,5 @@
 id: hl7.fhir.ae
-title: Adverse Event FHIR Profiles
+title: AstraZeneca FHIR IG
 url: http://example.org/fhir/az/
-description: Adverse Event Implementation Guide
+description: AstraZeneca Adverse Event Implementation Guide
 fhir: 4.0.0
