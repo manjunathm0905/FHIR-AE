@@ -1,21 +1,21 @@
 description: Defines AZ constraints and extensions on the Patient resource
 
-# resourceType: StructureDefinition
-# url: "urn:profile:AZPatient"
-# name: "az-patient"
-# status: active
-# fhirVersion: '4.0.1'
-# kind: resource
-# abstract: "false"
-# type: Patient
-# baseDefinition: "http://hl7.org/fhir/StructureDefinition/Patient"
-# derivation: constraint
-# title: ''
+resourceType: StructureDefinition
+url: "urn:profile:AZPatient"
+name: "AZPatientProfile"
+status: active
+fhirVersion: '4.0.1'
+kind: resource
+abstract: false
+type: Patient
+baseDefinition: "http://hl7.org/fhir/StructureDefinition/Patient"
+derivation: constraint
+title: 'AZ Patient Profile'
 # identifier: {}
 # version: ''
-# experimental: false
-# date: "2020-09-30"
-# publisher: "AstraZeneca"
+experimental: false
+date: "2020-09-30"
+publisher: "AstraZeneca"
 # contact: []
 # jurisdiction: []
 

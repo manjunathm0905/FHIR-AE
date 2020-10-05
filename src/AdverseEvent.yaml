@@ -24,8 +24,6 @@ elements:
       type: string
       description: AZ Employee Reporter
       url: urn:extension:adverseevent-employeeReporter
-      minItems: 2
-      maxItems: 4
       # name: "AZEmployeeReporter"
       # fixedUri: urn:extension:adverseevent-employeeReporter
       # status: active

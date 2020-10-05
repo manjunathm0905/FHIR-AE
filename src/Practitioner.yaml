@@ -1,21 +1,21 @@
 description: Defines AZ constraints and extensions on the Practitioner resource
 
-# resourceType: StructureDefinition
-# url: "urn:profile:AZPractitioner"
-# name: "az-practitioner"
-# status: active
-# fhirVersion: '4.0.1'
-# kind: resource
-# abstract: "false"
-# type: Practitioner
-# baseDefinition: "http://hl7.org/fhir/StructureDefinition/Practitioner"
-# derivation: constraint
+resourceType: StructureDefinition
+url: "urn:profile:AZPractitioner"
+name: "AZPractitionerProfile"
+status: active
+fhirVersion: '4.0.1'
+kind: resource
+abstract: false
+type: Practitioner
+baseDefinition: "http://hl7.org/fhir/StructureDefinition/Practitioner"
+derivation: constraint
 # title: ''
 # identifier: {}
 # version: ''
-# experimental: false
-# date: "2020-09-30"
-# publisher: "AstraZeneca"
+experimental: false
+date: "2020-09-30"
+publisher: "AstraZeneca"
 # contact: []
 # jurisdiction: []
 

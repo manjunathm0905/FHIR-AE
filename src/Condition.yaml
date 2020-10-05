@@ -1,21 +1,21 @@
 description: Defines AZ constraints and extensions on the Condition resource
 
-# resourceType: StructureDefinition  
-# url: "urn:profile:AZCondition"
-# name: "AZConditionProfile"
-# status: active
-# fhirVersion: '4.0.1'
-# kind: resource
-# abstract: "false"
-# type: Condition
-# baseDefinition: "http://hl7.org/fhir/StructureDefinition/Condition"
-# derivation: constraint
-# title: ''
+resourceType: StructureDefinition  
+url: "urn:profile:AZCondition"
+name: "AZConditionProfile"
+status: active
+fhirVersion: '4.0.1'
+kind: resource
+abstract: false
+type: Condition
+baseDefinition: "http://hl7.org/fhir/StructureDefinition/Condition"
+derivation: constraint
+title: 'AZ Condition Profile'
 # identifier: {}
 # version: ''
-# experimental: false
-# date: "2020-09-30"
-# publisher: "AstraZeneca"
+experimental: false
+date: "2020-09-30"
+publisher: "AstraZeneca"
 # contact: []
 # jurisdiction: []
   

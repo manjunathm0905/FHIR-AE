@@ -1,21 +1,21 @@
 description: Defines AZ constraints and extensions on the MedicationAdministration resource
 
-# resourceType: StructureDefinition
-# url: "urn:profile:AZMedicationAdministration"
-# name: "az-medicationadministration"
-# status: active
-# fhirVersion: '4.0.1'
-# kind: resource
-# abstract: "false"
-# type: MedicationAdministration
-# baseDefinition: "http://hl7.org/fhir/StructureDefinition/MedicationAdministration"
-# derivation: constraint
-# title: ''
+resourceType: StructureDefinition
+url: "urn:profile:AZMedicationAdministration"
+name: "AZMedicationAdministrationProfile"
+status: active
+fhirVersion: '4.0.1'
+kind: resource
+abstract: false
+type: MedicationAdministration
+baseDefinition: "http://hl7.org/fhir/StructureDefinition/MedicationAdministration"
+derivation: constraint
+title: 'AZ MedicationAdministration Profile'
 # identifier: {}
 # version: ''
-# experimental: false
-# date: "2020-09-30"
-# publisher: "AstraZeneca"
+experimental: false
+date: "2020-09-30"
+publisher: "AstraZeneca"
 # contact: []
 # jurisdiction: []
 

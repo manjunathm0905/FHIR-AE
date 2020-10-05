@@ -1,21 +1,21 @@
 description: Defines AZ constraints and extensions on the RelatedPerson resource
 
-# resourceType: StructureDefinition
-# url: "urn:profile:AZRelatedPerson"
-# name: "az-relatedperson"
-# status: active
-# fhirVersion: '4.0.1'
-# kind: resource
-# abstract: "false"
-# type: RelatedPerson
-# baseDefinition: "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
-# derivation: constraint
+resourceType: StructureDefinition
+url: "urn:profile:AZRelatedPerson"
+name: "AZRelatedPersonProfile"
+status: active
+fhirVersion: '4.0.1'
+kind: resource
+abstract: false
+type: RelatedPerson
+baseDefinition: "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
+derivation: constraint
 # title: ''
 # identifier: {}
 # version: ''
-# experimental: false
-# date: "2020-09-30"
-# publisher: "AstraZeneca"
+experimental: false
+date: "2020-09-30"
+publisher: "AstraZeneca"
 # contact: []
 # jurisdiction: []
 
