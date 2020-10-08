@@ -1,0 +1,15 @@
+system: urn:CodeSystem:condition-outcome
+description: AZ condition outcome valueset
+concepts:
+  - code: resolved
+    display: Resolved
+  - code: recovering
+    display: Recovering
+  - code: ongoing
+    display: Ongoing
+  - code: resolvedWithSequelae
+    display: Resolved with Sequelae
+  - code: fatal
+    display: Fatal
+  - code: unknown
+    display: Unknown

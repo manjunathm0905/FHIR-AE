@@ -1,0 +1,11 @@
+system: urn:CodeSystem:intelligent-source
+description: AZ intelligent source valueset
+concepts:
+  - code: spont
+    display: Spontaneous
+  - code: usage
+    display: Usage Record Survey
+  - code: spec
+    display: Specific Use Survey
+  - code: other
+    display: Others

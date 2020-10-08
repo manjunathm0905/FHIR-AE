@@ -120,12 +120,18 @@ elements:
       # identifier: {}
       # version: ''
   address:
-    elements:
-      extension:
-        region:
-          type: CodeableConcept
-          description: Address region
-          url: urn:extension:address-region
+    description: "Should use the https://healthsamurai.github.io/ig-ae/StructureDefinition/azaddress profile on this element"
+    # type:
+    # - code: Address
+      # profile: 
+      # - "https://healthsamurai.github.io/ig-ae/StructureDefinition/azaddress"
+    profile: "https://healthsamurai.github.io/ig-ae/StructureDefinition/azaddress"  
+    # elements:
+      # extension:
+        # region:
+          # type: CodeableConcept
+          # description: Address region
+          # url: urn:extension:address-region
           # name: "region"
           # fixedUri: urn:extension:address-region
           # status: active
@@ -142,12 +148,18 @@ elements:
           # identifier: {}
           # version: ''
   name:
-    elements:
-      extension:
-        salutation:
-          type: CodeableConcept
-          description: Name salutation
-          url: urn:extension:name-salutation
+    description: "Should use the https://healthsamurai.github.io/ig-ae/StructureDefinition/azhumanname profile on this element"
+    # type:
+    # - code: HumanName
+      # profile: 
+      # - "https://healthsamurai.github.io/ig-ae/StructureDefinition/azhumanname"
+    profile: "https://healthsamurai.github.io/ig-ae/StructureDefinition/azhumanname"
+    # elements:
+      # extension:
+        # salutation:
+          # type: CodeableConcept
+          # description: Name salutation
+          # url: urn:extension:name-salutation
           # name: "salutation"
           # fixedUri: urn:extension:name-salutation
           # status: active

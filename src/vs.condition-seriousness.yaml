@@ -1,0 +1,15 @@
+system: urn:CodeSystem:condition-seriousness
+description: AZ condition seriousness valueset
+concepts:
+  - code: less-severe
+    display: Less severe
+  - code: recovered
+    display: Recovered
+  - code: not-recovered
+    display: Not recovered
+  - code: recovered-seq
+    display: Recovered with Sequela
+  - code: death
+    display: Death
+  - code: unknown
+    display: Unknown
