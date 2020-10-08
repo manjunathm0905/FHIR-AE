@@ -40,6 +40,13 @@ elements:
         # expression: RelatedPerson
       # identifier: {}
       # version: ''
+  name:
+    description: "Should use the https://healthsamurai.github.io/ig-ae/StructureDefinition/azhumanname profile on this element"
+    # type:
+    # - code: HumanName
+      # profile: 
+      # - "https://healthsamurai.github.io/ig-ae/StructureDefinition/azhumanname"
+    profile: "https://healthsamurai.github.io/ig-ae/StructureDefinition/azhumanname"
 
   address:
     description: "Should use the https://healthsamurai.github.io/ig-ae/StructureDefinition/azaddress profile on this element"
@@ -48,10 +55,3 @@ elements:
       # profile: 
       # - "https://healthsamurai.github.io/ig-ae/StructureDefinition/azaddress"
     profile: "https://healthsamurai.github.io/ig-ae/StructureDefinition/azaddress"
-  name:
-    description: "Should use the https://healthsamurai.github.io/ig-ae/StructureDefinition/azhumanname profile on this element"
-    # type:
-    # - code: HumanName
-      # profile: 
-      # - "https://healthsamurai.github.io/ig-ae/StructureDefinition/azhumanname"
-    profile: "https://healthsamurai.github.io/ig-ae/StructureDefinition/azhumanname"

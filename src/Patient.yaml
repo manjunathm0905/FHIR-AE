@@ -119,34 +119,6 @@ elements:
         # expression: Patient
       # identifier: {}
       # version: ''
-  address:
-    description: "Should use the https://healthsamurai.github.io/ig-ae/StructureDefinition/azaddress profile on this element"
-    # type:
-    # - code: Address
-      # profile: 
-      # - "https://healthsamurai.github.io/ig-ae/StructureDefinition/azaddress"
-    profile: "https://healthsamurai.github.io/ig-ae/StructureDefinition/azaddress"  
-    # elements:
-      # extension:
-        # region:
-          # type: CodeableConcept
-          # description: Address region
-          # url: urn:extension:address-region
-          # name: "region"
-          # fixedUri: urn:extension:address-region
-          # status: active
-          # fhirVersion: '4.0.1'
-          # kind: complex-type
-          # abstract: "false"
-          # type: Extension
-          # baseDefinition: "http://hl7.org/fhir/StructureDefinition/Extension"
-          # derivation: constraint
-          # title: ''
-          # context:
-            # type: element
-            # expression: Address
-          # identifier: {}
-          # version: ''
   name:
     description: "Should use the https://healthsamurai.github.io/ig-ae/StructureDefinition/azhumanname profile on this element"
     # type:
@@ -154,24 +126,10 @@ elements:
       # profile: 
       # - "https://healthsamurai.github.io/ig-ae/StructureDefinition/azhumanname"
     profile: "https://healthsamurai.github.io/ig-ae/StructureDefinition/azhumanname"
-    # elements:
-      # extension:
-        # salutation:
-          # type: CodeableConcept
-          # description: Name salutation
-          # url: urn:extension:name-salutation
-          # name: "salutation"
-          # fixedUri: urn:extension:name-salutation
-          # status: active
-          # fhirVersion: '4.0.1'
-          # kind: complex-type
-          # abstract: "false"
-          # type: Extension
-          # baseDefinition: "http://hl7.org/fhir/StructureDefinition/Extension"
-          # derivation: constraint
-          # title: ''
-          # context:
-            # type: element
-            # expression: HumanName
-          # identifier: {}
-          # version: ''
+  address:
+    description: "Should use the https://healthsamurai.github.io/ig-ae/StructureDefinition/azaddress profile on this element"
+    # type:
+    # - code: Address
+      # profile: 
+      # - "https://healthsamurai.github.io/ig-ae/StructureDefinition/azaddress"
+    profile: "https://healthsamurai.github.io/ig-ae/StructureDefinition/azaddress"  
