@@ -1,12 +1,27 @@
 description: Defines AZ constraints and extensions on the HumanName data type
+url: "urn:profile:AZHumanName"
+name: "AZHumanNameProfile"
+status: active
+fhirVersion: '4.0.1'
+kind: complex-type
+abstract: false
+type: HumanName
+baseDefinition: "http://hl7.org/fhir/StructureDefinition/HumanName"
+derivation: constraint
+title: 'AZ HumanName Profile'
+# identifier: {}
+# version: ''
+experimental: false
+date: "2020-10-06"
+publisher: "AstraZeneca"
 elements:
   extension:
     salutation:
       type: CodeableConcept
       description: Name salutation
-      url: urn:extension:name-salutation
+      url: urn:extension:humanname-salutation
       # name: "salutation"
-      # fixedUri: urn:extension:name-salutation
+      # fixedUri: urn:extension:humanname-salutation
       # status: active
       # fhirVersion: '4.0.1'
       # kind: complex-type

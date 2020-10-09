@@ -1,4 +1,21 @@
 description: Defines AZ constraints and extensions on the Address data type
+url: "urn:profile:AZAddress"
+name: "AZAddressProfile"
+status: active
+fhirVersion: '4.0.1'
+kind: complex-type
+abstract: false
+type: Address
+baseDefinition: "http://hl7.org/fhir/StructureDefinition/Address"
+derivation: constraint
+title: 'AZ Address Profile'
+# identifier: {}
+# version: ''
+experimental: false
+date: "2020-10-06"
+publisher: "AstraZeneca"
+
+
 elements:
   extension:
     region:

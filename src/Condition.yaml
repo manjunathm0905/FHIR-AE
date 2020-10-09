@@ -85,7 +85,7 @@ elements:
       # identifier: {}
       # version: ''
     outcome:
-      type: CodableConcept
+      type: CodeableConcept
       valueset:
         id: condition-outcome
         description: The value should be from the valueset detailed-ethnicity

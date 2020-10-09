@@ -1,0 +1,7 @@
+system: urn:CodeSystem:survey-status
+description: AZ survey status valueset
+concepts:
+  - code: req-det
+    display: Requested detailed investigation
+  - code: N/A
+    display: No further cooperation is available

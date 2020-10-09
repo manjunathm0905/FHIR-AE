@@ -1,0 +1,11 @@
+system: urn:CodeSystem:detailed-ethnicity
+description: AZ detailed ethnicity valueset
+concepts:
+  - code: white
+    display: White
+  - code: african
+    display: African
+  - code: caribbean
+    display: Caribbean
+  - code: N/A
+    display: Not prepared to say

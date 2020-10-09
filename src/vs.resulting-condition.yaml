@@ -1,0 +1,15 @@
+system: urn:CodeSystem:resulting-condition
+description: AZ resulting condition valueset
+concepts:
+  - code: death
+    display: Death
+  - code: life-threat
+    display: Life Threat
+  - code: birth-defect
+    display: Birth Defect
+  - code: hospitalization
+    display: Hospitalization
+  - code: disability
+    display: Disability
+  - code: IMA
+    display: Important Medical Event
