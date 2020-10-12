@@ -1,5 +1,7 @@
 # Adverse Event IG
 
+[![Build Status](https://travis-ci.org/HealthSamurai/ig-ae.svg?branch=master)](https://travis-ci.org/HealthSamurai/ig-ae)
+
 Implementation Guide for Adverse Event.
 
 Current version is published at https://healthsamurai.github.io/ig-ae/
