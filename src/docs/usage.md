@@ -24,7 +24,7 @@ java -jar "./igpop/target/igpop.jar" dev -p 8891
 
 - Browse the folder
 
-- The folder will contain FHIR StractureDefinitions and ValueSets
+- The folder will contain FHIR StructureDefinitions and ValueSets
 
 ## StructureDefinitions
 

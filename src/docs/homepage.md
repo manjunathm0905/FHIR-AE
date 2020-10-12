@@ -20,7 +20,7 @@ Here you can view the value sets that are used in the IGPOP profiles.
 
 #### Package
 
-Click this link to generate a package of FHIR StractureDefinitions and ValueSets.
+Click this link to generate a package of FHIR StructureDefinitions and ValueSets.
 
 The package will be downloaded as a zip-archive. 
 
