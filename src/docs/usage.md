@@ -1,10 +1,20 @@
 ---
-title: Instruction
+title: Instructions
 ---
 
-# Instruction
+# Instructions
 ---
 ---
+
+## Development
+---
+
+In order to develop the implementation guide, do the following steps:
+
+* clone the repository [https://github.com/HealthSamurai/ig-ae](https://github.com/HealthSamurai/ig-ae)
+* execute `npm install` in a command line
+* execute `./igpop.sh dev` in the command line to run a local server on 8899 (may be changed with `-p` param)
+* navigate to `http://localhost:8899` to see results of editing
 
 ## Generate Structure Definitions
 ---
@@ -14,15 +24,6 @@ title: Instruction
 - Unzip the archive
 - Browse the folder
 - The folder will contain FHIR StructureDefinitions and ValueSets
-
-## Run IGPOP Locally
----
-
-- Clone the repository [https://github.com/HealthSamurai/ig-ae](https://github.com/HealthSamurai/ig-ae)
-- Access the repository folder
-- Run the command: `java -jar "./igpop/target/igpop.jar" dev -p 8891`
-- Open localhost:8891
-
 
 ## Publish the Implementation Guide
 ---
