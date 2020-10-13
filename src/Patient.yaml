@@ -50,18 +50,16 @@ elements:
       # url: urn:extension:patient-patientAge
       url: urn:extension:hl7.fhir.ae-Patient-patientAge
   name:
-    description: "Should use the urn:extension:hl7.fhir.ae-HumanName profile on this element"
-    # type:
-    # - code: HumanName
-      # profile: 
-      # - "urn:extension:azhumanname"
-    # profile: "urn:extension:azhumanname"
-    # profile: "urn:extension:hl7.fhir.ae-HumanName"
+    elements:
+      extension:
+        salutation:
+          description: Name salutation
+          type: CodeableConcept
+          url: urn:extension:hl7.fhir.ae-HumanName-salutation
   address:
-    description: "Should use the urn:extension:hl7.fhir.ae-Address profile on this element"
-    # type:
-    # - code: Address
-      # profile: 
-      # - "urn:extension:azaddress"
-    # profile: "urn:extension:azaddress"  
-    # profile: "urn:extension:hl7.fhir.ae-Address"  
+    elements:
+      extension:
+        region:
+          description: Address region
+          type: CodeableConcept
+          url: urn:extension:hl7.fhir.ae-Address-region
