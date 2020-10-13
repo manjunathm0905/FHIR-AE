@@ -1,5 +1,6 @@
 system: urn:CodeSystem:resulting-condition
 description: AZ resulting condition valueset
+url: urn:ValueSet:resulting-condition
 concepts:
   - code: death
     display: Death

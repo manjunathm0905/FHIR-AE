@@ -24,7 +24,8 @@ elements:
     pregnancyFlag:
       description: Pregnancy
       type: boolean 
-      url: urn:extension:observation-pregnancyFlag
+      # url: urn:extension:observation-pregnancyFlag
+      url: urn:extension:hl7.fhir.ae-Observation-pregnancyFlag
       # name: "pregnancyFlag"
       # fixedUri: urn:extension:observation-pregnancyFlag
       # status: active
@@ -43,7 +44,8 @@ elements:
     pregnancyDueDate:
       description: Pregnancy Due Date
       type: date  
-      url: urn:extension:observation-pregnancyDueDate
+      # url: urn:extension:observation-pregnancyDueDate
+      url: urn:extension:hl7.fhir.ae-Observation-pregnancyDueDate
       # name: "pregnancyDueDate"
       # fixedUri: urn:extension:observation-pregnancyDueDate
       # status: active
@@ -62,7 +64,8 @@ elements:
     previousPregnanciesDetails:
       description: Details of previous pregnancies
       type: string 
-      url: urn:extension:observation-previousPregnanciesDetails
+      # url: urn:extension:observation-previousPregnanciesDetails
+      url: urn:extension:hl7.fhir.ae-Observation-previousPregnanciesDetails
       # name: "previousPregnanciesDetails"
       # fixedUri: urn:extension:observation-previousPregnanciesDetails
       # status: active

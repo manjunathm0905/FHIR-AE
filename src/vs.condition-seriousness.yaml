@@ -1,5 +1,6 @@
 system: urn:CodeSystem:condition-seriousness
 description: AZ condition seriousness valueset
+url: urn:ValueSet:condition-seriousness
 concepts:
   - code: less-severe
     display: Less severe

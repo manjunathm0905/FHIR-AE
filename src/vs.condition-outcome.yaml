@@ -1,5 +1,6 @@
 system: urn:CodeSystem:condition-outcome
 description: AZ condition outcome valueset
+url: urn:ValueSet:condition-outcome
 concepts:
   - code: resolved
     display: Resolved

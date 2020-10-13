@@ -1,5 +1,6 @@
 system: urn:CodeSystem:detailed-ethnicity
 description: AZ detailed ethnicity valueset
+url: urn:ValueSet:detailed-ethnicity
 concepts:
   - code: white
     display: White

@@ -24,7 +24,8 @@ elements:
     actionTaken:
       type: CodeableConcept
       description: MedicationAdministration Action Taken
-      url: urn:extension:medicationadministration-actionTaken
+      # url: urn:extension:medicationadministration-actionTaken
+      url: urn:extension:hl7.fhir.ae-MedicationAdministration-actionTaken
       # name: "actionTaken"
       # fixedUri: urn:extension:medicationadministration-actionTaken
       # status: active
@@ -43,7 +44,8 @@ elements:
     operatorDevice:
       type: CodeableConcept
       description: MedicationAdministration Operator Device
-      url: urn:extension:medicationadministration-operatorDevice
+      # url: urn:extension:medicationadministration-operatorDevice
+      url: urn:extension:hl7.fhir.ae-MedicationAdministration-operatorDevice
       # name: "operatorDevice"
       # fixedUri: urn:extension:medicationadministration-operatorDevice
       # status: active
@@ -62,7 +64,8 @@ elements:
     operatorDeviceOther:
       type: string
       description: MedicationAdministration Operator Device Other
-      url: urn:extension:medicationadministration-operatorDeviceOther
+      # url: urn:extension:medicationadministration-operatorDeviceOther
+      url: urn:extension:hl7.fhir.ae-MedicationAdministration-operatorDeviceOther
       # name: "operatorDeviceOther"
       # fixedUri: urn:extension:medicationadministration-operatorDeviceOther
       # status: active
@@ -81,7 +84,8 @@ elements:
     productType:
       type: string
       description: MedicationAdministration Product Type
-      url: urn:extension:medicationadministration-productType
+      # url: urn:extension:medicationadministration-productType
+      url: urn:extension:hl7.fhir.ae-MedicationAdministration-productType
       # name: "productType"
       # fixedUri: urn:extension:medicationadministration-productType
       # status: active
@@ -103,7 +107,8 @@ elements:
         frequency:
           type: CodeableConcept
           description: MedicationAdministration Dosage Frequency
-          url: urn:extension:medicationadministration-dosageFrequency
+          # url: urn:extension:medicationadministration-dosageFrequency
+          url: urn:extension:hl7.fhir.ae-MedicationAdministration-frequency
           # name: "dosage"
           # fixedUri: urn:extension:medicationadministration-dosageFrequency
           # status: active
@@ -122,7 +127,8 @@ elements:
         unit:
           type: CodeableConcept
           description: MedicationAdministration Dosage Unit
-          url: urn:extension:medicationadministration-dosageUnit
+          # url: urn:extension:medicationadministration-dosageUnit
+          url: urn:extension:hl7.fhir.ae-MedicationAdministration-unit
           # name: "unit"
           # fixedUri: urn:extension:medicationadministration-dosageUnit
           # status: active

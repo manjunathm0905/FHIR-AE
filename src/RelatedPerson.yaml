@@ -10,7 +10,7 @@ abstract: false
 type: RelatedPerson
 baseDefinition: "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
 derivation: constraint
-# title: ''
+title: 'AZ RelatedPerson Profile'
 # identifier: {}
 # version: ''
 experimental: false
@@ -24,7 +24,8 @@ elements:
     consentToContactReporter:
       description: RelatedPerson Consent to Contact Extension
       type: boolean
-      url: urn:extension:relatedperson-consentToContactReporter
+      # url: urn:extension:relatedperson-consentToContactReporter
+      url: urn:extension:hl7.fhir.ae-RelatedPerson-consentToContactReporter
       # name: "consentToContactReporter"
       # fixedUri: urn:extension:relatedperson-consentToContactReporter
       # status: active
@@ -41,17 +42,18 @@ elements:
       # identifier: {}
       # version: ''
   name:
-    description: "Should use the https://healthsamurai.github.io/ig-ae/StructureDefinition/azhumanname profile on this element"
+    description: "Should use the urn:extension:hl7.fhir.ae-HumanName profile on this element"
     # type:
     # - code: HumanName
       # profile: 
-      # - "https://healthsamurai.github.io/ig-ae/StructureDefinition/azhumanname"
-    profile: "https://healthsamurai.github.io/ig-ae/StructureDefinition/azhumanname"
-
+      # - "urn:extension:azhumanname"
+    # profile: "urn:extension:azhumanname"
+    # profile: "urn:extension:hl7.fhir.ae-HumanName"
   address:
-    description: "Should use the https://healthsamurai.github.io/ig-ae/StructureDefinition/azaddress profile on this element"
+    description: "Should use the urn:extension:hl7.fhir.ae-Address profile on this element"
     # type:
     # - code: Address
       # profile: 
-      # - "https://healthsamurai.github.io/ig-ae/StructureDefinition/azaddress"
-    profile: "https://healthsamurai.github.io/ig-ae/StructureDefinition/azaddress"
+      # - "urn:extension:azaddress"
+    # profile: "urn:extension:azaddress"  
+    # profile: "urn:extension:hl7.fhir.ae-Address"  

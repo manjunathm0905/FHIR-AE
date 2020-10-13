@@ -1,5 +1,6 @@
 system: urn:CodeSystem:intelligent-source
 description: AZ intelligent source valueset
+url: urn:ValueSet:intelligent-source
 concepts:
   - code: spont
     display: Spontaneous

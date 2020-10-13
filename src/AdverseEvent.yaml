@@ -1,5 +1,5 @@
 description: Defines AZ constraints and extensions on the AdverseEvent resource
-
+id: AZAdverseEvent
 url: "urn:profile:AZAdverseEvent"
 name: "AZAdverseEventProfile"
 status: active
@@ -23,7 +23,8 @@ elements:
     AZEmployeeReporter:
       type: string
       description: AZ Employee Reporter
-      url: urn:extension:adverseevent-employeeReporter
+      # url: urn:extension:adverseevent-employeeReporter
+      url: urn:extension:hl7.fhir.ae-AdverseEvent-AZEmployeeReporter
       # name: "AZEmployeeReporter"
       # fixedUri: urn:extension:adverseevent-employeeReporter
       # status: active
@@ -42,7 +43,8 @@ elements:
     reporterType:
       type: string
       description: Reporter Type
-      url: urn:extension:adverseevent-reporterType
+      # url: urn:extension:adverseevent-reporterType
+      url: urn:extension:hl7.fhir.ae-AdverseEvent-reporterType
       # name: "reporterType"
       # fixedUri: urn:extension:adverseevent-reporterType
       # status: active
@@ -61,7 +63,8 @@ elements:
     programNumber:
       description: Program Number
       type: string
-      url: urn:extension:adverseevent-programNumber
+      # url: urn:extension:adverseevent-programNumber
+      url: urn:extension:hl7.fhir.ae-AdverseEvent-programNumber
       # name: "programNumber"
       # fixedUri: urn:extension:adverseevent-programNumber
       # status: active
@@ -80,7 +83,8 @@ elements:
     localReference:
       description: Local Ref No
       type: string
-      url: urn:extension:adverseevent-localReference
+      # url: urn:extension:adverseevent-localReference
+      url: urn:extension:hl7.fhir.ae-AdverseEvent-localReference
       # name: "localReference"
       # fixedUri: urn:extension:adverseevent-localReference
       # status: active
@@ -102,7 +106,8 @@ elements:
       valueset: 
         id: intelligent-source
         description: The value should be from the valueset intelligent-source
-      url: urn:extension:adverseevent-sourceType
+      # url: urn:extension:adverseevent-sourceType
+      url: urn:extension:hl7.fhir.ae-AdverseEvent-sourceType
       # name: "sourceType"
       # fixedUri: urn:extension:adverseevent-sourceType
       # status: active
@@ -124,7 +129,8 @@ elements:
       valueset: 
         id: survey-status        
         description: The value should be from the valueset survey-status
-      url: urn:extension:adverseevent-surveyStatus
+      # url: urn:extension:adverseevent-surveyStatus
+      url: urn:extension:hl7.fhir.ae-AdverseEvent-surveyStatus
       # name: "surveyStatus"
       # fixedUri: urn:extension:adverseevent-surveyStatus
       # status: active
@@ -143,7 +149,8 @@ elements:
     lateReason:
       description: Late reason for raising adverse event
       type: string
-      url: urn:extension:adverseevent-lateReason
+      # url: urn:extension:adverseevent-lateReason
+      url: urn:extension:hl7.fhir.ae-AdverseEvent-lateReason
       # name: "lateReason"
       # fixedUri: urn:extension:adverseevent-lateReason
       # status: active
@@ -167,7 +174,8 @@ elements:
             positiveDechallenge:
               type: string
               description: Positive Dechallenge
-              url: urn:extension:adverseevent-causalityPositiveDechallenge
+              # url: urn:extension:adverseevent-causalityPositiveDechallenge
+              url: urn:extension:hl7.fhir.ae-AdverseEvent-positiveDechallenge
               # name: "positiveDechallenge"
               # fixedUri: urn:extension:adverseevent-causalityPositiveDechallenge
               # status: active
@@ -186,7 +194,8 @@ elements:
             positiveRechallenge:
               type: string
               description: Positive Rechallenge
-              url: urn:extension:adverseevent-causalityPositiveRechallenge
+              # url: urn:extension:adverseevent-causalityPositiveRechallenge
+              url: urn:extension:hl7.fhir.ae-AdverseEvent-positiveRechallenge
               # name: "positiveRechallenge"
               # fixedUri: urn:extension:adverseevent-causalityPositiveRechallenge
               # status: active
@@ -205,7 +214,8 @@ elements:
             rechallenge:
               type: string
               description: Rechallenge
-              url: urn:extension:adverseevent-causalityRechallenge
+              # url: urn:extension:adverseevent-causalityRechallenge
+              url: urn:extension:hl7.fhir.ae-AdverseEvent-rechallenge
               # name: "rechallenge"
               # fixedUri: urn:extension:adverseevent-causalityRechallenge
               # status: active

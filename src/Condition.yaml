@@ -24,7 +24,8 @@ elements:
     duration:
       type: string
       description: Condition Duration
-      url: urn:extension:condition-duration
+      # url: urn:extension:condition-duration
+      url: urn:extension:hl7.fhir.ae-Condition-duration
       # name: "duration"
       # fixedUri: urn:extension:condition-duration
       # status: active
@@ -46,7 +47,8 @@ elements:
         id: condition-seriousness
         description: The value should be from the valueset detailed-ethnicity
       description: Condition Seriousness
-      url: urn:extension:condition-seriousness
+      # url: urn:extension:condition-seriousness
+      url: urn:extension:hl7.fhir.ae-Condition-seriousness
       # name: "seriousness"
       # fixedUri: urn:extension:condition-seriousness
       # status: active
@@ -68,7 +70,8 @@ elements:
         id: resulting-condition
         description: The value should be from the valueset detailed-ethnicity
       description: Resulting Condition
-      url: urn:extension:condition-resultingCondition
+      # url: urn:extension:condition-resultingCondition
+      url: urn:extension:hl7.fhir.ae-Condition-resultingCondition
       # name: "resultingCondition"
       # fixedUri: urn:extension:condition-resultingCondition
       # status: active
@@ -90,7 +93,8 @@ elements:
         id: condition-outcome
         description: The value should be from the valueset detailed-ethnicity
       description: Condition Outcome
-      url: urn:extension:condition-outcome
+      # url: urn:extension:condition-outcome
+      url: urn:extension:hl7.fhir.ae-Condition-outcome
       # name: "outcome"
       # fixedUri: urn:extension:condition-outcome
       # status: active

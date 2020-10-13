@@ -1,4 +1,5 @@
 description: Defines AZ constraints and extensions on the Address data type
+id: AZAddress
 url: "urn:profile:AZAddress"
 name: "AZAddressProfile"
 status: active
@@ -21,7 +22,9 @@ elements:
     region:
       type: CodeableConcept
       description: Address region
-      url: urn:extension:address-region
+      id: address-region
+      # url: urn:extension:address-region
+      url: urn:extension:hl7.fhir.ae-Address-region
       # name: "region"
       # fixedUri: urn:extension:address-region
       # status: active
@@ -31,7 +34,7 @@ elements:
       # type: Extension
       # baseDefinition: "http://hl7.org/fhir/StructureDefinition/Extension"
       # derivation: constraint
-      # title: ''
+      # title: 'Address region'
       # context:
         # type: element
         # expression: Address

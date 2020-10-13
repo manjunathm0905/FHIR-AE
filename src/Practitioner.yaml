@@ -10,7 +10,7 @@ abstract: false
 type: Practitioner
 baseDefinition: "http://hl7.org/fhir/StructureDefinition/Practitioner"
 derivation: constraint
-# title: ''
+title: 'AZ Practitioner Profile'
 # identifier: {}
 # version: ''
 experimental: false
@@ -24,7 +24,8 @@ elements:
     consentToContactPractitioner:
       description: Practitioner Consent to Contact Extension
       type: boolean
-      url: urn:extension:practitioner-consentToContactPractitioner
+      # url: urn:extension:practitioner-consentToContactPractitioner
+      url: urn:extension:hl7.fhir.ae-Practitioner-consentToContactPractitioner
       # name: "consentToContactPractitioner"
       # fixedUri: urn:extension:practitioner-consentToContactPractitioner
       # status: active
@@ -41,17 +42,18 @@ elements:
       # identifier: {}
       # version: ''
   name:
-    description: "Should use the https://healthsamurai.github.io/ig-ae/StructureDefinition/azhumanname profile on this element"
+    description: "Should use the urn:extension:hl7.fhir.ae-HumanName profile on this element"
     # type:
     # - code: HumanName
       # profile: 
-      # - "https://healthsamurai.github.io/ig-ae/StructureDefinition/azhumanname"
-    profile: "https://healthsamurai.github.io/ig-ae/StructureDefinition/azhumanname"
-
+      # - "urn:extension:azhumanname"
+    # profile: "urn:extension:azhumanname"
+    # profile: "urn:extension:hl7.fhir.ae-HumanName"
   address:
-    description: "Should use the https://healthsamurai.github.io/ig-ae/StructureDefinition/azaddress profile on this element"
+    description: "Should use the urn:extension:hl7.fhir.ae-Address profile on this element"
     # type:
     # - code: Address
       # profile: 
-      # - "https://healthsamurai.github.io/ig-ae/StructureDefinition/azaddress"
-    profile: "https://healthsamurai.github.io/ig-ae/StructureDefinition/azaddress"
+      # - "urn:extension:azaddress"
+    # profile: "urn:extension:azaddress"  
+    # profile: "urn:extension:hl7.fhir.ae-Address" 

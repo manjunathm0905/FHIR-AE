@@ -19,7 +19,8 @@ elements:
     salutation:
       type: CodeableConcept
       description: Name salutation
-      url: urn:extension:humanname-salutation
+      # url: urn:extension:humanname-salutation
+      url: urn:extension:hl7.fhir.ae-HumanName-salutation
       # name: "salutation"
       # fixedUri: urn:extension:humanname-salutation
       # status: active
