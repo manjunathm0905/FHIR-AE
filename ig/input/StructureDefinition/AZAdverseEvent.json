@@ -1,0 +1,186 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "AZAdverseEvent",
+  "description": "Defines AZ constraints and extensions on the AdverseEvent resource",
+  "type": "AdverseEvent",
+  "name": "AZAdverseEventProfile",
+  "status": "active",
+  "fhirVersion": "4.0.1",
+  "abstract": false,
+  "url": "http://somewhere.org/fhir/uv/myig/StructureDefinition/AZAdverseEvent",
+  "kind": "resource",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/AdverseEvent",
+  "derivation": "constraint",
+  "title": "AZ AdverseEvent Profile",
+  "experimental": false,
+  "date": "2020-09-30",
+  "publisher": "AstraZeneca",
+  "differential": {
+    "element": [{
+        "id": "AdverseEvent.extension",
+        "path": "AdverseEvent.extension",
+        "mustSupport": true,
+        "slicing": {
+          "discriminator": [{
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      }, {
+        "id": "AdverseEvent.extension:AZEmployeeReporter",
+        "path": "AdverseEvent.extension",
+        "mustSupport": true,
+        "type": [{
+            "code": "Extension",
+            "profile": ["http://somewhere.org/fhir/uv/myig/StructureDefinition/hl7.fhir.ae-AdverseEvent-AZEmployeeReporter"]
+          }
+        ],
+        "short": "AZ Employee Reporter",
+        "sliceName": "AZEmployeeReporter",
+        "isModifier": false
+      }, {
+        "id": "AdverseEvent.extension:reporterType",
+        "path": "AdverseEvent.extension",
+        "mustSupport": true,
+        "type": [{
+            "code": "Extension",
+            "profile": ["http://somewhere.org/fhir/uv/myig/StructureDefinition/hl7.fhir.ae-AdverseEvent-reporterType"]
+          }
+        ],
+        "short": "Reporter Type",
+        "sliceName": "reporterType",
+        "isModifier": false
+      }, {
+        "id": "AdverseEvent.extension:programNumber",
+        "path": "AdverseEvent.extension",
+        "mustSupport": true,
+        "short": "Program Number",
+        "type": [{
+            "code": "Extension",
+            "profile": ["http://somewhere.org/fhir/uv/myig/StructureDefinition/hl7.fhir.ae-AdverseEvent-programNumber"]
+          }
+        ],
+        "sliceName": "programNumber",
+        "isModifier": false
+      }, {
+        "id": "AdverseEvent.extension:localReference",
+        "path": "AdverseEvent.extension",
+        "mustSupport": true,
+        "short": "Local Ref No",
+        "type": [{
+            "code": "Extension",
+            "profile": ["http://somewhere.org/fhir/uv/myig/StructureDefinition/hl7.fhir.ae-AdverseEvent-localReference"]
+          }
+        ],
+        "sliceName": "localReference",
+        "isModifier": false
+      }, {
+        "id": "AdverseEvent.extension:sourceType",
+        "path": "AdverseEvent.extension",
+        "mustSupport": true,
+        "short": "Source Type",
+        "type": [{
+            "code": "Extension",
+            "profile": ["http://somewhere.org/fhir/uv/myig/StructureDefinition/hl7.fhir.ae-AdverseEvent-sourceType"]
+          }
+        ],
+        "binding": {
+          "valueSet": "http://somewhere.org/fhir/uv/myig/ValueSet/intelligent-source",
+          "strength": "required",
+          "description": "The value should be from the valueset intelligent-source"
+        },
+        "sliceName": "sourceType",
+        "isModifier": false
+      }, {
+        "id": "AdverseEvent.extension:surveyStatus",
+        "path": "AdverseEvent.extension",
+        "mustSupport": true,
+        "short": "Survey Status",
+        "type": [{
+            "code": "Extension",
+            "profile": ["http://somewhere.org/fhir/uv/myig/StructureDefinition/hl7.fhir.ae-AdverseEvent-surveyStatus"]
+          }
+        ],
+        "binding": {
+          "valueSet": "http://somewhere.org/fhir/uv/myig/ValueSet/survey-status",
+          "strength": "required",
+          "description": "The value should be from the valueset survey-status"
+        },
+        "sliceName": "surveyStatus",
+        "isModifier": false
+      }, {
+        "id": "AdverseEvent.extension:lateReason",
+        "path": "AdverseEvent.extension",
+        "mustSupport": true,
+        "short": "Late reason for raising adverse event",
+        "type": [{
+            "code": "Extension",
+            "profile": ["http://somewhere.org/fhir/uv/myig/StructureDefinition/hl7.fhir.ae-AdverseEvent-lateReason"]
+          }
+        ],
+        "sliceName": "lateReason",
+        "isModifier": false
+      }, {
+        "id": "AdverseEvent.suspectEntity",
+        "path": "AdverseEvent.suspectEntity",
+        "mustSupport": true
+      }, {
+        "id": "AdverseEvent.suspectEntity.causality",
+        "path": "AdverseEvent.suspectEntity.causality",
+        "mustSupport": true
+      }, {
+        "id": "AdverseEvent.suspectEntity.causality.extension",
+        "path": "AdverseEvent.suspectEntity.causality.extension",
+        "mustSupport": true,
+        "slicing": {
+          "discriminator": [{
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      }, {
+        "id": "AdverseEvent.suspectEntity.causality.extension:positiveDechallenge",
+        "path": "AdverseEvent.suspectEntity.causality.extension",
+        "mustSupport": true,
+        "type": [{
+            "code": "Extension",
+            "profile": ["http://somewhere.org/fhir/uv/myig/StructureDefinition/hl7.fhir.ae-AdverseEvent-positiveDechallenge"]
+          }
+        ],
+        "short": "Positive Dechallenge",
+        "sliceName": "positiveDechallenge",
+        "isModifier": false
+      }, {
+        "id": "AdverseEvent.suspectEntity.causality.extension:positiveRechallenge",
+        "path": "AdverseEvent.suspectEntity.causality.extension",
+        "mustSupport": true,
+        "type": [{
+            "code": "Extension",
+            "profile": ["http://somewhere.org/fhir/uv/myig/StructureDefinition/hl7.fhir.ae-AdverseEvent-positiveRechallenge"]
+          }
+        ],
+        "short": "Positive Rechallenge",
+        "sliceName": "positiveRechallenge",
+        "isModifier": false
+      }, {
+        "id": "AdverseEvent.suspectEntity.causality.extension:rechallenge",
+        "path": "AdverseEvent.suspectEntity.causality.extension",
+        "mustSupport": true,
+        "type": [{
+            "code": "Extension",
+            "profile": ["http://somewhere.org/fhir/uv/myig/StructureDefinition/hl7.fhir.ae-AdverseEvent-rechallenge"]
+          }
+        ],
+        "short": "Rechallenge",
+        "sliceName": "rechallenge",
+        "isModifier": false
+      }
+    ]
+  }
+}

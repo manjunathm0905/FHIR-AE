@@ -1,0 +1,124 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "hl7.fhir.ae-MedicationAdministration",
+  "description": "Defines AZ constraints and extensions on the MedicationAdministration resource",
+  "type": "MedicationAdministration",
+  "name": "AZMedicationAdministrationProfile",
+  "status": "active",
+  "fhirVersion": "4.0.1",
+  "abstract": false,
+  "url": "http://somewhere.org/fhir/uv/myig/StructureDefinition/AZMedicationAdministration",
+  "kind": "resource",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/MedicationAdministration",
+  "derivation": "constraint",
+  "title": "AZ MedicationAdministration Profile",
+  "experimental": false,
+  "date": "2020-09-30",
+  "publisher": "AstraZeneca",
+  "differential": {
+    "element": [{
+        "id": "MedicationAdministration.extension",
+        "path": "MedicationAdministration.extension",
+        "mustSupport": true,
+        "slicing": {
+          "discriminator": [{
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      }, {
+        "id": "MedicationAdministration.extension:actionTaken",
+        "path": "MedicationAdministration.extension",
+        "mustSupport": true,
+        "type": [{
+            "code": "Extension",
+            "profile": ["http://somewhere.org/fhir/uv/myig/StructureDefinition/hl7.fhir.ae-MedicationAdministration-actionTaken"]
+          }
+        ],
+        "short": "MedicationAdministration Action Taken",
+        "sliceName": "actionTaken",
+        "isModifier": false
+      }, {
+        "id": "MedicationAdministration.extension:operatorDevice",
+        "path": "MedicationAdministration.extension",
+        "mustSupport": true,
+        "type": [{
+            "code": "Extension",
+            "profile": ["http://somewhere.org/fhir/uv/myig/StructureDefinition/hl7.fhir.ae-MedicationAdministration-operatorDevice"]
+          }
+        ],
+        "short": "MedicationAdministration Operator Device",
+        "sliceName": "operatorDevice",
+        "isModifier": false
+      }, {
+        "id": "MedicationAdministration.extension:operatorDeviceOther",
+        "path": "MedicationAdministration.extension",
+        "mustSupport": true,
+        "type": [{
+            "code": "Extension",
+            "profile": ["http://somewhere.org/fhir/uv/myig/StructureDefinition/hl7.fhir.ae-MedicationAdministration-operatorDeviceOther"]
+          }
+        ],
+        "short": "MedicationAdministration Operator Device Other",
+        "sliceName": "operatorDeviceOther",
+        "isModifier": false
+      }, {
+        "id": "MedicationAdministration.extension:productType",
+        "path": "MedicationAdministration.extension",
+        "mustSupport": true,
+        "type": [{
+            "code": "Extension",
+            "profile": ["http://somewhere.org/fhir/uv/myig/StructureDefinition/hl7.fhir.ae-MedicationAdministration-productType"]
+          }
+        ],
+        "short": "MedicationAdministration Product Type",
+        "sliceName": "productType",
+        "isModifier": false
+      }, {
+        "id": "MedicationAdministration.dosage",
+        "path": "MedicationAdministration.dosage",
+        "mustSupport": true
+      }, {
+        "id": "MedicationAdministration.dosage.extension",
+        "path": "MedicationAdministration.dosage.extension",
+        "mustSupport": true,
+        "slicing": {
+          "discriminator": [{
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      }, {
+        "id": "MedicationAdministration.dosage.extension:frequency",
+        "path": "MedicationAdministration.dosage.extension",
+        "mustSupport": true,
+        "type": [{
+            "code": "Extension",
+            "profile": ["http://somewhere.org/fhir/uv/myig/StructureDefinition/hl7.fhir.ae-MedicationAdministration-frequency"]
+          }
+        ],
+        "short": "MedicationAdministration Dosage Frequency",
+        "sliceName": "frequency",
+        "isModifier": false
+      }, {
+        "id": "MedicationAdministration.dosage.extension:unit",
+        "path": "MedicationAdministration.dosage.extension",
+        "mustSupport": true,
+        "type": [{
+            "code": "Extension",
+            "profile": ["http://somewhere.org/fhir/uv/myig/StructureDefinition/hl7.fhir.ae-MedicationAdministration-unit"]
+          }
+        ],
+        "short": "MedicationAdministration Dosage Unit",
+        "sliceName": "unit",
+        "isModifier": false
+      }
+    ]
+  }
+}

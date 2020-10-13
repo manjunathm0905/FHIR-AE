@@ -1,0 +1,47 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "hl7.fhir.ae-HumanName",
+  "description": "Defines AZ constraints and extensions on the HumanName data type",
+  "type": "HumanName",
+  "name": "AZHumanNameProfile",
+  "status": "active",
+  "fhirVersion": "4.0.1",
+  "abstract": false,
+  "url": "http://somewhere.org/fhir/uv/myig/StructureDefinition/AZHumanName",
+  "kind": "complex-type",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/HumanName",
+  "derivation": "constraint",
+  "title": "AZ HumanName Profile",
+  "experimental": false,
+  "date": "2020-10-06",
+  "publisher": "AstraZeneca",
+  "differential": {
+    "element": [{
+        "id": "HumanName.extension",
+        "path": "HumanName.extension",
+        "mustSupport": true,
+        "slicing": {
+          "discriminator": [{
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      }, {
+        "id": "HumanName.extension:salutation",
+        "path": "HumanName.extension",
+        "mustSupport": true,
+        "type": [{
+            "code": "Extension",
+            "profile": ["http://somewhere.org/fhir/uv/myig/StructureDefinition/hl7.fhir.ae-HumanName-salutation"]
+          }
+        ],
+        "short": "Name salutation",
+        "sliceName": "salutation",
+        "isModifier": false
+      }
+    ]
+  }
+}

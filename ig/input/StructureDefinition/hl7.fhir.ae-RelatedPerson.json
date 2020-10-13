@@ -1,0 +1,138 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "hl7.fhir.ae-RelatedPerson",
+  "description": "Defines AZ constraints and extensions on the RelatedPerson resource",
+  "type": "RelatedPerson",
+  "name": "AZRelatedPersonProfile",
+  "title": "AZ RelatedPerson Profile",
+  "status": "active",
+  "fhirVersion": "4.0.1",
+  "abstract": false,
+  "url": "http://somewhere.org/fhir/uv/myig/StructureDefinition/hl7.fhir.ae-RelatedPerson",
+  "kind": "resource",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
+  "derivation": "constraint",
+  "experimental": false,
+  "date": "2020-09-30",
+  "publisher": "AstraZeneca",
+  "differential": {
+    "element": [{
+        "id": "RelatedPerson.extension",
+        "path": "RelatedPerson.extension",
+        "mustSupport": true,
+        "slicing": {
+          "discriminator": [{
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      }, {
+        "id": "RelatedPerson.extension:consentToContactReporter",
+        "path": "RelatedPerson.extension",
+        "mustSupport": true,
+        "short": "RelatedPerson Consent to Contact Extension",
+        "type": [{
+            "code": "Extension",
+            "profile": ["http://somewhere.org/fhir/uv/myig/StructureDefinition/hl7.fhir.ae-RelatedPerson-consentToContactReporter"]
+          }
+        ],
+        "sliceName": "consentToContactReporter",
+        "isModifier": false
+      }, {
+        "id": "RelatedPerson.name",
+        "path": "RelatedPerson.name",
+        "mustSupport": true,
+        "type": [{
+            "code": "HumanName"
+          }
+        ]
+      }, {
+        "id": "RelatedPerson.name.extension",
+        "path": "RelatedPerson.name.extension",
+        "slicing": {
+          "discriminator": [{
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+
+        "type": [{
+            "code": "Extension"
+          }
+        ]
+      }, {
+        "id": "RelatedPerson.name.extension:salutation",
+        "path": "RelatedPerson.name.extension",
+        "short": "Name salutation",
+        "sliceName": "salutation",
+        "definition": "Name salutation",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [{
+            "code": "Extension",
+            "profile": ["http://somewhere.org/fhir/uv/myig/StructureDefinition/hl7.fhir.ae-HumanName-salutation"]
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mustSupport": true
+      }, {
+        "id": "RelatedPerson.address",
+        "path": "RelatedPerson.address",
+        "mustSupport": true,
+        "type": [{
+            "code": "Address"
+          }
+        ]
+      }, {
+        "id": "RelatedPerson.address.extension",
+        "path": "RelatedPerson.address.extension",
+        "slicing": {
+          "discriminator": [{
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "type": [{
+            "code": "Extension"
+          }
+        ]
+      }, {
+        "id": "RelatedPerson.address.extension:region",
+        "path": "RelatedPerson.address.extension",
+        "short": "Address region",
+        "sliceName": "region",
+        "definition": "Address region",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [{
+            "code": "Extension",
+            "profile": ["http://somewhere.org/fhir/uv/myig/StructureDefinition/hl7.fhir.ae-Address-region"]
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mustSupport": true
+      }
+    ]
+  }
+}

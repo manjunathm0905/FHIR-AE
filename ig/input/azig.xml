@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Start by finding all references to "myig" and updating to appropriate text for your IG, including changing realm -->
+<ImplementationGuide xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas/R5/fhir-single.xsd">
+  <id value="example.fhir.az.ig"/>
+  <url value="http://somewhere.org/fhir/uv/myig/ImplementationGuide/example.fhir.az.ig"/>
+  <!-- This version will propagate to all artifacts unless the "propagate-version" extension is overridden -->
+  <version value="0.1.0"/>
+  <name value="AZAdverseEventIG"/>
+  <title value="AstraZeneca Adverse Event Implementation Guide"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <publisher value="AstraZeneca - Adverse Event Work Group"/>
+  <contact>
+    <telecom>
+      <!-- Or whatever URL and/or email address(es) are appropriate -->
+  <system value="url"/>
+      <value value="https://www.astrazeneca.com"/>
+    </telecom>
+  </contact>
+  <description value="AstraZeneca Adverse Event Implementation Guide"/>
+  <jurisdiction>
+    <!-- This will drive SNOMED release used -->
+    <coding>
+      <!-- This is the code for universal -->
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <!-- Change to this if the IG is country-specific
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      -->
+    </coding>
+  </jurisdiction>
+  <packageId value="example.fhir.az.ig"/>
+  <!-- This should be changed to 'not-open-source' or another license if appropriate for non-HL7-published content -->
+  <license value="ISC"/>
+  <!-- This is whatever FHIR version(s) the IG artifacts are targeting (not the version of this file, which should always be 'current release') -->
+  <fhirVersion value="4.0.1"/>
+  <definition>
+    <!-- You don't need to define any groupings.  The IGPublisher will define them for you.  You only need to do so if your IG is 'special' and it's
+      inappropriate to use the defaults.  Feel free to provide feedback about the defaults... -->
+    
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/AZAddress"/>
+      </reference>
+      <description value="AZAddress"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/hl7.fhir.ae-Address-region"/>
+      </reference>
+      <description value="hl7.fhir.ae-Address-region"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/AZAdverseEvent"/>
+      </reference>
+      <description value="AZAdverseEvent"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/hl7.fhir.ae-AdverseEvent-AZEmployeeReporter"/>
+      </reference>
+      <description value="hl7.fhir.ae-AdverseEvent-AZEmployeeReporter"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/hl7.fhir.ae-AdverseEvent-lateReason"/>
+      </reference>
+      <description value="hl7.fhir.ae-AdverseEvent-lateReason"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/hl7.fhir.ae-AdverseEvent-localReference"/>
+      </reference>
+      <description value="hl7.fhir.ae-AdverseEvent-localReference"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/hl7.fhir.ae-AdverseEvent-positiveDechallenge"/>
+      </reference>
+      <description value="hl7.fhir.ae-AdverseEvent-positiveDechallenge"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/hl7.fhir.ae-AdverseEvent-positiveRechallenge"/>
+      </reference>
+      <description value="hl7.fhir.ae-AdverseEvent-positiveRechallenge"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/hl7.fhir.ae-AdverseEvent-programNumber"/>
+      </reference>
+      <description value="hl7.fhir.ae-AdverseEvent-programNumber"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/hl7.fhir.ae-AdverseEvent-rechallenge"/>
+      </reference>
+      <description value="hl7.fhir.ae-AdverseEvent-rechallenge"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/hl7.fhir.ae-AdverseEvent-reporterType"/>
+      </reference>
+      <description value="hl7.fhir.ae-AdverseEvent-reporterType"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/hl7.fhir.ae-AdverseEvent-sourceType"/>
+      </reference>
+      <description value="hl7.fhir.ae-AdverseEvent-sourceType"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/hl7.fhir.ae-AdverseEvent-surveyStatus"/>
+      </reference>
+      <description value="hl7.fhir.ae-AdverseEvent-surveyStatus"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/hl7.fhir.ae-Condition"/>
+      </reference>
+      <description value="hl7.fhir.ae-Condition"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/hl7.fhir.ae-Condition-duration"/>
+      </reference>
+      <description value="hl7.fhir.ae-Condition-duration"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/hl7.fhir.ae-Condition-outcome"/>
+      </reference>
+      <description value="hl7.fhir.ae-Condition-outcome"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/hl7.fhir.ae-Condition-resultingCondition"/>
+      </reference>
+      <description value="hl7.fhir.ae-Condition-resultingCondition"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/hl7.fhir.ae-Condition-seriousness"/>
+      </reference>
+      <description value="hl7.fhir.ae-Condition-seriousness"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/hl7.fhir.ae-HumanName"/>
+      </reference>
+      <description value="hl7.fhir.ae-HumanName"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/hl7.fhir.ae-HumanName-salutation"/>
+      </reference>
+      <description value="hl7.fhir.ae-HumanName-salutation"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/hl7.fhir.ae-MedicationAdministration"/>
+      </reference>
+      <description value="hl7.fhir.ae-MedicationAdministration"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/hl7.fhir.ae-MedicationAdministration-actionTaken"/>
+      </reference>
+      <description value="hl7.fhir.ae-MedicationAdministration-actionTaken"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/hl7.fhir.ae-MedicationAdministration-frequency"/>
+      </reference>
+      <description value="hl7.fhir.ae-MedicationAdministration-frequency"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/hl7.fhir.ae-MedicationAdministration-operatorDevice"/>
+      </reference>
+      <description value="hl7.fhir.ae-MedicationAdministration-operatorDevice"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/hl7.fhir.ae-MedicationAdministration-operatorDeviceOther"/>
+      </reference>
+      <description value="hl7.fhir.ae-MedicationAdministration-operatorDeviceOther"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/hl7.fhir.ae-MedicationAdministration-productType"/>
+      </reference>
+      <description value="hl7.fhir.ae-MedicationAdministration-productType"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/hl7.fhir.ae-MedicationAdministration-unit"/>
+      </reference>
+      <description value="hl7.fhir.ae-MedicationAdministration-unit"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/hl7.fhir.ae-Observation"/>
+      </reference>
+      <description value="hl7.fhir.ae-Observation"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/hl7.fhir.ae-Observation-pregnancyDueDate"/>
+      </reference>
+      <description value="hl7.fhir.ae-Observation-pregnancyDueDate"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/hl7.fhir.ae-Observation-pregnancyFlag"/>
+      </reference>
+      <description value="hl7.fhir.ae-Observation-pregnancyFlag"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/hl7.fhir.ae-Observation-previousPregnanciesDetails"/>
+      </reference>
+      <description value="hl7.fhir.ae-Observation-previousPregnanciesDetails"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/hl7.fhir.ae-Patient"/>
+      </reference>
+      <description value="hl7.fhir.ae-Patient"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/hl7.fhir.ae-Patient-ageGroup"/>
+      </reference>
+      <description value="hl7.fhir.ae-Patient-ageGroup"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/hl7.fhir.ae-Patient-consentToContactPatient"/>
+      </reference>
+      <description value="hl7.fhir.ae-Patient-consentToContactPatient"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/hl7.fhir.ae-Patient-ethnicity"/>
+      </reference>
+      <description value="hl7.fhir.ae-Patient-ethnicity"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/hl7.fhir.ae-Patient-gender"/>
+      </reference>
+      <description value="hl7.fhir.ae-Patient-gender"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/hl7.fhir.ae-Patient-patientAge"/>
+      </reference>
+      <description value="hl7.fhir.ae-Patient-patientAge"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/hl7.fhir.ae-Practitioner"/>
+      </reference>
+      <description value="hl7.fhir.ae-Practitioner"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/hl7.fhir.ae-Practitioner-consentToContactPractitioner"/>
+      </reference>
+      <description value="hl7.fhir.ae-Practitioner-consentToContactPractitioner"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/hl7.fhir.ae-RelatedPerson"/>
+      </reference>
+      <description value="hl7.fhir.ae-RelatedPerson"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/hl7.fhir.ae-RelatedPerson-consentToContactReporter"/>
+      </reference>
+      <description value="hl7.fhir.ae-RelatedPerson-consentToContactReporter"/>
+    </resource>
+    
+    
+    <resource>
+      <reference>
+        <reference value="ValueSet/hl7.fhir.ae-condition-outcome"/>
+      </reference>
+      <name value="Value set hl7.fhir.ae-condition-outcome"/>
+    </resource>    
+       
+    <resource>
+      <reference>
+        <reference value="ValueSet/hl7.fhir.ae-condition-seriousness"/>
+      </reference>
+      <name value="Value set hl7.fhir.ae-condition-seriousness"/>
+    </resource>   
+       
+    <resource>
+      <reference>
+        <reference value="ValueSet/hl7.fhir.ae-detailed-ethnicity"/>
+      </reference>
+      <name value="Value set hl7.fhir.ae-detailed-ethnicity"/>
+    </resource>   
+       
+    <resource>
+      <reference>
+        <reference value="ValueSet/hl7.fhir.ae-intelligent-source"/>
+      </reference>
+      <name value="Value set hl7.fhir.ae-intelligent-source"/>
+    </resource>   
+       
+    <resource>
+      <reference>
+        <reference value="ValueSet/hl7.fhir.ae-resulting-condition"/>
+      </reference>
+      <name value="Value set hl7.fhir.ae-resulting-condition"/>
+    </resource>   
+       
+    <resource>
+      <reference>
+        <reference value="ValueSet/hl7.fhir.ae-survey-status"/>
+      </reference>
+      <name value="Value set hl7.fhir.ae-survey-status"/>
+    </resource> 
+    
+    <page>
+      <!-- The root will always be toc.html - the template will force it if you don't do it -->
+      <nameUrl value="toc.html"/>
+      <title value="Table of Contents"/>
+      <generation value="html"/>
+      <page>
+        <nameUrl value="index.html"/>
+        <title value="AZ IG Home Page"/>
+        <generation value="html"/>
+      </page>
+      <page>
+        <nameUrl value="background.html"/>
+        <title value="Background"/>
+        <generation value="html"/>
+      </page>
+      <page>
+        <nameUrl value="spec.html"/>
+        <title value="Detailed Specification"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="downloads.html"/>
+        <title value="Useful Downloads"/>
+        <generation value="html"/>
+      </page>
+      <!-- <page> -->
+        <!-- <nameUrl value="changes.html"/> -->
+        <!-- <title value="IG Change History"/> -->
+        <!-- <generation value="html"/> -->
+      <!-- </page> -->
+    </page>
+    <!-- copyright year is a mandatory parameter -->
+    <parameter>
+      <code value="copyrightyear"/>
+      <value value="2020+"/>
+    </parameter>
+    <!-- releaselabel should be the ballot status for HL7-published IGs. -->
+    <parameter>
+      <code value="releaselabel"/>
+      <value value="CI Build"/>
+    </parameter>
+<!--     <parameter>
+      <code value="find-other-resources"/>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input\history"/>
+    </parameter>
+    <parameter>
+      <code value="path-binary"/>
+      <value value="input\cql"/>
+    </parameter> -->
+    <parameter>
+      <code value="path-liquid"/>
+      <value value="templates\liquid"/>
+    </parameter>
+<!-- Uncomment one or more of these if you want to limit which syntaxes are supported or want to disable the display of mappings
+    <parameter>
+      <code value="excludexml"/>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code value="excludejson"/>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code value="excludettl"/>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code value="excludemap"/>
+      <value value="true"/>
+    </parameter>-->
+  </definition>
+</ImplementationGuide>

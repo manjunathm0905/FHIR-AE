@@ -1,0 +1,214 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "hl7.fhir.ae-Patient",
+  "description": "Defines AZ constraints and extensions on the Patient resource",
+  "type": "Patient",
+  "name": "AZPatientProfile",
+  "status": "active",
+  "fhirVersion": "4.0.1",
+  "abstract": false,
+  "url": "http://somewhere.org/fhir/uv/myig/StructureDefinition/AZPatient",
+  "kind": "resource",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Patient",
+  "derivation": "constraint",
+  "title": "AZ Patient Profile",
+  "experimental": false,
+  "date": "2020-09-30",
+  "publisher": "AstraZeneca",
+  "differential": {
+    "element": [{
+        "id": "Patient.extension",
+        "path": "Patient.extension",
+        "mustSupport": true,
+        "slicing": {
+          "discriminator": [{
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      }, {
+        "id": "Patient.extension:ethnicity",
+        "path": "Patient.extension",
+        "mustSupport": true,
+        "short": "Patient Ethnicity Extension",
+        "type": [{
+            "code": "Extension",
+            "profile": ["http://somewhere.org/fhir/uv/myig/StructureDefinition/hl7.fhir.ae-Patient-ethnicity"]
+          }
+        ],
+        "binding": {
+          "valueSet": "http://somewhere.org/fhir/uv/myig/ValueSet/detailed-ethnicity",
+          "strength": "extensible",
+          "description": "The value should be from the valueset detailed-ethnicity"
+        },
+        "sliceName": "ethnicity",
+        "isModifier": false
+      }, {
+        "id": "Patient.extension:consentToContactPatient",
+        "path": "Patient.extension",
+        "mustSupport": true,
+        "short": "Patient Consent to Contact Extension",
+        "type": [{
+            "code": "Extension",
+            "profile": ["http://somewhere.org/fhir/uv/myig/StructureDefinition/hl7.fhir.ae-Patient-consentToContactPatient"]
+          }
+        ],
+        "sliceName": "consentToContactPatient",
+        "isModifier": false
+      }, {
+        "id": "Patient.extension:gender",
+        "path": "Patient.extension",
+        "mustSupport": true,
+        "type": [{
+            "code": "Extension",
+            "profile": ["http://somewhere.org/fhir/uv/myig/StructureDefinition/hl7.fhir.ae-Patient-gender"]
+          }
+        ],
+        "short": "Patient Gender",
+        "sliceName": "gender",
+        "isModifier": false
+      }, {
+        "id": "Patient.extension:ageGroup",
+        "path": "Patient.extension",
+        "mustSupport": true,
+        "type": [{
+            "code": "Extension",
+            "profile": ["http://somewhere.org/fhir/uv/myig/StructureDefinition/hl7.fhir.ae-Patient-ageGroup"]
+          }
+        ],
+        "short": "Patient Age Group",
+        "sliceName": "ageGroup",
+        "isModifier": false
+      }, {
+        "id": "Patient.extension:patientAge",
+        "path": "Patient.extension",
+        "mustSupport": true,
+        "type": [{
+            "code": "Extension",
+            "profile": ["http://somewhere.org/fhir/uv/myig/StructureDefinition/hl7.fhir.ae-Patient-patientAge"]
+          }
+        ],
+        "short": "Patient Age",
+        "sliceName": "patientAge",
+        "isModifier": false
+      }, {
+        "id": "Patient.name",
+        "path": "Patient.name",
+        "mustSupport": true,
+        "short": "A name associated with the patient",
+        "type": [{
+            "code": "HumanName"
+          }
+        ]
+      }, {
+        "id": "Patient.name.extension",
+        "path": "Patient.name.extension",
+        "slicing": {
+          "discriminator": [{
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "short": "Additional content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [{
+            "code": "Extension"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false
+      }, {
+        "id": "Patient.name.extension:salutation",
+        "path": "Patient.name.extension",
+        "short": "Name salutation",
+        "sliceName": "salutation",
+        "definition": "Name salutation",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [{
+            "code": "Extension",
+            "profile": ["http://somewhere.org/fhir/uv/myig/StructureDefinition/hl7.fhir.ae-HumanName-salutation"]
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mustSupport": true
+      }, {
+        "id": "Patient.address",
+        "path": "Patient.address",
+        "mustSupport": true,
+        "short": "Should use the http://somewhere.org/fhir/uv/myig/StructureDefinition/hl7.fhir.ae-Address profile on this element",
+        "type": [{
+            "code": "Address"
+          }
+        ]
+      }, {
+        "id": "Patient.address.extension",
+        "path": "Patient.address.extension",
+        "slicing": {
+          "discriminator": [{
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "short": "Additional content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [{
+            "code": "Extension"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false
+      }, {
+        "id": "Patient.address.extension:region",
+        "path": "Patient.address.extension",
+        "short": "Address region",
+        "sliceName": "region",
+        "definition": "Address region",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [{
+            "code": "Extension",
+            "profile": ["http://somewhere.org/fhir/uv/myig/StructureDefinition/hl7.fhir.ae-Address-region"]
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mustSupport": true
+      }
+    ]
+  }
+}
