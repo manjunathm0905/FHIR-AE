@@ -16,6 +16,15 @@ In order to develop the implementation guide, do the following steps:
 * execute `./igpop.sh dev` in the command line to run a local server on 8899 (may be changed with `-p` param)
 * navigate to `http://localhost:8899` to see results of editing
 
+
+
+## Alternative Development (with igpop.jar file)
+
+- Clone the repository
+- Access the repository folder
+- Run the command: `java -jar "./igpop/target/igpop.jar" dev -p 8891`
+- Open localhost:8891
+
 ## Generate Structure Definitions
 ---
 
