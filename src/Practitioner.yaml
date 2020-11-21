@@ -42,16 +42,6 @@ elements:
       # identifier: {}
       # version: ''
   name:
-    elements:
-      extension:
-        salutation:
-          description: Name salutation
-          type: CodeableConcept
-          url: urn:extension:hl7.fhir.ae-HumanName-salutation
+    profile: az-HumanName
   address:
-    elements:
-      extension:
-        region:
-          description: Address region
-          type: CodeableConcept
-          url: urn:extension:hl7.fhir.ae-Address-region
+    profile: az-Address
