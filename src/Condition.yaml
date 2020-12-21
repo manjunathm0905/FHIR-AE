@@ -24,6 +24,10 @@ elements:
     duration:
       type: string
       description: Condition Duration
+      title: AZ Condition Duration Extension
+      experimental: false
+      date: "2020-12-18"
+      publisher: AstraZeneca
       # url: urn:extension:condition-duration
       url: urn:extension:hl7.fhir.ae-Condition-duration
       # name: "duration"
@@ -43,6 +47,10 @@ elements:
       # version: ''
     seriousness:
       type: code
+      title: AZ Condition Seriousness Extension
+      experimental: false
+      date: "2020-12-18"
+      publisher: AstraZeneca
       valueset:
         id: condition-seriousness
         description: The value should be from the valueset detailed-ethnicity
@@ -66,6 +74,10 @@ elements:
       # version: ''
     resultingCondition:
       type: code
+      title: AZ Resulting Condition Extension
+      experimental: false
+      date: "2020-12-18"
+      publisher: AstraZeneca
       valueset:
         id: resulting-condition
         description: The value should be from the valueset detailed-ethnicity
@@ -89,6 +101,10 @@ elements:
       # version: ''
     outcome:
       type: CodeableConcept
+      title: AZ Condition Outcome Extension
+      experimental: false
+      date: "2020-12-18"
+      publisher: AstraZeneca
       valueset:
         id: condition-outcome
         description: The value should be from the valueset detailed-ethnicity

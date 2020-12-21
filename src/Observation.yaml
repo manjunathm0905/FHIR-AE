@@ -23,7 +23,11 @@ elements:
   extension:
     pregnancyFlag:
       description: Pregnancy
-      type: boolean 
+      type: boolean
+      title: AZ Pregnancy Extension
+      experimental: false
+      date: "2020-12-18"
+      publisher: AstraZeneca 
       # url: urn:extension:observation-pregnancyFlag
       url: urn:extension:hl7.fhir.ae-Observation-pregnancyFlag
       # name: "pregnancyFlag"
@@ -43,7 +47,11 @@ elements:
       # version: ''
     pregnancyDueDate:
       description: Pregnancy Due Date
-      type: date  
+      type: date
+      title: AZ Pregnancy Due Date Extension
+      experimental: false
+      date: "2020-12-18"
+      publisher: AstraZeneca  
       # url: urn:extension:observation-pregnancyDueDate
       url: urn:extension:hl7.fhir.ae-Observation-pregnancyDueDate
       # name: "pregnancyDueDate"
@@ -64,6 +72,10 @@ elements:
     previousPregnanciesDetails:
       description: Details of previous pregnancies
       type: string 
+      title: AZ Details of previous pregnancies Extension
+      experimental: false
+      date: "2020-12-18"
+      publisher: AstraZeneca
       # url: urn:extension:observation-previousPregnanciesDetails
       url: urn:extension:hl7.fhir.ae-Observation-previousPregnanciesDetails
       # name: "previousPregnanciesDetails"

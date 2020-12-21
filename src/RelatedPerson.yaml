@@ -24,6 +24,10 @@ elements:
     consentToContactReporter:
       description: RelatedPerson Consent to Contact Extension
       type: boolean
+      title: AZ RelatedPerson Consent to Contact Extension
+      experimental: false
+      date: "2020-12-18"
+      publisher: AstraZeneca 
       # url: urn:extension:relatedperson-consentToContactReporter
       url: urn:extension:hl7.fhir.ae-RelatedPerson-consentToContactReporter
       # name: "consentToContactReporter"
@@ -42,6 +46,6 @@ elements:
       # identifier: {}
       # version: ''
   name:
-    profile: az-HumanName
+    profile: HumanName
   address:
-    profile: az-Address
+    profile: Address

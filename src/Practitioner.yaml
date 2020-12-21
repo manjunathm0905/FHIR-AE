@@ -24,6 +24,10 @@ elements:
     consentToContactPractitioner:
       description: Practitioner Consent to Contact Extension
       type: boolean
+      title: AZ Practitioner Consent to Contact Extension
+      experimental: false
+      date: "2020-12-18"
+      publisher: AstraZeneca 
       # url: urn:extension:practitioner-consentToContactPractitioner
       url: urn:extension:hl7.fhir.ae-Practitioner-consentToContactPractitioner
       # name: "consentToContactPractitioner"
@@ -42,6 +46,6 @@ elements:
       # identifier: {}
       # version: ''
   name:
-    profile: az-HumanName
+    profile: HumanName
   address:
-    profile: az-Address
+    profile: Address

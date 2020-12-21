@@ -24,6 +24,10 @@ elements:
     actionTaken:
       type: CodeableConcept
       description: MedicationAdministration Action Taken
+      title: AZ MedicationAdministration Action Taken Extension
+      experimental: false
+      date: "2020-12-18"
+      publisher: AstraZeneca
       # url: urn:extension:medicationadministration-actionTaken
       url: urn:extension:hl7.fhir.ae-MedicationAdministration-actionTaken
       # name: "actionTaken"
@@ -44,6 +48,10 @@ elements:
     operatorDevice:
       type: CodeableConcept
       description: MedicationAdministration Operator Device
+      title: AZ MedicationAdministration Operator Device Extension
+      experimental: false
+      date: "2020-12-18"
+      publisher: AstraZeneca
       # url: urn:extension:medicationadministration-operatorDevice
       url: urn:extension:hl7.fhir.ae-MedicationAdministration-operatorDevice
       # name: "operatorDevice"
@@ -64,6 +72,10 @@ elements:
     operatorDeviceOther:
       type: string
       description: MedicationAdministration Operator Device Other
+      title: AZ MedicationAdministration Operator Device Other Extension
+      experimental: false
+      date: "2020-12-18"
+      publisher: AstraZeneca
       # url: urn:extension:medicationadministration-operatorDeviceOther
       url: urn:extension:hl7.fhir.ae-MedicationAdministration-operatorDeviceOther
       # name: "operatorDeviceOther"
@@ -84,6 +96,10 @@ elements:
     productType:
       type: string
       description: MedicationAdministration Product Type
+      title: AZ MedicationAdministration Product Type Extension
+      experimental: false
+      date: "2020-12-18"
+      publisher: AstraZeneca
       # url: urn:extension:medicationadministration-productType
       url: urn:extension:hl7.fhir.ae-MedicationAdministration-productType
       # name: "productType"
@@ -107,6 +123,10 @@ elements:
         frequency:
           type: CodeableConcept
           description: MedicationAdministration Dosage Frequency
+          title: AZ MedicationAdministration Dosage Frequency Extension
+          experimental: false
+          date: "2020-12-18"
+          publisher: AstraZeneca
           # url: urn:extension:medicationadministration-dosageFrequency
           url: urn:extension:hl7.fhir.ae-MedicationAdministration-frequency
           # name: "dosage"
@@ -127,6 +147,10 @@ elements:
         unit:
           type: CodeableConcept
           description: MedicationAdministration Dosage Unit
+          title: AZ MedicationAdministration Dosage Unit Extension
+          experimental: false
+          date: "2020-12-18"
+          publisher: AstraZeneca
           # url: urn:extension:medicationadministration-dosageUnit
           url: urn:extension:hl7.fhir.ae-MedicationAdministration-unit
           # name: "unit"

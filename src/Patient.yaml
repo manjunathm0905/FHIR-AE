@@ -24,44 +24,42 @@ elements:
     ethnicity:
       description: Patient Ethnicity Extension
       type: CodeableConcept
+      title: AZ Patient Ethnicity Extension
+      experimental: false
+      date: "2020-12-18"
+      publisher: AstraZeneca 
       valueset:
         id: detailed-ethnicity
         description: The value should be from the valueset detailed-ethnicity
-      # url: urn:extension:patient-ethnicity
-      url: urn:extension:hl7.fhir.ae-Patient-ethnicity
     consentToContactPatient:
       description: Patient Consent to Contact Extension
       type: boolean
-      # url: urn:extension:patient-consentToContactPatient
-      url: urn:extension:hl7.fhir.ae-Patient-consentToContactPatient
+      title: AZ Patient Consent to Contact Extension
+      experimental: false
+      date: "2020-12-18"
+      publisher: AstraZeneca
     gender:
       type: CodeableConcept      
       description: Patient Gender
-      # url: urn:extension:patient-gender
-      url: urn:extension:hl7.fhir.ae-Patient-gender
+      title: AZ Patient Gender Extension
+      experimental: false
+      date: "2020-12-18"
+      publisher: AstraZeneca
     ageGroup:
       type: CodeableConcept     
       description: Patient Age Group
-      # url: urn:extension:patient-ageGroup
-      url: urn:extension:hl7.fhir.ae-Patient-ageGroup
+      title: AZ Patient Age Group Extension
+      experimental: false
+      date: "2020-12-18"
+      publisher: AstraZeneca
     patientAge:
       type: integer     
       description: Patient Age
-      # url: urn:extension:patient-patientAge
-      url: urn:extension:hl7.fhir.ae-Patient-patientAge
+      title: AZ Patient Age Extension
+      experimental: false
+      date: "2020-12-18"
+      publisher: AstraZeneca
   name:
-    profile: az-HumanName
-    # elements:
-      # extension:
-        # salutation:
-          # description: Name salutation
-          # type: CodeableConcept
-          # url: urn:extension:hl7.fhir.ae-HumanName-salutation
+    profile: HumanName
   address:
-    profile: az-Address
-    # elements:
-      # extension:
-        # region:
-          # description: Address region
-          # type: CodeableConcept
-          # url: urn:extension:hl7.fhir.ae-Address-region
+    profile: Address

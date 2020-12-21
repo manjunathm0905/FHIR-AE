@@ -1,5 +1,4 @@
 description: Defines AZ constraints and extensions on the AdverseEvent resource
-id: AZAdverseEvent
 url: "urn:profile:AZAdverseEvent"
 name: "AZAdverseEventProfile"
 status: active
@@ -23,6 +22,10 @@ elements:
     AZEmployeeReporter:
       type: string
       description: AZ Employee Reporter
+      title: AZ Employee Reporter Extension
+      experimental: false
+      date: "2020-12-18"
+      publisher: AstraZeneca
       # url: urn:extension:adverseevent-employeeReporter
       url: urn:extension:hl7.fhir.ae-AdverseEvent-AZEmployeeReporter
       # name: "AZEmployeeReporter"
@@ -43,6 +46,10 @@ elements:
     reporterType:
       type: string
       description: Reporter Type
+      title: AZ Reporter Type Extension
+      experimental: false
+      date: "2020-12-18"
+      publisher: AstraZeneca
       # url: urn:extension:adverseevent-reporterType
       url: urn:extension:hl7.fhir.ae-AdverseEvent-reporterType
       # name: "reporterType"
@@ -63,6 +70,10 @@ elements:
     programNumber:
       description: Program Number
       type: string
+      title: AZ Program Number Extension
+      experimental: false
+      date: "2020-12-18"
+      publisher: AstraZeneca
       # url: urn:extension:adverseevent-programNumber
       url: urn:extension:hl7.fhir.ae-AdverseEvent-programNumber
       # name: "programNumber"
@@ -83,6 +94,10 @@ elements:
     localReference:
       description: Local Ref No
       type: string
+      title: AZ Local Ref No Extension
+      experimental: false
+      date: "2020-12-18"
+      publisher: AstraZeneca
       # url: urn:extension:adverseevent-localReference
       url: urn:extension:hl7.fhir.ae-AdverseEvent-localReference
       # name: "localReference"
@@ -103,6 +118,10 @@ elements:
     sourceType:
       description: Source Type
       type: code
+      title: AZ Source Type Extension
+      experimental: false
+      date: "2020-12-18"
+      publisher: AstraZeneca
       valueset: 
         id: intelligent-source
         description: The value should be from the valueset intelligent-source
@@ -126,6 +145,10 @@ elements:
     surveyStatus:
       description: Survey Status
       type: code
+      title: AZ Survey Status Extension
+      experimental: false
+      date: "2020-12-18"
+      publisher: AstraZeneca
       valueset: 
         id: survey-status        
         description: The value should be from the valueset survey-status
@@ -149,6 +172,10 @@ elements:
     lateReason:
       description: Late reason for raising adverse event
       type: string
+      title: AZ Late Reason Extension
+      experimental: false
+      date: "2020-12-18"
+      publisher: AstraZeneca
       # url: urn:extension:adverseevent-lateReason
       url: urn:extension:hl7.fhir.ae-AdverseEvent-lateReason
       # name: "lateReason"
@@ -174,6 +201,10 @@ elements:
             positiveDechallenge:
               type: string
               description: Positive Dechallenge
+              title: AZ Positive Dechallenge Extension
+              experimental: false
+              date: "2020-12-18"
+              publisher: AstraZeneca
               # url: urn:extension:adverseevent-causalityPositiveDechallenge
               url: urn:extension:hl7.fhir.ae-AdverseEvent-positiveDechallenge
               # name: "positiveDechallenge"
@@ -194,6 +225,10 @@ elements:
             positiveRechallenge:
               type: string
               description: Positive Rechallenge
+              title: AZ Positive Rechallenge Extension
+              experimental: false
+              date: "2020-12-18"
+              publisher: AstraZeneca
               # url: urn:extension:adverseevent-causalityPositiveRechallenge
               url: urn:extension:hl7.fhir.ae-AdverseEvent-positiveRechallenge
               # name: "positiveRechallenge"
@@ -214,6 +249,10 @@ elements:
             rechallenge:
               type: string
               description: Rechallenge
+              title: AZ Rechallenge Extension
+              experimental: false
+              date: "2020-12-18"
+              publisher: AstraZeneca
               # url: urn:extension:adverseevent-causalityRechallenge
               url: urn:extension:hl7.fhir.ae-AdverseEvent-rechallenge
               # name: "rechallenge"
