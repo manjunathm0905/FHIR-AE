@@ -2,7 +2,7 @@
 <!-- Start by finding all references to "myig" and updating to appropriate text for your IG, including changing realm -->
 <ImplementationGuide xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas/R5/fhir-single.xsd">
   <id value="example.fhir.az.ig"/>
-  <url value="http://somewhere.org/fhir/uv/myig/ImplementationGuide/example.fhir.az.ig"/>
+  <url value="https://semalexa.github.io/ig-az/ImplementationGuide/example.fhir.az.ig"/>
   <!-- This version will propagate to all artifacts unless the "propagate-version" extension is overridden -->
   <version value="0.1.0"/>
   <name value="AZAdverseEventIG"/>
@@ -41,7 +41,7 @@
     
     <resource>
       <reference>
-        <reference value="StructureDefinition/AZAddress"/>
+        <reference value="StructureDefinition/hl7.fhir.ae-Address"/>
       </reference>
       <description value="AZAddress"/>
     </resource>
@@ -55,7 +55,7 @@
 
     <resource>
       <reference>
-        <reference value="StructureDefinition/AZAdverseEvent"/>
+        <reference value="StructureDefinition/hl7.fhir.ae-AdverseEvent"/>
       </reference>
       <description value="AZAdverseEvent"/>
     </resource>

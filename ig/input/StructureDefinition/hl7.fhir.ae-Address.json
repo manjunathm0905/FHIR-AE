@@ -1,20 +1,20 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "AZAddress",
-  "description": "Defines AZ constraints and extensions on the Address data type",
-  "type": "Address",
+  "id": "hl7.fhir.ae-Address",
+  "url": "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-Address",
   "name": "AZAddressProfile",
-  "status": "active",
-  "fhirVersion": "4.0.1",
-  "abstract": false,
-  "url": "http://somewhere.org/fhir/uv/myig/StructureDefinition/AZAddress",
-  "kind": "complex-type",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Address",
-  "derivation": "constraint",
   "title": "AZ Address Profile",
+  "status": "active",
   "experimental": false,
   "date": "2020-10-06",
   "publisher": "AstraZeneca",
+  "description": "Defines AZ constraints and extensions on the Address data type",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "type": "Address",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Address",
+  "derivation": "constraint",
   "differential": {
     "element": [{
         "id": "Address.extension",
@@ -30,15 +30,19 @@
           "rules": "open"
         }
       }, {
-        "id": "address-region",
+        "id": "Address.extension:region",
         "path": "Address.extension",
         "mustSupport": true,
         "type": [{
             "code": "Extension",
-            "profile": ["http://somewhere.org/fhir/uv/myig/StructureDefinition/hl7.fhir.ae-Address-region"]
+            "profile": ["https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-Address-region"]
           }
         ],
         "short": "Address region",
+        "title": "AZ Address Region Extension",
+        "experimental": false,
+        "date": "2020-12-18",
+        "publisher": "AstraZeneca",
         "sliceName": "region",
         "isModifier": false
       }

@@ -1,11 +1,11 @@
 {
   "resourceType": "ValueSet",
   "id": "hl7.fhir.ae-condition-outcome",
-  "url": "http://somewhere.org/fhir/uv/myig/ValueSet/hl7.fhir.ae-condition-outcome",
+  "url": "https://semalexa.github.io/ig-az/ValueSet/hl7.fhir.ae-condition-outcome",
   "name": "ConditionOutcome",
-  "title": "Condition outcome",
+  "title": "condition outcome",
   "status": "active",
-  "date": "2020-10-12T20:21:26Z",
+  "date": "2020-12-18T10:10:37Z",
   "compose": {
     "include": [{
         "system": "urn:CodeSystem:condition-outcome",
