@@ -1,0 +1,410 @@
+{
+  "package": "example.fhir.az.ig",
+  "version": "0.1.0",
+  "fhirVersion": "4.0.1",
+  "jurisdiction": "001",
+  "extensions": [
+    {
+      "url": "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-Address-region",
+      "title": "AZ Address Region Extension",
+      "types": [
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-AdverseEvent-AZEmployeeReporter",
+      "title": "AZ Employee Reporter Extension",
+      "types": [
+        "string"
+      ]
+    },
+    {
+      "url": "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-AdverseEvent-lateReason",
+      "title": "AZ Late Reason Extension",
+      "types": [
+        "string"
+      ]
+    },
+    {
+      "url": "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-AdverseEvent-localReference",
+      "title": "AZ Local Ref No Extension",
+      "types": [
+        "string"
+      ]
+    },
+    {
+      "url": "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-AdverseEvent-positiveDechallenge",
+      "title": "AZ Positive Dechallenge Extension",
+      "types": [
+        "string"
+      ]
+    },
+    {
+      "url": "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-AdverseEvent-positiveRechallenge",
+      "title": "AZ Positive Rechallenge Extension",
+      "types": [
+        "string"
+      ]
+    },
+    {
+      "url": "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-AdverseEvent-programNumber",
+      "title": "AZ Program Number Extension",
+      "types": [
+        "string"
+      ]
+    },
+    {
+      "url": "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-AdverseEvent-rechallenge",
+      "title": "AZ Rechallenge Extension",
+      "types": [
+        "string"
+      ]
+    },
+    {
+      "url": "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-AdverseEvent-reporterType",
+      "title": "AZ Reporter Type Extension",
+      "types": [
+        "string"
+      ]
+    },
+    {
+      "url": "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-AdverseEvent-sourceType",
+      "title": "AZ Source Type Extension",
+      "types": [
+        "code"
+      ]
+    },
+    {
+      "url": "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-AdverseEvent-surveyStatus",
+      "title": "AZ Survey Status Extension",
+      "types": [
+        "code"
+      ]
+    },
+    {
+      "url": "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-Condition-duration",
+      "title": "AZ Condition Duration Extension",
+      "types": [
+        "string"
+      ]
+    },
+    {
+      "url": "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-Condition-outcome",
+      "title": "AZ Condition Outcome Extension",
+      "types": [
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-Condition-resultingCondition",
+      "title": "AZ Resulting Condition Extension",
+      "types": [
+        "code"
+      ]
+    },
+    {
+      "url": "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-Condition-seriousness",
+      "title": "AZ Condition Seriousness Extension",
+      "types": [
+        "code"
+      ]
+    },
+    {
+      "url": "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-HumanName-salutation",
+      "title": "AZ Name salutation Extension",
+      "types": [
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-MedicationAdministration-actionTaken",
+      "title": "AZ MedicationAdministration Action Taken Extension",
+      "types": [
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-MedicationAdministration-frequency",
+      "title": "AZ MedicationAdministration Dosage Frequency Extension",
+      "types": [
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-MedicationAdministration-operatorDevice",
+      "title": "AZ MedicationAdministration Operator Device Extension",
+      "types": [
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-MedicationAdministration-operatorDeviceOther",
+      "title": "AZ MedicationAdministration Operator Device Other Extension",
+      "types": [
+        "string"
+      ]
+    },
+    {
+      "url": "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-MedicationAdministration-productType",
+      "title": "AZ MedicationAdministration Product Type Extension",
+      "types": [
+        "string"
+      ]
+    },
+    {
+      "url": "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-MedicationAdministration-unit",
+      "title": "AZ MedicationAdministration Dosage Unit Extension",
+      "types": [
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-Observation-pregnancyDueDate",
+      "title": "AZ Pregnancy Due Date Extension",
+      "types": [
+        "date"
+      ]
+    },
+    {
+      "url": "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-Observation-pregnancyFlag",
+      "title": "AZ Pregnancy Extension",
+      "types": [
+        "boolean"
+      ]
+    },
+    {
+      "url": "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-Observation-previousPregnanciesDetails",
+      "title": "AZ Details of previous pregnancies Extension",
+      "types": [
+        "string"
+      ]
+    },
+    {
+      "url": "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-Patient-ageGroup",
+      "title": "AZ Patient Age Group Extension",
+      "types": [
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-Patient-consentToContactPatient",
+      "title": "AZ Patient Consent to Contact Extension",
+      "types": [
+        "boolean"
+      ]
+    },
+    {
+      "url": "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-Patient-ethnicity",
+      "title": "AZ Patient Ethnicity Extension",
+      "types": [
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-Patient-gender",
+      "title": "AZ Patient Gender Extension",
+      "types": [
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-Patient-patientAge",
+      "title": "AZ Patient Age Extension",
+      "types": [
+        "integer"
+      ]
+    },
+    {
+      "url": "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-Practitioner-consentToContactPractitioner",
+      "title": "AZ Practitioner Consent to Contact Extension",
+      "types": [
+        "boolean"
+      ]
+    },
+    {
+      "url": "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-RelatedPerson-consentToContactReporter",
+      "title": "AZ RelatedPerson Consent to Contact Extension",
+      "types": [
+        "boolean"
+      ]
+    }
+  ],
+  "profiles": {
+    "AdverseEvent": [
+      {
+        "url": "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-AdverseEvent",
+        "title": "AZ AdverseEvent Profile"
+      }
+    ],
+    "Condition": [
+      {
+        "url": "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-Condition",
+        "title": "AZ Condition Profile"
+      }
+    ],
+    "MedicationAdministration": [
+      {
+        "url": "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-MedicationAdministration",
+        "title": "AZ MedicationAdministration Profile"
+      }
+    ],
+    "Observation": [
+      {
+        "url": "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-Observation",
+        "title": "AZ Observation Profile"
+      }
+    ],
+    "Patient": [
+      {
+        "url": "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-Patient",
+        "title": "AZ Patient Profile"
+      }
+    ],
+    "Practitioner": [
+      {
+        "url": "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-Practitioner",
+        "title": "AZ Practitioner Profile"
+      }
+    ],
+    "RelatedPerson": [
+      {
+        "url": "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-RelatedPerson",
+        "title": "AZ RelatedPerson Profile"
+      }
+    ]
+  },
+  "usage": {
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice-explanation": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-hierarchy": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter": [
+      "ImplementationGuide.definition"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
+      "ImplementationGuide.definition.resource"
+    ],
+    "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-Address-region": [
+      "Address"
+    ],
+    "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-AdverseEvent-AZEmployeeReporter": [
+      "AdverseEvent"
+    ],
+    "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-AdverseEvent-lateReason": [
+      "AdverseEvent"
+    ],
+    "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-AdverseEvent-localReference": [
+      "AdverseEvent"
+    ],
+    "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-AdverseEvent-positiveDechallenge": [
+      "AdverseEvent.suspectEntity.causality"
+    ],
+    "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-AdverseEvent-positiveRechallenge": [
+      "AdverseEvent.suspectEntity.causality"
+    ],
+    "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-AdverseEvent-programNumber": [
+      "AdverseEvent"
+    ],
+    "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-AdverseEvent-rechallenge": [
+      "AdverseEvent.suspectEntity.causality"
+    ],
+    "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-AdverseEvent-reporterType": [
+      "AdverseEvent"
+    ],
+    "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-AdverseEvent-sourceType": [
+      "AdverseEvent"
+    ],
+    "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-AdverseEvent-surveyStatus": [
+      "AdverseEvent"
+    ],
+    "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-Condition-duration": [
+      "Condition"
+    ],
+    "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-Condition-outcome": [
+      "Condition"
+    ],
+    "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-Condition-resultingCondition": [
+      "Condition"
+    ],
+    "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-Condition-seriousness": [
+      "Condition"
+    ],
+    "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-HumanName-salutation": [
+      "HumanName"
+    ],
+    "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-MedicationAdministration-actionTaken": [
+      "MedicationAdministration"
+    ],
+    "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-MedicationAdministration-frequency": [
+      "MedicationAdministration.dosage"
+    ],
+    "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-MedicationAdministration-operatorDevice": [
+      "MedicationAdministration"
+    ],
+    "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-MedicationAdministration-operatorDeviceOther": [
+      "MedicationAdministration"
+    ],
+    "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-MedicationAdministration-productType": [
+      "MedicationAdministration"
+    ],
+    "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-MedicationAdministration-unit": [
+      "MedicationAdministration.dosage"
+    ],
+    "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-Observation-pregnancyDueDate": [
+      "Observation"
+    ],
+    "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-Observation-pregnancyFlag": [
+      "Observation"
+    ],
+    "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-Observation-previousPregnanciesDetails": [
+      "Observation"
+    ],
+    "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-Patient-ageGroup": [
+      "Patient"
+    ],
+    "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-Patient-consentToContactPatient": [
+      "Patient"
+    ],
+    "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-Patient-ethnicity": [
+      "Patient"
+    ],
+    "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-Patient-gender": [
+      "Patient"
+    ],
+    "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-Patient-patientAge": [
+      "Patient"
+    ],
+    "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-Practitioner-consentToContactPractitioner": [
+      "Practitioner"
+    ],
+    "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-RelatedPerson-consentToContactReporter": [
+      "RelatedPerson"
+    ]
+  }
+}

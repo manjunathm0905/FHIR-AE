@@ -1,0 +1,76 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://semalexa.github.io/ig-az/ValueSet/hl7.fhir.ae-condition-seriousness> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "hl7.fhir.ae-condition-seriousness"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <code>urn:CodeSystem:condition-seriousness</code><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>less-severe</td><td>Less severe</td></tr><tr><td>recovered</td><td>Recovered</td></tr><tr><td>not-recovered</td><td>Not recovered</td></tr><tr><td>recovered-seq</td><td>Recovered with Sequela</td></tr><tr><td>death</td><td>Death</td></tr><tr><td>unknown</td><td>Unknown</td></tr></table></li></ul></div>"
+  ];
+  fhir:ValueSet.url [ fhir:value "https://semalexa.github.io/ig-az/ValueSet/hl7.fhir.ae-condition-seriousness"];
+  fhir:ValueSet.version [ fhir:value "0.1.0"];
+  fhir:ValueSet.name [ fhir:value "ConditionSeriousness"];
+  fhir:ValueSet.title [ fhir:value "condition seriousness"];
+  fhir:ValueSet.status [ fhir:value "active"];
+  fhir:ValueSet.date [ fhir:value "2020-12-18T10:10:37Z"^^xsd:dateTime];
+  fhir:ValueSet.publisher [ fhir:value "AstraZeneca - Adverse Event Work Group"];
+  fhir:ValueSet.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "https://www.astrazeneca.com" ]
+     ]
+  ];
+  fhir:ValueSet.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://unstats.un.org/unsd/methods/m49/m49.htm" ];
+       fhir:Coding.code [ fhir:value "001" ]
+     ]
+  ];
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0;
+       fhir:ValueSet.compose.include.system [ fhir:value "urn:CodeSystem:condition-seriousness" ];
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "less-severe" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Less severe" ]
+       ], [
+         fhir:index 1;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "recovered" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Recovered" ]
+       ], [
+         fhir:index 2;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "not-recovered" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Not recovered" ]
+       ], [
+         fhir:index 3;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "recovered-seq" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Recovered with Sequela" ]
+       ], [
+         fhir:index 4;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "death" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Death" ]
+       ], [
+         fhir:index 5;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "unknown" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Unknown" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://semalexa.github.io/ig-az/ValueSet/hl7.fhir.ae-condition-seriousness.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

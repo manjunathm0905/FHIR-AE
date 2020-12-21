@@ -1,0 +1,68 @@
+{
+  "resourceType": "ValueSet",
+  "id": "hl7.fhir.ae-condition-outcome",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <code>urn:CodeSystem:condition-outcome</code><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>resolved</td><td>Resolved</td></tr><tr><td>recovering</td><td>Recovering</td></tr><tr><td>ongoing</td><td>Ongoing</td></tr><tr><td>resolvedWithSequelae</td><td>Resolved with Sequelae</td></tr><tr><td>fatal</td><td>Fatal</td></tr><tr><td>unknown</td><td>Unknown</td></tr></table></li></ul></div>"
+  },
+  "url": "https://semalexa.github.io/ig-az/ValueSet/hl7.fhir.ae-condition-outcome",
+  "version": "0.1.0",
+  "name": "ConditionOutcome",
+  "title": "condition outcome",
+  "status": "active",
+  "date": "2020-12-18T10:10:37Z",
+  "publisher": "AstraZeneca - Adverse Event Work Group",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.astrazeneca.com"
+        }
+      ]
+    }
+  ],
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code": "001"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "urn:CodeSystem:condition-outcome",
+        "concept": [
+          {
+            "code": "resolved",
+            "display": "Resolved"
+          },
+          {
+            "code": "recovering",
+            "display": "Recovering"
+          },
+          {
+            "code": "ongoing",
+            "display": "Ongoing"
+          },
+          {
+            "code": "resolvedWithSequelae",
+            "display": "Resolved with Sequelae"
+          },
+          {
+            "code": "fatal",
+            "display": "Fatal"
+          },
+          {
+            "code": "unknown",
+            "display": "Unknown"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "resourceType": "ValueSet",
+  "id": "hl7.fhir.ae-intelligent-source",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <code>urn:CodeSystem:intelligent-source</code><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>spont</td><td>Spontaneous</td></tr><tr><td>usage</td><td>Usage Record Survey</td></tr><tr><td>spec</td><td>Specific Use Survey</td></tr><tr><td>other</td><td>Others</td></tr></table></li></ul></div>"
+  },
+  "url": "https://semalexa.github.io/ig-az/ValueSet/hl7.fhir.ae-intelligent-source",
+  "version": "0.1.0",
+  "name": "IntelligentSource",
+  "title": "intelligent source",
+  "status": "active",
+  "date": "2020-12-18T10:10:37Z",
+  "publisher": "AstraZeneca - Adverse Event Work Group",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.astrazeneca.com"
+        }
+      ]
+    }
+  ],
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code": "001"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "urn:CodeSystem:intelligent-source",
+        "concept": [
+          {
+            "code": "spont",
+            "display": "Spontaneous"
+          },
+          {
+            "code": "usage",
+            "display": "Usage Record Survey"
+          },
+          {
+            "code": "spec",
+            "display": "Specific Use Survey"
+          },
+          {
+            "code": "other",
+            "display": "Others"
+          }
+        ]
+      }
+    ]
+  }
+}

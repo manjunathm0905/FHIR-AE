@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="hl7.fhir.ae-resulting-condition"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li>Include these codes as defined in <code>urn:CodeSystem:resulting-condition</code><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>death</td><td>Death</td></tr><tr><td>life-threat</td><td>Life Threat</td></tr><tr><td>birth-defect</td><td>Birth Defect</td></tr><tr><td>hospitalization</td><td>Hospitalization</td></tr><tr><td>disability</td><td>Disability</td></tr><tr><td>IMA</td><td>Important Medical Event</td></tr></table></li></ul></div>
+  </text>
+  <url value="https://semalexa.github.io/ig-az/ValueSet/hl7.fhir.ae-resulting-condition"/>
+  <version value="0.1.0"/>
+  <name value="ResultingCondition"/>
+  <title value="resulting condition"/>
+  <status value="active"/>
+  <date value="2020-12-18T10:10:37Z"/>
+  <publisher value="AstraZeneca - Adverse Event Work Group"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.astrazeneca.com"/>
+    </telecom>
+  </contact>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="urn:CodeSystem:resulting-condition"/>
+      <concept>
+        <code value="death"/>
+        <display value="Death"/>
+      </concept>
+      <concept>
+        <code value="life-threat"/>
+        <display value="Life Threat"/>
+      </concept>
+      <concept>
+        <code value="birth-defect"/>
+        <display value="Birth Defect"/>
+      </concept>
+      <concept>
+        <code value="hospitalization"/>
+        <display value="Hospitalization"/>
+      </concept>
+      <concept>
+        <code value="disability"/>
+        <display value="Disability"/>
+      </concept>
+      <concept>
+        <code value="IMA"/>
+        <display value="Important Medical Event"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

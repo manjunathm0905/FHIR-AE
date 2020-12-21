@@ -1,0 +1,1177 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://semalexa.github.io/ig-az/ImplementationGuide/example.fhir.az.ig> a fhir:ImplementationGuide;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "example.fhir.az.ig"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>AZAdverseEventIG</h2><p>The official URL for this implementation guide is: </p><pre>https://semalexa.github.io/ig-az/ImplementationGuide/example.fhir.az.ig</pre><div><p>AstraZeneca Adverse Event Implementation Guide</p>\n</div></div>"
+  ];
+  fhir:ImplementationGuide.url [ fhir:value "https://semalexa.github.io/ig-az/ImplementationGuide/example.fhir.az.ig"];
+  fhir:ImplementationGuide.version [ fhir:value "0.1.0"];
+  fhir:ImplementationGuide.name [ fhir:value "AZAdverseEventIG"];
+  fhir:ImplementationGuide.title [ fhir:value "AstraZeneca Adverse Event Implementation Guide"];
+  fhir:ImplementationGuide.status [ fhir:value "active"];
+  fhir:ImplementationGuide.experimental [ fhir:value "false"^^xsd:boolean];
+  fhir:ImplementationGuide.date [ fhir:value "2020-12-18T04:12:40-06:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.publisher [ fhir:value "AstraZeneca - Adverse Event Work Group"];
+  fhir:ImplementationGuide.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "https://www.astrazeneca.com" ]
+     ]
+  ];
+  fhir:ImplementationGuide.description [ fhir:value "AstraZeneca Adverse Event Implementation Guide"];
+  fhir:ImplementationGuide.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://unstats.un.org/unsd/methods/m49/m49.htm" ];
+       fhir:Coding.code [ fhir:value "001" ]
+     ]
+  ];
+  fhir:ImplementationGuide.packageId [ fhir:value "example.fhir.az.ig"];
+  fhir:ImplementationGuide.license [ fhir:value "ISC"];
+  fhir:ImplementationGuide.fhirVersion [
+     fhir:value "4.0.1";
+     fhir:index 0
+  ];
+  fhir:ImplementationGuide.definition [
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "copyrightyear" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "2020+" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 1;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "releaselabel" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "CI Build" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 2;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-liquid" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "templates\\liquid" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 3;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-liquid" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "template/liquid" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 4;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-liquid" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "input/liquid" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 5;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-qa" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "temp/qa" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 6;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-temp" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "temp/pages" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 7;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-output" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "output" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 8;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-suppressed-warnings" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "input/ignoreWarnings.txt" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 9;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-history" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "https://semalexa.github.io/ig-az/history.html" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 10;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "template-html" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "template-page.html" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 11;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "template-md" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "template-page-md.html" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 12;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-contact" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 13;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-context" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 14;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-copyright" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 15;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-jurisdiction" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 16;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-license" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 17;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-publisher" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 18;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-version" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 19;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "active-tables" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ];
+     fhir:ImplementationGuide.definition.resource [
+       fhir:index 0;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:complex-type" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-hl7.fhir.ae-Address.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-Address>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/hl7.fhir.ae-Address" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "AZ Address Profile" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "AZAddress" ]
+     ], [
+       fhir:index 1;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-hl7.fhir.ae-Address-region.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-Address-region>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/hl7.fhir.ae-Address-region" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "AZ Address Region Extension" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "hl7.fhir.ae-Address-region" ]
+     ], [
+       fhir:index 2;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-hl7.fhir.ae-AdverseEvent.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-AdverseEvent>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/hl7.fhir.ae-AdverseEvent" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "AZ AdverseEvent Profile" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "AZAdverseEvent" ]
+     ], [
+       fhir:index 3;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-hl7.fhir.ae-AdverseEvent-AZEmployeeReporter.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-AdverseEvent-AZEmployeeReporter>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/hl7.fhir.ae-AdverseEvent-AZEmployeeReporter" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "AZ Employee Reporter Extension" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "hl7.fhir.ae-AdverseEvent-AZEmployeeReporter" ]
+     ], [
+       fhir:index 4;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-hl7.fhir.ae-AdverseEvent-lateReason.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-AdverseEvent-lateReason>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/hl7.fhir.ae-AdverseEvent-lateReason" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "AZ Late Reason Extension" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "hl7.fhir.ae-AdverseEvent-lateReason" ]
+     ], [
+       fhir:index 5;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-hl7.fhir.ae-AdverseEvent-localReference.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-AdverseEvent-localReference>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/hl7.fhir.ae-AdverseEvent-localReference" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "AZ Local Ref No Extension" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "hl7.fhir.ae-AdverseEvent-localReference" ]
+     ], [
+       fhir:index 6;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-hl7.fhir.ae-AdverseEvent-positiveDechallenge.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-AdverseEvent-positiveDechallenge>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/hl7.fhir.ae-AdverseEvent-positiveDechallenge" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "AZ Positive Dechallenge Extension" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "hl7.fhir.ae-AdverseEvent-positiveDechallenge" ]
+     ], [
+       fhir:index 7;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-hl7.fhir.ae-AdverseEvent-positiveRechallenge.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-AdverseEvent-positiveRechallenge>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/hl7.fhir.ae-AdverseEvent-positiveRechallenge" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "AZ Positive Rechallenge Extension" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "hl7.fhir.ae-AdverseEvent-positiveRechallenge" ]
+     ], [
+       fhir:index 8;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-hl7.fhir.ae-AdverseEvent-programNumber.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-AdverseEvent-programNumber>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/hl7.fhir.ae-AdverseEvent-programNumber" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "AZ Program Number Extension" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "hl7.fhir.ae-AdverseEvent-programNumber" ]
+     ], [
+       fhir:index 9;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-hl7.fhir.ae-AdverseEvent-rechallenge.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-AdverseEvent-rechallenge>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/hl7.fhir.ae-AdverseEvent-rechallenge" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "AZ Rechallenge Extension" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "hl7.fhir.ae-AdverseEvent-rechallenge" ]
+     ], [
+       fhir:index 10;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-hl7.fhir.ae-AdverseEvent-reporterType.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-AdverseEvent-reporterType>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/hl7.fhir.ae-AdverseEvent-reporterType" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "AZ Reporter Type Extension" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "hl7.fhir.ae-AdverseEvent-reporterType" ]
+     ], [
+       fhir:index 11;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-hl7.fhir.ae-AdverseEvent-sourceType.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-AdverseEvent-sourceType>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/hl7.fhir.ae-AdverseEvent-sourceType" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "AZ Source Type Extension" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "hl7.fhir.ae-AdverseEvent-sourceType" ]
+     ], [
+       fhir:index 12;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-hl7.fhir.ae-AdverseEvent-surveyStatus.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-AdverseEvent-surveyStatus>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/hl7.fhir.ae-AdverseEvent-surveyStatus" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "AZ Survey Status Extension" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "hl7.fhir.ae-AdverseEvent-surveyStatus" ]
+     ], [
+       fhir:index 13;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-hl7.fhir.ae-Condition.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-Condition>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/hl7.fhir.ae-Condition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "AZ Condition Profile" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "hl7.fhir.ae-Condition" ]
+     ], [
+       fhir:index 14;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-hl7.fhir.ae-Condition-duration.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-Condition-duration>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/hl7.fhir.ae-Condition-duration" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "AZ Condition Duration Extension" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "hl7.fhir.ae-Condition-duration" ]
+     ], [
+       fhir:index 15;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-hl7.fhir.ae-Condition-outcome.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-Condition-outcome>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/hl7.fhir.ae-Condition-outcome" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "AZ Condition Outcome Extension" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "hl7.fhir.ae-Condition-outcome" ]
+     ], [
+       fhir:index 16;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-hl7.fhir.ae-Condition-resultingCondition.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-Condition-resultingCondition>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/hl7.fhir.ae-Condition-resultingCondition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "AZ Resulting Condition Extension" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "hl7.fhir.ae-Condition-resultingCondition" ]
+     ], [
+       fhir:index 17;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-hl7.fhir.ae-Condition-seriousness.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-Condition-seriousness>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/hl7.fhir.ae-Condition-seriousness" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "AZ Condition Seriousness Extension" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "hl7.fhir.ae-Condition-seriousness" ]
+     ], [
+       fhir:index 18;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:complex-type" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-hl7.fhir.ae-HumanName.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-HumanName>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/hl7.fhir.ae-HumanName" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "AZ HumanName Profile" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "hl7.fhir.ae-HumanName" ]
+     ], [
+       fhir:index 19;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-hl7.fhir.ae-HumanName-salutation.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-HumanName-salutation>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/hl7.fhir.ae-HumanName-salutation" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "AZ Name salutation Extension" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "hl7.fhir.ae-HumanName-salutation" ]
+     ], [
+       fhir:index 20;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-hl7.fhir.ae-MedicationAdministration.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-MedicationAdministration>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/hl7.fhir.ae-MedicationAdministration" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "AZ MedicationAdministration Profile" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "hl7.fhir.ae-MedicationAdministration" ]
+     ], [
+       fhir:index 21;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-hl7.fhir.ae-MedicationAdministration-actionTaken.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-MedicationAdministration-actionTaken>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/hl7.fhir.ae-MedicationAdministration-actionTaken" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "AZ MedicationAdministration Action Taken Extension" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "hl7.fhir.ae-MedicationAdministration-actionTaken" ]
+     ], [
+       fhir:index 22;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-hl7.fhir.ae-MedicationAdministration-frequency.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-MedicationAdministration-frequency>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/hl7.fhir.ae-MedicationAdministration-frequency" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "AZ MedicationAdministration Dosage Frequency Extension" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "hl7.fhir.ae-MedicationAdministration-frequency" ]
+     ], [
+       fhir:index 23;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-hl7.fhir.ae-MedicationAdministration-operatorDevice.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-MedicationAdministration-operatorDevice>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/hl7.fhir.ae-MedicationAdministration-operatorDevice" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "AZ MedicationAdministration Operator Device Extension" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "hl7.fhir.ae-MedicationAdministration-operatorDevice" ]
+     ], [
+       fhir:index 24;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-hl7.fhir.ae-MedicationAdministration-operatorDeviceOther.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-MedicationAdministration-operatorDeviceOther>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/hl7.fhir.ae-MedicationAdministration-operatorDeviceOther" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "AZ MedicationAdministration Operator Device Other Extension" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "hl7.fhir.ae-MedicationAdministration-operatorDeviceOther" ]
+     ], [
+       fhir:index 25;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-hl7.fhir.ae-MedicationAdministration-productType.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-MedicationAdministration-productType>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/hl7.fhir.ae-MedicationAdministration-productType" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "AZ MedicationAdministration Product Type Extension" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "hl7.fhir.ae-MedicationAdministration-productType" ]
+     ], [
+       fhir:index 26;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-hl7.fhir.ae-MedicationAdministration-unit.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-MedicationAdministration-unit>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/hl7.fhir.ae-MedicationAdministration-unit" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "AZ MedicationAdministration Dosage Unit Extension" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "hl7.fhir.ae-MedicationAdministration-unit" ]
+     ], [
+       fhir:index 27;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-hl7.fhir.ae-Observation.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-Observation>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/hl7.fhir.ae-Observation" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "AZ Observation Profile" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "hl7.fhir.ae-Observation" ]
+     ], [
+       fhir:index 28;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-hl7.fhir.ae-Observation-pregnancyDueDate.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-Observation-pregnancyDueDate>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/hl7.fhir.ae-Observation-pregnancyDueDate" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "AZ Pregnancy Due Date Extension" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "hl7.fhir.ae-Observation-pregnancyDueDate" ]
+     ], [
+       fhir:index 29;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-hl7.fhir.ae-Observation-pregnancyFlag.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-Observation-pregnancyFlag>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/hl7.fhir.ae-Observation-pregnancyFlag" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "AZ Pregnancy Extension" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "hl7.fhir.ae-Observation-pregnancyFlag" ]
+     ], [
+       fhir:index 30;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-hl7.fhir.ae-Observation-previousPregnanciesDetails.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-Observation-previousPregnanciesDetails>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/hl7.fhir.ae-Observation-previousPregnanciesDetails" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "AZ Details of previous pregnancies Extension" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "hl7.fhir.ae-Observation-previousPregnanciesDetails" ]
+     ], [
+       fhir:index 31;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-hl7.fhir.ae-Patient.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-Patient>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/hl7.fhir.ae-Patient" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "AZ Patient Profile" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "hl7.fhir.ae-Patient" ]
+     ], [
+       fhir:index 32;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-hl7.fhir.ae-Patient-ageGroup.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-Patient-ageGroup>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/hl7.fhir.ae-Patient-ageGroup" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "AZ Patient Age Group Extension" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "hl7.fhir.ae-Patient-ageGroup" ]
+     ], [
+       fhir:index 33;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-hl7.fhir.ae-Patient-consentToContactPatient.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-Patient-consentToContactPatient>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/hl7.fhir.ae-Patient-consentToContactPatient" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "AZ Patient Consent to Contact Extension" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "hl7.fhir.ae-Patient-consentToContactPatient" ]
+     ], [
+       fhir:index 34;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-hl7.fhir.ae-Patient-ethnicity.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-Patient-ethnicity>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/hl7.fhir.ae-Patient-ethnicity" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "AZ Patient Ethnicity Extension" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "hl7.fhir.ae-Patient-ethnicity" ]
+     ], [
+       fhir:index 35;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-hl7.fhir.ae-Patient-gender.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-Patient-gender>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/hl7.fhir.ae-Patient-gender" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "AZ Patient Gender Extension" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "hl7.fhir.ae-Patient-gender" ]
+     ], [
+       fhir:index 36;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-hl7.fhir.ae-Patient-patientAge.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-Patient-patientAge>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/hl7.fhir.ae-Patient-patientAge" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "AZ Patient Age Extension" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "hl7.fhir.ae-Patient-patientAge" ]
+     ], [
+       fhir:index 37;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-hl7.fhir.ae-Practitioner.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-Practitioner>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/hl7.fhir.ae-Practitioner" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "AZ Practitioner Profile" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "hl7.fhir.ae-Practitioner" ]
+     ], [
+       fhir:index 38;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-hl7.fhir.ae-Practitioner-consentToContactPractitioner.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-Practitioner-consentToContactPractitioner>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/hl7.fhir.ae-Practitioner-consentToContactPractitioner" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "AZ Practitioner Consent to Contact Extension" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "hl7.fhir.ae-Practitioner-consentToContactPractitioner" ]
+     ], [
+       fhir:index 39;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-hl7.fhir.ae-RelatedPerson.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-RelatedPerson>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/hl7.fhir.ae-RelatedPerson" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "AZ RelatedPerson Profile" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "hl7.fhir.ae-RelatedPerson" ]
+     ], [
+       fhir:index 40;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-hl7.fhir.ae-RelatedPerson-consentToContactReporter.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-RelatedPerson-consentToContactReporter>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/hl7.fhir.ae-RelatedPerson-consentToContactReporter" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "AZ RelatedPerson Consent to Contact Extension" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "hl7.fhir.ae-RelatedPerson-consentToContactReporter" ]
+     ], [
+       fhir:index 41;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-hl7.fhir.ae-condition-outcome.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://semalexa.github.io/ig-az/ValueSet/hl7.fhir.ae-condition-outcome>;
+         fhir:Reference.reference [ fhir:value "ValueSet/hl7.fhir.ae-condition-outcome" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Value set hl7.fhir.ae-condition-outcome" ]
+     ], [
+       fhir:index 42;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-hl7.fhir.ae-condition-seriousness.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://semalexa.github.io/ig-az/ValueSet/hl7.fhir.ae-condition-seriousness>;
+         fhir:Reference.reference [ fhir:value "ValueSet/hl7.fhir.ae-condition-seriousness" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Value set hl7.fhir.ae-condition-seriousness" ]
+     ], [
+       fhir:index 43;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-hl7.fhir.ae-detailed-ethnicity.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://semalexa.github.io/ig-az/ValueSet/hl7.fhir.ae-detailed-ethnicity>;
+         fhir:Reference.reference [ fhir:value "ValueSet/hl7.fhir.ae-detailed-ethnicity" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Value set hl7.fhir.ae-detailed-ethnicity" ]
+     ], [
+       fhir:index 44;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-hl7.fhir.ae-intelligent-source.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://semalexa.github.io/ig-az/ValueSet/hl7.fhir.ae-intelligent-source>;
+         fhir:Reference.reference [ fhir:value "ValueSet/hl7.fhir.ae-intelligent-source" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Value set hl7.fhir.ae-intelligent-source" ]
+     ], [
+       fhir:index 45;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-hl7.fhir.ae-resulting-condition.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://semalexa.github.io/ig-az/ValueSet/hl7.fhir.ae-resulting-condition>;
+         fhir:Reference.reference [ fhir:value "ValueSet/hl7.fhir.ae-resulting-condition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Value set hl7.fhir.ae-resulting-condition" ]
+     ], [
+       fhir:index 46;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-hl7.fhir.ae-survey-status.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://semalexa.github.io/ig-az/ValueSet/hl7.fhir.ae-survey-status>;
+         fhir:Reference.reference [ fhir:value "ValueSet/hl7.fhir.ae-survey-status" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Value set hl7.fhir.ae-survey-status" ]
+     ];
+     fhir:ImplementationGuide.definition.page [
+       fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "toc.html" ];
+       fhir:ImplementationGuide.definition.page.title [ fhir:value "Table of Contents" ];
+       fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ];
+       fhir:ImplementationGuide.definition.page.page [
+         fhir:index 0;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "index.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "AZ IG Home Page" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
+       ], [
+         fhir:index 1;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "background.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Background" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
+       ], [
+         fhir:index 2;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "spec.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Detailed Specification" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 3;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "downloads.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Useful Downloads" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
+       ]
+     ];
+     fhir:ImplementationGuide.definition.parameter [
+       fhir:index 0;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/capabilities" ]
+     ], [
+       fhir:index 1;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/examples" ]
+     ], [
+       fhir:index 2;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/extensions" ]
+     ], [
+       fhir:index 3;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/models" ]
+     ], [
+       fhir:index 4;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/operations" ]
+     ], [
+       fhir:index 5;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/profiles" ]
+     ], [
+       fhir:index 6;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/resources" ]
+     ], [
+       fhir:index 7;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/vocabulary" ]
+     ], [
+       fhir:index 8;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/maps" ]
+     ], [
+       fhir:index 9;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/testing" ]
+     ], [
+       fhir:index 10;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/history" ]
+     ], [
+       fhir:index 11;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "fsh-generated/resources" ]
+     ], [
+       fhir:index 12;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-pages" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "template/config" ]
+     ], [
+       fhir:index 13;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-pages" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/images" ]
+     ], [
+       fhir:index 14;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-tx-cache" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input-cache/txcache" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://semalexa.github.io/ig-az/ImplementationGuide/example.fhir.az.ig.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
