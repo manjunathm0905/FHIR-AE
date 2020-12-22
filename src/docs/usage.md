@@ -13,7 +13,7 @@ In order to develop the implementation guide, do the following steps:
 
 * clone the repository [https://github.com/HealthSamurai/ig-ae](https://github.com/HealthSamurai/ig-ae)
 * execute `npm install` in a command line
-* execute `./igpop.sh dev` in the command line to run a local server on 8899 (may be changed with `-p` param)
+* execute `./igpop.sh dev` in the command line to run a local server on 8899 by default (may be changed with `-p` param e.g. `./igpop.sh dev -p 8799`)
 * navigate to `http://localhost:8899` to see results of editing
 
 
@@ -37,7 +37,12 @@ In order to develop the implementation guide, do the following steps:
 ## Validate Generated Structure Definitions
 --- 
 
-```java -jar validator_cli.jar -version 4.0.1 adverse-event-profile34/* -ig adverse-event-profile34/ -recurse```
+- Having that you downloaded and unzipped the archive with generated structure definitions, you can validate them against the base FHIR specification and your IG.
+- Download the official FHIR validator - a Java jar file that can be used to validate resources (http://build.fhir.org/downloads.html).
+- Say you've extracted files to the adverse-event-profile folder. Then you will run the following command:
+
+```java -jar validator_cli.jar -version 4.0.1 adverse-event-profile/* -ig adverse-event-profile/ -recurse```
 
 
-
+## Validate your custom resources
+--- 
