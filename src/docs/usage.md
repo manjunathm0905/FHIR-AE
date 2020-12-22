@@ -34,14 +34,10 @@ In order to develop the implementation guide, do the following steps:
 - Browse the folder
 - The folder will contain FHIR StructureDefinitions and ValueSets
 
-## Publish the Implementation Guide
----
+## Validate Generated Structure Definitions
+--- 
 
-- Download the [FHIR publisher tool](https://github.com/HL7/fhir-ig-publisher/releases). The FHIR documentation can be found [here](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation#IGPublisherDocumentation-Installing)
-- Access the ig-ae/ig folder. The folder contains the `ig.ini` file and the `input` folder
-- Run the publisher in the GUI mode by double clicking the `publisher.jar` file, or run it in the console with the following command:<br>
-`java -jar publisher.jar -ig ig.ini`
-- After the process is finished, access the `output` folder and open `index.html` file - this will be the home page of the published IG.
+```java -jar validator_cli.jar -version 4.0.1 adverse-event-profile34/* -ig adverse-event-profile34/ -recurse```
 
 
 
