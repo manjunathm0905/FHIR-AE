@@ -1,3 +1,3 @@
 #!/bin/sh
 
-java -jar "./node_modules/igpop/bin/igpop.jar" "$@"
+java -jar "./node_modules/igpop-cli/bin/igpop.jar" "$@"
