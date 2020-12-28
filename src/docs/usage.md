@@ -93,32 +93,38 @@ When you are running profiles locally, you can edit them directly on the site:
 
 - Having that you downloaded and unzipped the archive with generated structure definitions, you can validate them against the base FHIR specification and your IG.
 - Download the official FHIR validator - a Java jar file that can be used to validate resources (http://build.fhir.org/downloads.html).
-- Say, you've extracted files to the `adverse-event-profile` folder. Then, you will run the following command from the parent folder:
+- Say, you've extracted files to the `adverse-event-profile` folder. Then, you will run the following command from the parent folder.
+- Remove the package.json file from the `adverse-event-profile` folder
+- Run the validator:
 
 ```java -jar validator_cli.jar -version 4.0.1 adverse-event-profile/* -ig adverse-event-profile/ -recurse```
+
+
 
 
 ## Validate Resources
 --- 
 
-You can specify profile to validate against in the command:
+- You can specify profile to validate against in the command:
 
 ```java -jar validator_cli.jar -version 4.0.1 path/to/resource -ig path/to/ig/folder/ -recurse -profile profile/StructureDefinition/url```
 
-Example:
+- Example:
 
 ```java -jar validator_cli.jar -version 4.0.1 resourcesToValidate/adverseEventSample.json -ig adverse-event-profile/ -recurse -profile https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-AdverseEvent```
 
-You can specify profiles to validate against in the resource:
+- You can specify profiles to validate against in the resource:
+```
 "meta": {
     "profile": ["https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-AdverseEvent"]
   }
+```  
   
-Then, you can run the following command:  
+- Then, you can run the following command:  
 
 ```java -jar validator_cli.jar -version 4.0.1 path/to/resource -ig path/to/ig/folder/ -recurse```
 
-Example:
+- Example:
   
 ```java -jar validator_cli.jar -version 4.0.1 resourcesToValidate/adverseEventSample.json -ig adverse-event-profile/ -recurse```
 
