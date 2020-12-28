@@ -11,13 +11,9 @@ type: RelatedPerson
 baseDefinition: "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
 derivation: constraint
 title: 'AZ RelatedPerson Profile'
-# identifier: {}
-# version: ''
 experimental: false
 date: "2020-09-30"
 publisher: "AstraZeneca"
-# contact: []
-# jurisdiction: []
 
 elements:
   extension:
@@ -28,23 +24,6 @@ elements:
       experimental: false
       date: "2020-12-18"
       publisher: AstraZeneca 
-      # url: urn:extension:relatedperson-consentToContactReporter
-      url: urn:extension:hl7.fhir.ae-RelatedPerson-consentToContactReporter
-      # name: "consentToContactReporter"
-      # fixedUri: urn:extension:relatedperson-consentToContactReporter
-      # status: active
-      # fhirVersion: '4.0.1'
-      # kind: complex-type
-      # abstract: "false"
-      # type: Extension
-      # baseDefinition: "http://hl7.org/fhir/StructureDefinition/Extension"
-      # derivation: constraint
-      # title: ''
-      # context:
-        # type: element
-        # expression: RelatedPerson
-      # identifier: {}
-      # version: ''
   name:
     profile: HumanName
   address:

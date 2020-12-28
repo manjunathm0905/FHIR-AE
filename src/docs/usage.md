@@ -9,21 +9,73 @@ title: Instructions
 ## Development
 ---
 
+
+### Run a Local Server
+---
+
 In order to develop the implementation guide, do the following steps:
 
-* clone the repository [https://github.com/HealthSamurai/ig-ae](https://github.com/HealthSamurai/ig-ae)
-* execute `npm install` in a command line
-* execute `./igpop.sh dev` in the command line to run a local server on 8899 by default (may be changed with `-p` param e.g. `./igpop.sh dev -p 8799`)
-* navigate to `http://localhost:8899` to see results of editing
+- Clone the repository [https://github.com/HealthSamurai/ig-ae](https://github.com/HealthSamurai/ig-ae)
+
+```git clone https://github.com/HealthSamurai/ig-ae.git```
+
+- browse to the ig-ae folder
+
+```cd ig-ae```
 
 
 
-## Alternative Development (with igpop.jar file)
+- Install modules
 
-- Clone the repository
-- Access the repository folder
-- Run the command: `java -jar "./igpop/target/igpop.jar" dev -p 8891`
-- Open localhost:8891
+```npm install```
+
+
+
+- Run a local server on the 8891 port (or specify another port if needed)
+
+```./igpop.sh dev -p 8891```
+
+- Navigate to the [http://localhost:8891](http://localhost:8891) to see results of editing
+
+Console output:
+
+```/ig-ae
+$ ./igpop.sh dev -p 8891
+Dev... (dev -p 8891)
+Run server on http://localhost: 8891
+```
+
+
+### Project Structure and Configuration
+---
+
+![Project structure](https://github.com/HealthSamurai/ig-ae/blob/master/src/images/project_structure.png?raw=true)
+
+
+- Update the ig.yaml file in the project root folder:
+
+`id:`  prefix for your FHIR resources<br>
+`title:` title displayed on the home page of your IG site<br>
+`url:` base URL for your profiles (StructureDefinition.url and fixedUri)<br>
+`description:` your IG general description<br>
+`fhir:` FHIR version (current value is 4.0.0)<br>
+
+
+![ig.yaml](https://github.com/HealthSamurai/ig-ae/blob/master/src/images/igyaml.png?raw=true)
+
+- You will need to stop and start server to apply ig.yaml changes
+
+
+## Edit Profiles and ValueSets
+---
+
+When you are running profiles locally, you can edit them directly on the site:
+
+![Editing](https://github.com/HealthSamurai/ig-ae/blob/master/src/images/editing.gif?raw=true)
+
+
+
+
 
 ## Generate Structure Definitions
 ---
@@ -34,15 +86,40 @@ In order to develop the implementation guide, do the following steps:
 - Browse the folder
 - The folder will contain FHIR StructureDefinitions and ValueSets
 
+![Package](https://github.com/HealthSamurai/ig-ae/blob/master/src/images/package.gif?raw=true)
+
 ## Validate Generated Structure Definitions
 --- 
 
 - Having that you downloaded and unzipped the archive with generated structure definitions, you can validate them against the base FHIR specification and your IG.
 - Download the official FHIR validator - a Java jar file that can be used to validate resources (http://build.fhir.org/downloads.html).
-- Say you've extracted files to the adverse-event-profile folder. Then you will run the following command:
+- Say, you've extracted files to the `adverse-event-profile` folder. Then, you will run the following command from the parent folder:
 
 ```java -jar validator_cli.jar -version 4.0.1 adverse-event-profile/* -ig adverse-event-profile/ -recurse```
 
 
-## Validate your custom resources
+## Validate Resources
 --- 
+
+You can specify profile to validate against in the command:
+
+```java -jar validator_cli.jar -version 4.0.1 path/to/resource -ig path/to/ig/folder/ -recurse -profile profile/StructureDefinition/url```
+
+Example:
+
+```java -jar validator_cli.jar -version 4.0.1 resourcesToValidate/adverseEventSample.json -ig adverse-event-profile/ -recurse -profile https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-AdverseEvent```
+
+You can specify profiles to validate against in the resource:
+"meta": {
+    "profile": ["https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-AdverseEvent"]
+  }
+  
+Then, you can run the following command:  
+
+```java -jar validator_cli.jar -version 4.0.1 path/to/resource -ig path/to/ig/folder/ -recurse```
+
+Example:
+  
+```java -jar validator_cli.jar -version 4.0.1 resourcesToValidate/adverseEventSample.json -ig adverse-event-profile/ -recurse```
+
+
