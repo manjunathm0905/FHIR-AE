@@ -92,7 +92,7 @@ When you are running profiles locally, you can edit them directly on the site:
 --- 
 
 - Having that you downloaded and unzipped the archive with generated structure definitions, you can validate them against the base FHIR specification and your IG.
-- Download the official FHIR validator - a Java jar file that can be used to validate resources (http://build.fhir.org/downloads.html).
+- Download the official FHIR [validator](https://github.com/hapifhir/org.hl7.fhir.core/releases/latest/download/validator_cli.jar) — a Java jar file that can be used to validate resources ([download page](http://build.fhir.org/downloads.html)). (See the [Validator documentation](https://confluence.hl7.org/display/FHIR/Using+the+FHIR+Validator))
 - Say, you've extracted files to the `adverse-event-profile` folder. Then, you will run the following command from the parent folder.
 - Remove the package.json file from the `adverse-event-profile` folder
 - Run the validator:
