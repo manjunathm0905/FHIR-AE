@@ -45,7 +45,6 @@ elements:
     sourceType:
       description: Source Type
       type: code
-      required: true
       title: AZ Source Type Extension
       experimental: false
       date: "2020-12-18"
@@ -70,9 +69,6 @@ elements:
       experimental: false
       date: "2020-12-18"
       publisher: AstraZeneca
-  recordedDate:
-    description: recordedDate
-    required: true
   suspectEntity:
     elements:
       causality:

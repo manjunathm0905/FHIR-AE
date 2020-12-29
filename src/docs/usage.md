@@ -26,6 +26,10 @@ In order to develop the implementation guide, do the following steps:
 
 ```npm install```
 
+- Init submodules
+
+```git submodule init```
+
 - Update submodules
 
 ```git submodule update```
