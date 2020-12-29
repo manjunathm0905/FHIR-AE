@@ -22,13 +22,13 @@ In order to develop the implementation guide, do the following steps:
 
 ```cd ig-ae```
 
-
-
 - Install modules
 
 ```npm install```
 
+- Update submodules
 
+```git submodule update```
 
 - Run a local server on the 8891 port (or specify another port if needed)
 
