@@ -11,13 +11,9 @@ type: Condition
 baseDefinition: "http://hl7.org/fhir/StructureDefinition/Condition"
 derivation: constraint
 title: 'AZ Condition Profile'
-# identifier: {}
-# version: ''
 experimental: false
 date: "2020-09-30"
 publisher: "AstraZeneca"
-# contact: []
-# jurisdiction: []
   
 elements:
   extension:
@@ -28,23 +24,6 @@ elements:
       experimental: false
       date: "2020-12-18"
       publisher: AstraZeneca
-      # url: urn:extension:condition-duration
-      url: urn:extension:hl7.fhir.ae-Condition-duration
-      # name: "duration"
-      # fixedUri: urn:extension:condition-duration
-      # status: active
-      # fhirVersion: '4.0.1'
-      # kind: complex-type
-      # abstract: "false"
-      # type: Extension
-      # baseDefinition: "http://hl7.org/fhir/StructureDefinition/Extension"
-      # derivation: constraint
-      # title: ''
-      # context:
-        # type: element
-        # expression: Condition
-      # identifier: {}
-      # version: ''
     seriousness:
       type: code
       title: AZ Condition Seriousness Extension
@@ -55,23 +34,6 @@ elements:
         id: condition-seriousness
         description: The value should be from the valueset detailed-ethnicity
       description: Condition Seriousness
-      # url: urn:extension:condition-seriousness
-      url: urn:extension:hl7.fhir.ae-Condition-seriousness
-      # name: "seriousness"
-      # fixedUri: urn:extension:condition-seriousness
-      # status: active
-      # fhirVersion: '4.0.1'
-      # kind: complex-type
-      # abstract: "false"
-      # type: Extension
-      # baseDefinition: "http://hl7.org/fhir/StructureDefinition/Extension"
-      # derivation: constraint
-      # title: ''
-      # context:
-        # type: element
-        # expression: Condition
-      # identifier: {}
-      # version: ''
     resultingCondition:
       type: code
       title: AZ Resulting Condition Extension
@@ -82,23 +44,6 @@ elements:
         id: resulting-condition
         description: The value should be from the valueset detailed-ethnicity
       description: Resulting Condition
-      # url: urn:extension:condition-resultingCondition
-      url: urn:extension:hl7.fhir.ae-Condition-resultingCondition
-      # name: "resultingCondition"
-      # fixedUri: urn:extension:condition-resultingCondition
-      # status: active
-      # fhirVersion: '4.0.1'
-      # kind: complex-type
-      # abstract: "false"
-      # type: Extension
-      # baseDefinition: "http://hl7.org/fhir/StructureDefinition/Extension"
-      # derivation: constraint
-      # title: ''
-      # context:
-        # type: element
-        # expression: Condition
-      # identifier: {}
-      # version: ''
     outcome:
       type: CodeableConcept
       title: AZ Condition Outcome Extension
@@ -109,20 +54,3 @@ elements:
         id: condition-outcome
         description: The value should be from the valueset detailed-ethnicity
       description: Condition Outcome
-      # url: urn:extension:condition-outcome
-      url: urn:extension:hl7.fhir.ae-Condition-outcome
-      # name: "outcome"
-      # fixedUri: urn:extension:condition-outcome
-      # status: active
-      # fhirVersion: '4.0.1'
-      # kind: complex-type
-      # abstract: "false"
-      # type: Extension
-      # baseDefinition: "http://hl7.org/fhir/StructureDefinition/Extension"
-      # derivation: constraint
-      # title: ''
-      # context:
-        # type: element
-        # expression: Condition
-      # identifier: {}
-      # version: ''

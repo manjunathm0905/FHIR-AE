@@ -1,5 +1,4 @@
 description: Defines AZ constraints and extensions on the AdverseEvent resource
-url: "urn:profile:AZAdverseEvent"
 name: "AZAdverseEventProfile"
 status: active
 fhirVersion: '4.0.1'
@@ -9,13 +8,9 @@ type: AdverseEvent
 baseDefinition: "http://hl7.org/fhir/StructureDefinition/AdverseEvent"
 derivation: constraint
 title: 'AZ AdverseEvent Profile'
-# identifier: {}
-# version: ''
 experimental: false
 date: "2020-09-30"
 publisher: "AstraZeneca"
-# contact: []
-# jurisdiction: []
 
 elements:
   extension:
@@ -26,23 +21,6 @@ elements:
       experimental: false
       date: "2020-12-18"
       publisher: AstraZeneca
-      # url: urn:extension:adverseevent-employeeReporter
-      url: urn:extension:hl7.fhir.ae-AdverseEvent-AZEmployeeReporter
-      # name: "AZEmployeeReporter"
-      # fixedUri: urn:extension:adverseevent-employeeReporter
-      # status: active
-      # fhirVersion: '4.0.1'
-      # kind: complex-type
-      # abstract: "false"
-      # type: Extension
-      # baseDefinition: "http://hl7.org/fhir/StructureDefinition/Extension"
-      # derivation: constraint
-      # title: 'AZ Employee Reporter'
-      # context:
-        # type: element
-        # expression: AdverseEvent
-      # identifier: {}
-      # version: ''
     reporterType:
       type: string
       description: Reporter Type
@@ -50,23 +28,6 @@ elements:
       experimental: false
       date: "2020-12-18"
       publisher: AstraZeneca
-      # url: urn:extension:adverseevent-reporterType
-      url: urn:extension:hl7.fhir.ae-AdverseEvent-reporterType
-      # name: "reporterType"
-      # fixedUri: urn:extension:adverseevent-reporterType
-      # status: active
-      # fhirVersion: '4.0.1'
-      # kind: complex-type
-      # abstract: "false"
-      # type: Extension
-      # baseDefinition: "http://hl7.org/fhir/StructureDefinition/Extension"
-      # derivation: constraint
-      # title: ''
-      # context:
-        # type: element
-        # expression: AdverseEvent
-      # identifier: {}
-      # version: ''
     programNumber:
       description: Program Number
       type: string
@@ -74,23 +35,6 @@ elements:
       experimental: false
       date: "2020-12-18"
       publisher: AstraZeneca
-      # url: urn:extension:adverseevent-programNumber
-      url: urn:extension:hl7.fhir.ae-AdverseEvent-programNumber
-      # name: "programNumber"
-      # fixedUri: urn:extension:adverseevent-programNumber
-      # status: active
-      # fhirVersion: '4.0.1'
-      # kind: complex-type
-      # abstract: "false"
-      # type: Extension
-      # baseDefinition: "http://hl7.org/fhir/StructureDefinition/Extension"
-      # derivation: constraint
-      # title: ''
-      # context:
-        # type: element
-        # expression: AdverseEvent
-      # identifier: {}
-      # version: ''
     localReference:
       description: Local Ref No
       type: string
@@ -98,26 +42,10 @@ elements:
       experimental: false
       date: "2020-12-18"
       publisher: AstraZeneca
-      # url: urn:extension:adverseevent-localReference
-      url: urn:extension:hl7.fhir.ae-AdverseEvent-localReference
-      # name: "localReference"
-      # fixedUri: urn:extension:adverseevent-localReference
-      # status: active
-      # fhirVersion: '4.0.1'
-      # kind: complex-type
-      # abstract: "false"
-      # type: Extension
-      # baseDefinition: "http://hl7.org/fhir/StructureDefinition/Extension"
-      # derivation: constraint
-      # title: ''
-      # context:
-        # type: element
-        # expression: AdverseEvent
-      # identifier: {}
-      # version: ''
     sourceType:
       description: Source Type
       type: code
+      required: true
       title: AZ Source Type Extension
       experimental: false
       date: "2020-12-18"
@@ -125,23 +53,6 @@ elements:
       valueset: 
         id: intelligent-source
         description: The value should be from the valueset intelligent-source
-      # url: urn:extension:adverseevent-sourceType
-      url: urn:extension:hl7.fhir.ae-AdverseEvent-sourceType
-      # name: "sourceType"
-      # fixedUri: urn:extension:adverseevent-sourceType
-      # status: active
-      # fhirVersion: '4.0.1'
-      # kind: complex-type
-      # abstract: "false"
-      # type: Extension
-      # baseDefinition: "http://hl7.org/fhir/StructureDefinition/Extension"
-      # derivation: constraint
-      # title: ''
-      # context:
-        # type: element
-        # expression: AdverseEvent
-      # identifier: {}
-      # version: ''
     surveyStatus:
       description: Survey Status
       type: code
@@ -152,23 +63,6 @@ elements:
       valueset: 
         id: survey-status        
         description: The value should be from the valueset survey-status
-      # url: urn:extension:adverseevent-surveyStatus
-      url: urn:extension:hl7.fhir.ae-AdverseEvent-surveyStatus
-      # name: "surveyStatus"
-      # fixedUri: urn:extension:adverseevent-surveyStatus
-      # status: active
-      # fhirVersion: '4.0.1'
-      # kind: complex-type
-      # abstract: "false"
-      # type: Extension
-      # baseDefinition: "http://hl7.org/fhir/StructureDefinition/Extension"
-      # derivation: constraint
-      # title: ''
-      # context:
-        # type: element
-        # expression: AdverseEvent
-      # identifier: {}
-      # version: ''
     lateReason:
       description: Late reason for raising adverse event
       type: string
@@ -176,23 +70,9 @@ elements:
       experimental: false
       date: "2020-12-18"
       publisher: AstraZeneca
-      # url: urn:extension:adverseevent-lateReason
-      url: urn:extension:hl7.fhir.ae-AdverseEvent-lateReason
-      # name: "lateReason"
-      # fixedUri: urn:extension:adverseevent-lateReason
-      # status: active
-      # fhirVersion: '4.0.1'
-      # kind: complex-type
-      # abstract: "false"
-      # type: Extension
-      # baseDefinition: "http://hl7.org/fhir/StructureDefinition/Extension"
-      # derivation: constraint
-      # title: ''
-      # context:
-        # type: element
-        # expression: AdverseEvent
-      # identifier: {}
-      # version: ''
+  recordedDate:
+    description: recordedDate
+    required: true
   suspectEntity:
     elements:
       causality:
@@ -205,23 +85,6 @@ elements:
               experimental: false
               date: "2020-12-18"
               publisher: AstraZeneca
-              # url: urn:extension:adverseevent-causalityPositiveDechallenge
-              url: urn:extension:hl7.fhir.ae-AdverseEvent-positiveDechallenge
-              # name: "positiveDechallenge"
-              # fixedUri: urn:extension:adverseevent-causalityPositiveDechallenge
-              # status: active
-              # fhirVersion: '4.0.1'
-              # kind: complex-type
-              # abstract: "false"
-              # type: Extension
-              # baseDefinition: "http://hl7.org/fhir/StructureDefinition/Extension"
-              # derivation: constraint
-              # title: ''
-              # context:
-                # type: element
-                # expression: AdverseEvent.suspectEntity.causality
-              # identifier: {}
-              # version: ''
             positiveRechallenge:
               type: string
               description: Positive Rechallenge
@@ -229,23 +92,6 @@ elements:
               experimental: false
               date: "2020-12-18"
               publisher: AstraZeneca
-              # url: urn:extension:adverseevent-causalityPositiveRechallenge
-              url: urn:extension:hl7.fhir.ae-AdverseEvent-positiveRechallenge
-              # name: "positiveRechallenge"
-              # fixedUri: urn:extension:adverseevent-causalityPositiveRechallenge
-              # status: active
-              # fhirVersion: '4.0.1'
-              # kind: complex-type
-              # abstract: "false"
-              # type: Extension
-              # baseDefinition: "http://hl7.org/fhir/StructureDefinition/Extension"
-              # derivation: constraint
-              # title: ''
-              # context:
-                # type: element
-                # expression: AdverseEvent.suspectEntity.causality
-              # identifier: {}
-              # version: ''
             rechallenge:
               type: string
               description: Rechallenge
@@ -253,20 +99,3 @@ elements:
               experimental: false
               date: "2020-12-18"
               publisher: AstraZeneca
-              # url: urn:extension:adverseevent-causalityRechallenge
-              url: urn:extension:hl7.fhir.ae-AdverseEvent-rechallenge
-              # name: "rechallenge"
-              # fixedUri: urn:extension:adverseevent-causalityRechallenge
-              # status: active
-              # fhirVersion: '4.0.1'
-              # kind: complex-type
-              # abstract: "false"
-              # type: Extension
-              # baseDefinition: "http://hl7.org/fhir/StructureDefinition/Extension"
-              # derivation: constraint
-              # title: ''
-              # context:
-                # type: element
-                # expression: AdverseEvent.suspectEntity.causality
-              # identifier: {}
-              # version: ''
