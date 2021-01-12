@@ -113,14 +113,14 @@ See more [Using the FHIR Validator](https://confluence.hl7.org/display/FHIR/Usin
 
 - Example:
 
-```java -jar validator_cli.jar -version 4.0.1 resourcesToValidate/adverseEventSample.json -ig adverse-event-profile/ -recurse -profile https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-AdverseEvent```
+```java -jar validator_cli.jar -version 4.0.1 resourcesToValidate/adverseEventSample.json -ig adverse-event-profile/ -recurse -profile https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-AdverseEvent```
 
 ### Validate a resource
 
 - You can specify profiles to validate against in the resource:
 ```
 "meta": {
-    "profile": ["https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-AdverseEvent"]
+    "profile": ["https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-AdverseEvent"]
   }
 ```  
   
@@ -140,12 +140,7 @@ See more [Using the FHIR Validator](https://confluence.hl7.org/display/FHIR/Usin
 
 ### Validate against a profile by URL
 
-
-```java -jar validator_cli.jar -version 4.0.1 resourcesToValidate/adverseEventSample.json -ig https://healthsamurai.github.io/ig-ae/StructureDefinition/hl7.fhir.ae-AdverseEvent.json -profile https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-AdverseEvent```
-
-In the future, it could work this way:
-
-```java -jar validator_cli.jar -version 4.0.1 resourcesToValidate/adverseEventSample.json -profile https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-AdverseEvent -ig https://healthsamurai.github.io/ig-ae/StructureDefinition/hl7.fhir.ae-AdverseEvent.json -ig https://healthsamurai.github.io/ig-ae/StructureDefinition/hl7.fhir.ae-AdverseEvent-AZEmployeeReporter.json -ig https://healthsamurai.github.io/ig-ae/StructureDefinition/hl7.fhir.ae-AdverseEvent-lateReason.json -ig https://healthsamurai.github.io/ig-ae/StructureDefinition/hl7.fhir.ae-AdverseEvent-localReference.json -ig https://healthsamurai.github.io/ig-ae/StructureDefinition/hl7.fhir.ae-AdverseEvent-positiveDechallenge.json -ig https://healthsamurai.github.io/ig-ae/StructureDefinition/hl7.fhir.ae-AdverseEvent-positiveRechallenge.json -ig https://healthsamurai.github.io/ig-ae/StructureDefinition/hl7.fhir.ae-AdverseEvent-programNumber.json -ig https://healthsamurai.github.io/ig-ae/StructureDefinition/hl7.fhir.ae-AdverseEvent-rechallenge.json -ig https://healthsamurai.github.io/ig-ae/StructureDefinition/hl7.fhir.ae-AdverseEvent-reporterType.json -ig https://healthsamurai.github.io/ig-ae/StructureDefinition/hl7.fhir.ae-AdverseEvent-sourceType.json -ig https://healthsamurai.github.io/ig-ae/StructureDefinition/hl7.fhir.ae-AdverseEvent-surveyStatus.json -ig https://healthsamurai.github.io/ig-ae/ValueSet/hl7.fhir.ae-survey-status.json -ig https://healthsamurai.github.io/ig-ae/ValueSet/hl7.fhir.ae-intelligent-source.json```
+```java -jar validator_cli.jar -version 4.0.1 resourcesToValidate/adverseEventSample.json -profile https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-AdverseEvent -ig https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-AdverseEvent.json -ig https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-AdverseEvent-AZEmployeeReporter.json -ig https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-AdverseEvent-lateReason.json -ig https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-AdverseEvent-localReference.json -ig https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-AdverseEvent-positiveDechallenge.json -ig https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-AdverseEvent-positiveRechallenge.json -ig https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-AdverseEvent-programNumber.json -ig https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-AdverseEvent-rechallenge.json -ig https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-AdverseEvent-reporterType.json -ig https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-AdverseEvent-sourceType.json -ig https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-AdverseEvent-surveyStatus.json -ig https://healthsamurai.github.io/ig-ae/ValueSet/astrazeneca.fhir.ig.ae-survey-status.json -ig https://healthsamurai.github.io/ig-ae/ValueSet/astrazeneca.fhir.ig.ae-intelligent-source.json```
 
 ## Create new profile
 

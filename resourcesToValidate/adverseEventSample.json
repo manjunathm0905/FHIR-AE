@@ -58,7 +58,7 @@
     }
   ],
   "extension": [{
-      "url": "https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-AdverseEvent-AZEmployeeReporter",
+      "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-AdverseEvent-AZEmployeeReporter",
       "valueString": "AZ Employee Reporter value"
     }
   ]
