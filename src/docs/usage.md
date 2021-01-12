@@ -77,9 +77,6 @@ When you are running profiles locally, you can edit them directly on the site:
 ![Editing](https://github.com/HealthSamurai/ig-ae/blob/master/src/images/editing.gif?raw=true)
 
 
-
-
-
 ## Generate Structure Definitions
 ---
 
@@ -102,11 +99,13 @@ When you are running profiles locally, you can edit them directly on the site:
 
 ```java -jar validator_cli.jar -version 4.0.1 adverse-event-profile/* -ig adverse-event-profile/ -recurse```
 
-
+See more [Using the FHIR Validator](https://confluence.hl7.org/display/FHIR/Using+the+FHIR+Validator).
 
 
 ## Validate Resources against Profiles
 --- 
+
+### Validate against a profile
 
 - You can specify profile to validate against in the command:
 
@@ -115,6 +114,8 @@ When you are running profiles locally, you can edit them directly on the site:
 - Example:
 
 ```java -jar validator_cli.jar -version 4.0.1 resourcesToValidate/adverseEventSample.json -ig adverse-event-profile/ -recurse -profile https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-AdverseEvent```
+
+### Validate a resource
 
 - You can specify profiles to validate against in the resource:
 ```
@@ -130,3 +131,23 @@ When you are running profiles locally, you can edit them directly on the site:
 - Example:
   
 ```java -jar validator_cli.jar -version 4.0.1 resourcesToValidate/adverseEventSample.json -ig adverse-event-profile/ -recurse```
+
+### Validate against a FHIR Package
+
+[Sample FHIR Package](http://registry.fhir.org/package/hl7.fhir.us.patient-reported-outcomes%7C0.2.0)
+
+```java -jar validator_cli.jar -version 4.0.1 resourcesToValidate/adverseEventSample.json -ig hl7.fhir.us.patient-reported-outcomes```
+
+### Validate against a profile by URL
+
+
+```java -jar validator_cli.jar -version 4.0.1 resourcesToValidate/adverseEventSample.json -ig https://healthsamurai.github.io/ig-ae/StructureDefinition/hl7.fhir.ae-AdverseEvent.json  -profile https://semalexa.github.io/ig-az/StructureDefinition/hl7.fhir.ae-AdverseEvent```
+
+In the future, it could work this way:
+
+```java -jar validator_cli.jar -version 4.0.1 resourcesToValidate/adverseEventSample.json -ig https://healthsamurai.github.io/ig-ae/StructureDefinition/hl7.fhir.ae-AdverseEvent.json -ig https://healthsamurai.github.io/ig-ae/StructureDefinition/hl7.fhir.ae-AdverseEvent-AZEmployeeReporter.json -ig https://healthsamurai.github.io/ig-ae/StructureDefinition/hl7.fhir.ae-AdverseEvent-lateReason.json -ig https://healthsamurai.github.io/ig-ae/StructureDefinition/hl7.fhir.ae-AdverseEvent-localReference.json -ig https://healthsamurai.github.io/ig-ae/StructureDefinition/hl7.fhir.ae-AdverseEvent-positiveDechallenge.json -ig https://healthsamurai.github.io/ig-ae/StructureDefinition/hl7.fhir.ae-AdverseEvent-positiveRechallenge.json -ig https://healthsamurai.github.io/ig-ae/StructureDefinition/hl7.fhir.ae-AdverseEvent-programNumber.json -ig https://healthsamurai.github.io/ig-ae/StructureDefinition/hl7.fhir.ae-AdverseEvent-rechallenge.json -ig https://healthsamurai.github.io/ig-ae/StructureDefinition/hl7.fhir.ae-AdverseEvent-reporterType.json -ig https://healthsamurai.github.io/ig-ae/StructureDefinition/hl7.fhir.ae-AdverseEvent-sourceType.json -ig https://healthsamurai.github.io/ig-ae/StructureDefinition/hl7.fhir.ae-AdverseEvent-surveyStatus.json -ig https://healthsamurai.github.io/ig-ae/ValueSet/hl7.fhir.ae-survey-status.json -ig https://healthsamurai.github.io/ig-ae/ValueSet/hl7.fhir.ae-intelligent-source.json```
+
+## Create new profile
+
+See the [IGPOP spec](https://github.com/HealthSamurai/igpop/blob/master/igpop.md).
+
