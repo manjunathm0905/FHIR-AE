@@ -1,5 +1,5 @@
 id: astrazeneca.fhir.ig.ae
 title: AstraZeneca FHIR IG
-url: https://astrazeneca.github.io/fhir
+url: https://healthsamurai.github.io/ig-ae
 description: AstraZeneca Adverse Event Implementation Guide
 fhir: 4.0.1
