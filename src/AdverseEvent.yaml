@@ -69,8 +69,6 @@ elements:
       experimental: false
       date: "2020-12-18"
       publisher: AstraZeneca
-  recordedDate:
-    required: true
   suspectEntity:
     elements:
       causality:
