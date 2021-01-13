@@ -1,0 +1,54 @@
+description: Defines AZ constraints and extensions on the Medication resource
+
+resourceType: StructureDefinition
+url: "urn:profile:AZMedication"
+name: "AZMedicationProfile"
+status: active
+fhirVersion: '4.0.1'
+kind: resource
+abstract: false
+type: Medication
+baseDefinition: "http://hl7.org/fhir/StructureDefinition/Medication"
+derivation: constraint
+title: 'AZ Medication Profile'
+experimental: false
+date: "2021-01-13"
+publisher: "AstraZeneca"
+
+elements:
+  extension:
+    marketProductType:
+      type: string
+      description: Finished Sales Pack/Device
+      title: AZ Finished Sales Pack/Device Extension
+      experimental: false
+      date: "2021-01-13"
+      publisher: "AstraZeneca"
+    strengthUnit:
+      type: CodeableConcept
+      description: Medication Strength Unit
+      title: AZ Medication Strength Unit Extension
+      experimental: false
+      date: "2021-01-13"
+      publisher: "AstraZeneca"
+    packType:
+      type: CodeableConcept
+      description: Medication Pack Type
+      title: AZ Medication Pack Type Extension
+      experimental: false
+      date: "2021-01-13"
+      publisher: "AstraZeneca"
+    sampleAvailableForReturn:
+      type: boolean
+      description: Medication Sample Available For Return
+      title: AZ Medication Sample Available For Return Extension
+      experimental: false
+      date: "2021-01-13"
+      publisher: "AstraZeneca"
+    quantityAvailableForReturn:
+      type: integer
+      description: Medication Quantity Available For Return
+      title: AZ Medication Quantity Available For Return Extension
+      experimental: false
+      date: "2021-01-13"
+      publisher: "AstraZeneca"
