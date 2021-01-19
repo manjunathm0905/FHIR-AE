@@ -102,45 +102,108 @@ When you are running profiles locally, you can edit them directly on the site:
 See more [Using the FHIR Validator](https://confluence.hl7.org/display/FHIR/Using+the+FHIR+Validator).
 
 
-## Validate Resources against Profiles
+## Validate Resources against AZ Profiles
 --- 
 
-### Validate against a profile
+### Validate against an IG as a FHIR Package .tgz file's URL
 
-- You can specify profile to validate against in the command:
+- You can specify an IG .tgz file to validate against in the command:
 
-```java -jar validator_cli.jar -version 4.0.1 path/to/resource -ig path/to/ig/folder/ -recurse -profile profile/StructureDefinition/url```
+```java -jar validator_cli.jar -version 4.0.1 path/to/resource -ig https://github.com/HealthSamurai/ig-ae/raw/master/package/az-ig-package.tgz  -profile profile/StructureDefinition/url```
+
+- Example 1:
+
+```java -jar validator_cli.jar -version 4.0.1 resourcesToValidate/adverseEventSample.json -ig https://github.com/HealthSamurai/ig-ae/raw/master/package/az-ig-package.tgz -profile https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-AdverseEvent```
+
+- Example 2:
+
+```java -jar validator_cli.jar -version 4.0.1 "docs/for review/fixed/New Adverse Event FHIR payload.json" -ig https://github.com/HealthSamurai/ig-ae/raw/master/package/az-ig-package.tgz -profile https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-AdverseEvent```
+
+- Example 3 (fast):
+
+```java -jar validator_cli.jar -version 4.0.1 "docs/for review/fixed/New Adverse Event FHIR payload.json" -tx n/a```
+
+- Example 4:
+
+```java -jar validator_cli.jar -version 4.0.1 "docs/for review/fixed/New Adverse Event FHIR payload.json" -ig https://github.com/HealthSamurai/ig-ae/raw/master/package/az-ig-package.tgz -tx n/a```
+
+
+### Validate against an IG as a FHIR Package .tgz local file
+
+- You can specify an IG .tgz local file to validate against in the command:
+
+```java -jar validator_cli.jar -version 4.0.1 path/to/resource.json -ig D:/path/to/az-ig-package.tgz -profile profile/canonical/url```
+
+- Example:
+  
+```java -jar validator_cli.jar -version 4.0.1 resourcesToValidate/adverseEventSample.json -ig D:/Work/Healthsamurai/az-fhir-profiles/az-ig-package.tgz -profile https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-AdverseEvent```
+
+
+### Validate against an IG as a local folder
+
+- You can download an IG files and validate resources against it with the `recurse` parameter:
+
+```java -jar validator_cli.jar -version 4.0.1 path/to/resource -ig path/to/ig/folder/ -recurse -profile profile/canonical/url```
 
 - Example:
 
 ```java -jar validator_cli.jar -version 4.0.1 resourcesToValidate/adverseEventSample.json -ig adverse-event-profile/ -recurse -profile https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-AdverseEvent```
 
-### Validate a resource
+### Validate a resource with meta element
 
-- You can specify profiles to validate against in the resource:
+- You can specify profiles to validate against in the resource's `meta` element:
+
 ```
 "meta": {
     "profile": ["https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-AdverseEvent"]
   }
 ```  
   
-- Then, you can run the following command:  
+- Then, you can run the following command without specifying the `profile` parameter:  
 
-```java -jar validator_cli.jar -version 4.0.1 path/to/resource -ig path/to/ig/folder/ -recurse```
+```java -jar validator_cli.jar -version 4.0.1 path/to/resource -ig https://github.com/HealthSamurai/ig-ae/raw/master/package/az-ig-package.tgz```
 
 - Example:
   
-```java -jar validator_cli.jar -version 4.0.1 resourcesToValidate/adverseEventSample.json -ig adverse-event-profile/ -recurse```
+```java -jar validator_cli.jar -version 4.0.1 resourcesToValidate/adverseEventSample.json -ig https://github.com/HealthSamurai/ig-ae/raw/master/package/az-ig-package.tgz```
 
-### Validate against a FHIR Package
+### Validation without a terminology server
+
+- Sometimes a terminology server is unavailable. You can set the following parameter to validate without a terminology server.
+
+```-tx n/a``` 
+
+- Example: 
+  
+```java -jar validator_cli.jar -version 4.0.1 resourcesToValidate/adverseEventSample.json -ig https://github.com/HealthSamurai/ig-ae/raw/master/package/az-ig-package.tgz -profile https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-AdverseEvent -tx n/a```
+
+### Validate against a FHIR Package published to FHIR Registry
 
 [Sample FHIR Package](http://registry.fhir.org/package/hl7.fhir.us.patient-reported-outcomes%7C0.2.0)
 
 ```java -jar validator_cli.jar -version 4.0.1 resourcesToValidate/adverseEventSample.json -ig hl7.fhir.us.patient-reported-outcomes```
 
-### Validate against a profile by URL
+### Validate against an IG files by their URLs
 
 ```java -jar validator_cli.jar -version 4.0.1 resourcesToValidate/adverseEventSample.json -profile https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-AdverseEvent -ig https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-AdverseEvent.json -ig https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-AdverseEvent-AZEmployeeReporter.json -ig https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-AdverseEvent-lateReason.json -ig https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-AdverseEvent-localReference.json -ig https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-AdverseEvent-positiveDechallenge.json -ig https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-AdverseEvent-positiveRechallenge.json -ig https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-AdverseEvent-programNumber.json -ig https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-AdverseEvent-rechallenge.json -ig https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-AdverseEvent-reporterType.json -ig https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-AdverseEvent-sourceType.json -ig https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-AdverseEvent-surveyStatus.json -ig https://healthsamurai.github.io/ig-ae/ValueSet/astrazeneca.fhir.ig.ae-survey-status.json -ig https://healthsamurai.github.io/ig-ae/ValueSet/astrazeneca.fhir.ig.ae-intelligent-source.json```
+
+
+
+### Validating a single resource in a bundle
+
+To validate a particular resource in the bundle against a given profile: 
+
+-bundle {entry rule} {profile url}
+
+This invokes the nominated profile (by canonical URL) on any entry in any bundle validated that meets the entry rule. The entry rule is either a Resource name, a integer index, or both:
+
+* Patient - validate any patient against the nominated profile 
+* 1 - validate the 1th resource (actually the second - index is 0 based) against the nominated profile
+* Patient:0 - validate the first patient resource against the nominated profile
+
+#### Example:
+
+```java -jar validator_cli.jar path/to/bundle.json -version 4.0.1 -ig https://github.com/HealthSamurai/ig-ae/raw/master/package/az-ig-package.tgz -bundle Patient:0 https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-AdverseEvent```
 
 ## Create new profile
 
