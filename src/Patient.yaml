@@ -12,7 +12,7 @@ baseDefinition: "http://hl7.org/fhir/StructureDefinition/Patient"
 derivation: constraint
 title: 'AZ Patient Profile'
 experimental: false
-date: "2020-09-30"
+date: "2021-01-19"
 publisher: "AstraZeneca"
 
 elements:
@@ -21,40 +21,25 @@ elements:
       description: Patient Ethnicity Extension
       type: CodeableConcept
       title: AZ Patient Ethnicity Extension
-      experimental: false
-      date: "2020-12-18"
-      publisher: AstraZeneca 
       valueset:
         id: detailed-ethnicity
         description: The value should be from the valueset detailed-ethnicity
-    consentToContactPatient:
-      description: Patient Consent to Contact Extension
+    consentToContactReporter:
+      description: Patient Consent to Contact Reporter Extension
       type: boolean
-      title: AZ Patient Consent to Contact Extension
-      experimental: false
-      date: "2020-12-18"
-      publisher: AstraZeneca
+      title: AZ Patient Consent to Contact Reporter Extension
     gender:
       type: CodeableConcept      
       description: Patient Gender
       title: AZ Patient Gender Extension
-      experimental: false
-      date: "2020-12-18"
-      publisher: AstraZeneca
     ageGroup:
       type: CodeableConcept     
       description: Patient Age Group
       title: AZ Patient Age Group Extension
-      experimental: false
-      date: "2020-12-18"
-      publisher: AstraZeneca
     patientAge:
       type: integer     
       description: Patient Age
       title: AZ Patient Age Extension
-      experimental: false
-      date: "2020-12-18"
-      publisher: AstraZeneca
   name:
     profile: HumanName
   address:
