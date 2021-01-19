@@ -1,0 +1,189 @@
+{
+  "resourceType": "QuestionnaireResponse",
+  "contained": [{
+      "resourceType": "consent",
+      "id": "consent01",
+      "status": "active",
+      "scope": {
+        "coding": [{
+            "code": "research",
+            "display": "Research"
+          }
+        ]
+      },
+      "category": [{
+          "coding": [{
+              "code": "57016-8",
+              "display": "Privacy policy acknowledgement Document"
+            }
+          ]
+        }
+      ],
+      "dateTime": "2020-12-10T15:41:08Z",
+      "performer": [{
+          "reference": "reporter"
+        }
+      ],
+      "verification": [{
+          "verified": true
+        }
+      ],
+      "extension": [{
+          "url": "http://hl7.org/fhir/StructureDefinition/Consent-Text",
+          "valueString": "Do you agree to AZ storing your information?"
+        }, {
+          "url": "http://hl7.org/fhir/StructureDefinition/Consent-Name",
+          "valueString": "PPP Consent 1"
+        }
+      ]
+    }, {
+      "resourceType": "consent",
+      "id": "consent02",
+      "status": "active",
+      "scope": {
+        "coding": [{
+            "code": "research",
+            "display": "Research"
+          }
+        ]
+      },
+      "category": [{
+          "coding": [{
+              "code": "57016-8",
+              "display": "Privacy policy acknowledgement Document"
+            }
+          ]
+        }
+      ],
+      "dateTime": "2020-12-10T15:41:08Z",
+      "performer": [{
+          "reference": "reporter"
+        }
+      ],
+      "verification": [{
+          "verified": true
+        }
+      ],
+      "extension": [{
+          "url": "http://hl7.org/fhir/StructureDefinition/Consent/Consent-Text",
+          "valueString": "Do you agree to AZ sharing your information with external healthcare partners?"
+        }, {
+          "url": "http://hl7.org/fhir/StructureDefinition/Consent/Consent-Name",
+          "valueString": "PPP Consent 1"
+        }
+      ]
+    }, {
+      "resourceType": "RelatedPerson",
+      "id": "reporter",
+      "name": [{
+          "family": "Williams",
+          "given": "Sean"
+        }
+      ],
+      "telecom": [{
+          "system": "phone",
+          "value": "07920 112233"
+        }, {
+          "system": "email",
+          "value": "sean.williams@astrazeneca.com"
+        }
+      ],
+      "address": [{
+          "country": "GB"
+        }
+      ]
+    }
+  ],
+  "id": "questionnaire",
+  "status": "completed",
+  "subject": {
+    "reference": "reporter"
+  },
+  "authored": "2020-12-10T15:41:08Z",
+  "extension": [{
+      "url": "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse-Programme",
+      "valueString": "ProgramCode"
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse-Source",
+      "valueString": "PPP"
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse-ReporterType",
+      "valueString": "CarerAdult/CarerChild/Patient"
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse-Language",
+      "valueString": "en"
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse-Consent",
+      "valueReference": "consent01"
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse-Consent",
+      "valueReference": "consent02"
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse-Attachment",
+      "valueAttachment": {
+        "contentType": "pdf",
+        "title": "PDF document name",
+        "data": "<base64 encoded pdf>"
+      }
+    }
+  ],
+  "item": [{
+      "linkId": "Conditions",
+      "text": "",
+      "answer": [{
+          "valueString": "COPD"
+        }, {
+          "valueString": "Severe Asthma"
+        }
+      ]
+    }, {
+      "linkId": "Experience",
+      "text": "Do you have experience in one or more of the following areas? (Select all that apply)",
+      "answer": [{
+          "valueString": "Medicine or Health Sciences"
+        }, {
+          "valueString": "Direct-To-Consumer Marketing"
+        }
+      ]
+    }, {
+      "linkId": "Fluent",
+      "text": "Do you speak and read English fluently",
+      "answer": [{
+          "valueString": "Yes"
+        }
+      ]
+    }, {
+      "linkId": "Timezone",
+      "text": "Do you speak and read English fluently",
+      "answer": [{
+          "valueString": "GMT-5"
+        }
+      ]
+    }, {
+      "linkId": "TimeToCall",
+      "text": "Best time to call",
+      "answer": [{
+          "valueString": "Morning"
+        }
+      ]
+    }, {
+      "linkId": "Q1",
+      "text": "Have you been diagnosed with moderate to severe asthma by a doctor or healthcare provider?",
+      "answer": [{
+          "valueString": "Yes"
+        }
+      ]
+    }, {
+      "linkId": "Q2",
+      "text": "Which of the following apply to you?",
+      "answer": [{
+          "valueString": "Suffer from high blood pressure"
+        }, {
+          "valueString": "Suffer from sleeplessness"
+        }, {
+          "valueString": "Regular user of pain killers"
+        }
+      ]
+    }
+  ]
+}
