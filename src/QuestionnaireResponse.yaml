@@ -1,0 +1,40 @@
+description: Defines AZ constraints and extensions on the QuestionnaireResponse resource
+name: "AZQuestionnaireResponseProfile"
+status: active
+fhirVersion: '4.0.1'
+kind: resource
+abstract: false
+type: QuestionnaireResponse
+baseDefinition: "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse"
+derivation: constraint
+title: 'AZ QuestionnaireResponse Profile'
+experimental: false
+date: "2021-01-19"
+publisher: "AstraZeneca"
+
+elements:
+  extension:
+    programme:
+      type: string
+      description: AZ QuestionnaireResponse programme
+      title: AZ QuestionnaireResponse programme Extension
+    source:
+      type: string
+      description: AZ QuestionnaireResponse source
+      title: AZ QuestionnaireResponse source Extension
+    reporterType:
+      type: string
+      description: AZ QuestionnaireResponse reporter type
+      title: AZ QuestionnaireResponse reporter type Extension
+    language:
+      type: string
+      description: AZ QuestionnaireResponse language
+      title: AZ QuestionnaireResponse language Extension
+    consent:
+      type: Reference
+      description: AZ QuestionnaireResponse consent
+      title: AZ QuestionnaireResponse consent Extension
+    attachment:
+      type: Attachment
+      description: AZ QuestionnaireResponse attachment
+      title: AZ QuestionnaireResponse attachment Extension

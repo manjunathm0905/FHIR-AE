@@ -1,0 +1,24 @@
+description: Defines AZ constraints and extensions on the Consent resource
+name: "AZConsentProfile"
+status: active
+fhirVersion: '4.0.1'
+kind: resource
+abstract: false
+type: Consent
+baseDefinition: "http://hl7.org/fhir/StructureDefinition/Consent"
+derivation: constraint
+title: 'AZ Consent Profile'
+experimental: false
+date: "2021-01-19"
+publisher: "AstraZeneca"
+
+elements:
+  extension:
+    text:
+      type: string
+      description: AZ Consent text
+      title: AZ Consent text Extension
+    name:
+      type: string
+      description: AZ Consent name
+      title: AZ Consent name Extension
