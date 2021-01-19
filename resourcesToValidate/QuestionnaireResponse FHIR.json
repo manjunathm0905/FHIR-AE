@@ -1,83 +1,112 @@
 {
   "resourceType": "QuestionnaireResponse",
   "contained": [{
-      "resourceType": "consent",
+      "resourceType": "Consent",
       "id": "consent01",
       "status": "active",
       "scope": {
         "coding": [{
             "code": "research",
-            "display": "Research"
+            "display": "Research",
+            "system": "http://terminology.hl7.org/CodeSystem/consentscope"
           }
         ]
       },
       "category": [{
           "coding": [{
               "code": "57016-8",
-              "display": "Privacy policy acknowledgement Document"
+              "display": "Privacy policy acknowledgment Document",
+              "system": "http://loinc.org"
             }
           ]
         }
       ],
+      "patient": {
+        "reference": "#patient"
+      },
       "dateTime": "2020-12-10T15:41:08Z",
       "performer": [{
           "reference": "reporter"
         }
       ],
+      "policyRule": {
+        "coding": [{
+            "code": "hipaa-research",
+            "system": "http://terminology.hl7.org/CodeSystem/consentpolicycodes",
+            "display": "HIPAA Research Authorization"
+          }
+        ]
+      },
       "verification": [{
           "verified": true
         }
       ],
       "extension": [{
-          "url": "http://hl7.org/fhir/StructureDefinition/Consent-Text",
+          "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-Consent-text",
           "valueString": "Do you agree to AZ storing your information?"
         }, {
-          "url": "http://hl7.org/fhir/StructureDefinition/Consent-Name",
+          "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-Consent-name",
           "valueString": "PPP Consent 1"
         }
       ]
     }, {
-      "resourceType": "consent",
+      "resourceType": "Consent",
       "id": "consent02",
       "status": "active",
       "scope": {
         "coding": [{
             "code": "research",
-            "display": "Research"
+            "display": "Research",
+            "system": "http://terminology.hl7.org/CodeSystem/consentscope"
           }
         ]
       },
       "category": [{
           "coding": [{
               "code": "57016-8",
-              "display": "Privacy policy acknowledgement Document"
+              "display": "Privacy policy acknowledgment Document",
+              "system": "http://loinc.org"
             }
           ]
         }
       ],
+      "patient": {
+        "reference": "#patient"
+      },
       "dateTime": "2020-12-10T15:41:08Z",
       "performer": [{
           "reference": "reporter"
         }
       ],
+      "policyRule": {
+        "coding": [{
+            "code": "hipaa-research",
+            "system": "http://terminology.hl7.org/CodeSystem/consentpolicycodes",
+            "display": "HIPAA Research Authorization"
+          }
+        ]
+      },
       "verification": [{
           "verified": true
         }
       ],
       "extension": [{
-          "url": "http://hl7.org/fhir/StructureDefinition/Consent/Consent-Text",
+          "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-Consent-text",
           "valueString": "Do you agree to AZ sharing your information with external healthcare partners?"
         }, {
-          "url": "http://hl7.org/fhir/StructureDefinition/Consent/Consent-Name",
+          "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-Consent-name",
           "valueString": "PPP Consent 1"
         }
       ]
     }, {
       "resourceType": "RelatedPerson",
       "id": "reporter",
+      "patient": {
+        "reference": "#patient"
+      },
       "name": [{
           "family": "Williams",
-          "given": "Sean"
+          "given": ["Sean"]
         }
       ],
       "telecom": [{
@@ -92,36 +121,136 @@
           "country": "GB"
         }
       ]
+    }, {
+      "resourceType": "Patient",
+      "id": "patient",
+      "extension": [{
+          "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-Patient-consentToContactReporter",
+          "valueBoolean": false
+        }, {
+          "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-Patient-patientAge",
+          "valueInteger": 35
+        }, {
+          "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-Patient-ageGroup",
+          "valueCodeableConcept": {
+            "coding": [{
+                "code": "ADULT",
+                "display": "Adulte",
+                "system": "https://healthsamurai.github.io/ig-ae/CodeSystem/ageGroup"
+              }
+            ],
+            "text": "Adult"
+          }
+        }, {
+          "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-Patient-gender",
+          "valueCodeableConcept": {
+            "coding": [{
+                "code": "MALE",
+                "display": "Masculin",
+                "system": "https://healthsamurai.github.io/ig-ae/CodeSystem/gender"
+              }
+            ],
+            "text": "Male"
+          }
+        }, {
+          "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-Patient-ethnicity",
+          "valueCodeableConcept": {
+            "coding": [{
+                "code": "D",
+                "display": "Asiane",
+                "system": "https://healthsamurai.github.io/ig-ae/CodeSystem/ethnicity"
+              }
+            ],
+            "text": "Asian"
+          }
+        }
+      ],
+      "name": [{
+          "extension": [{
+              "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-HumanName-salutation",
+              "valueCodeableConcept": {
+                "coding": [{
+                    "code": "Mr",
+                    "display": "Monsieur",
+                    "system": "https://healthsamurai.github.io/ig-ae/CodeSystem/humanname-salutation"
+                  }
+                ],
+                "text": "Mr."
+              }
+            }
+          ],
+          "family": "Flintstone",
+          "given": ["Fred"]
+        }
+      ],
+      "telecom": [{
+          "system": "phone",
+          "value": "0201231234"
+        }, {
+          "system": "email",
+          "value": "fred.Flintstone@astrazeneca.com"
+        }
+      ],
+      "address": [{
+          "extension": [{
+              "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-Address-region",
+              "valueCodeableConcept": {
+                "coding": [{
+                    "code": "01",
+                    "display": "Middlesex",
+                    "system": "https://healthsamurai.github.io/ig-ae/CodeSystem/address-region"
+                  }
+                ],
+                "text": "Middlesex"
+              }
+            }
+          ],
+          "line": ["APARTMENT 3", "21 Edgware Road"],
+          "city": "London",
+          "postalCode": "SW14 0EG",
+          "country": "UK"
+        }
+      ],
+      "identifier": [{
+          "value": "RELTIO-ID-123456"
+        }
+      ],
+      "birthDate": "1980-10-19",
+      "deceasedDateTime": "2020-12-31"
     }
   ],
   "id": "questionnaire",
   "status": "completed",
   "subject": {
-    "reference": "reporter"
+    "reference": "#reporter"
   },
   "authored": "2020-12-10T15:41:08Z",
   "extension": [{
-      "url": "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse-Programme",
+      "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-QuestionnaireResponse-programme",
       "valueString": "ProgramCode"
     }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse-Source",
+      "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-QuestionnaireResponse-source",
       "valueString": "PPP"
     }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse-ReporterType",
+      "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-QuestionnaireResponse-reporterType",
       "valueString": "CarerAdult/CarerChild/Patient"
     }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse-Language",
+      "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-QuestionnaireResponse-language",
       "valueString": "en"
     }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse-Consent",
-      "valueReference": "consent01"
+      "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-QuestionnaireResponse-consent",
+      "valueReference": {
+        "reference": "#consent01"
+      }
     }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse-Consent",
-      "valueReference": "consent02"
+      "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-QuestionnaireResponse-consent",
+      "valueReference": {
+        "reference": "#consent02"
+      }
     }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse-Attachment",
+      "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-QuestionnaireResponse-attachment",
       "valueAttachment": {
-        "contentType": "pdf",
+        "contentType": "application/pdf",
         "title": "PDF document name",
         "data": "<base64 encoded pdf>"
       }
@@ -129,7 +258,7 @@
   ],
   "item": [{
       "linkId": "Conditions",
-      "text": "",
+      "text": "Conditions?",
       "answer": [{
           "valueString": "COPD"
         }, {
@@ -154,7 +283,7 @@
       ]
     }, {
       "linkId": "Timezone",
-      "text": "Do you speak and read English fluently",
+      "text": "Timezone?",
       "answer": [{
           "valueString": "GMT-5"
         }
