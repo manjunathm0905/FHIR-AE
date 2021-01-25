@@ -4,7 +4,9 @@
       "resourceType": "Consent",
       "id": "consent01",
       "status": "active",
-      "patient": "#patient"
+      "patient": {
+        "reference": "#patient"
+      },
       "scope": {
         "coding": [{
             "code": "research",
@@ -39,7 +41,9 @@
       "resourceType": "Consent",
       "id": "consent02",
       "status": "active",
-      "patient": "#patient"
+      "patient": {
+        "reference": "#patient"
+      },
       "scope": {
         "coding": [{
             "code": "research",
@@ -113,10 +117,14 @@
       "valueString": "en"
     }, {
       "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-QuestionnaireResponse-consent",
-      "valueReference": "#consent01"
+      "valueReference": {
+        "reference": "#consent01"
+      }
     }, {
       "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-QuestionnaireResponse-consent",
-      "valueReference": "#consent02"
+      "valueReference": {
+        "reference": "#consent02"
+      }
     }, {
       "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-QuestionnaireResponse-attachment",
       "valueAttachment": {
