@@ -11,13 +11,13 @@
         "reference": "patient"
       },
       "extension": [{
-          "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-RelatedPerson-consentToContactReporter",
+          "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/RelatedPerson-consentToContactReporter",
           "valueBoolean": false
         }
       ],
       "name": [{
           "extension": [{
-              "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-HumanName-salutation",
+              "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/HumanName-salutation",
               "valueCodeableConcept": {
                 "coding": [{
                     "code": "Mr",
@@ -46,7 +46,7 @@
       ],
       "address": [{
           "extension": [{
-              "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-Address-region",
+              "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/Address-region",
               "valueCodeableConcept": {
                 "coding": [{
                     "code": "01",
@@ -67,13 +67,13 @@
       "resourceType": "Patient",
       "id": "patient",
       "extension": [{
-          "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-Patient-consentToContactPatient",
+          "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/Patient-consentToContactReporter",
           "valueBoolean": false
         }
       ],
       "name": [{
           "extension": [{
-              "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-HumanName-salutation",
+              "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/HumanName-salutation",
               "valueCodeableConcept": {
                 "coding": [{
                     "code": "Mr",
@@ -98,7 +98,7 @@
       ],
       "address": [{
           "extension": [{
-              "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-Address-region",
+              "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/Address-region",
               "valueCodeableConcept": {
                 "coding": [{
                     "code": "01",
@@ -139,7 +139,7 @@
       "id": "practitionerAssist",
       "name": [{
           "extension": [{
-              "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-HumanName-salutation",
+              "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/HumanName-salutation",
               "valueCodeableConcept": {
                 "coding": [{
                     "code": "Miss",
@@ -185,7 +185,7 @@
       "resourceType": "Practitioner",
       "id": "practitionerHCP",
       "extension": [{
-          "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-Practitioner-consentToContactPractitioner",
+          "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/Practitioner-consentToContactPractitioner",
           "valueBoolean": false
         }
       ],
@@ -195,7 +195,7 @@
       ],
       "name": [{
           "extension": [{
-              "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-HumanName-salutation",
+              "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/HumanName-salutation",
               "valueCodeableConcept": {
                 "coding": [{
                     "code": "Dr",
@@ -223,7 +223,7 @@
       ],
       "address": [{
           "extension": [{
-              "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-Address-region",
+              "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/Address-region",
               "valueCodeableConcept": {
                 "coding": [{
                     "code": "CHE",
@@ -306,10 +306,10 @@
       "resourceType": "Medication",
       "id": "medication",
       "extension": [{
-          "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-Medication-marketProductType",
+          "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/Medication-marketProductType",
           "valueString": "Finished Sales Pack/Device"
         }, {
-          "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-Medication-strengthUnit",
+          "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/Medication-strengthUnit",
           "valueCodeableConcept": {
             "coding": [{
                 "code": "mg",
@@ -319,7 +319,7 @@
             "text": "mg EN"
           }
         }, {
-          "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-Medication-packType",
+          "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/Medication-packType",
           "valueCodeableConcept": {
             "coding": [{
                 "code": "Blister",
@@ -329,10 +329,10 @@
             "text": "Blister EN"
           }
         }, {
-          "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-Medication-sampleAvailableForReturn",
+          "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/Medication-sampleAvailableForReturn",
           "valueBoolean": true
         }, {
-          "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-Medication-quantityAvailableForReturn",
+          "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/Medication-quantityAvailableForReturn",
           "valueInteger": 50
         }
       ],
@@ -369,8 +369,7 @@
         "lotNumber": "lotNumberhere",
         "expirationDate": "2020-12-31"
       }
-    },
-    {
+    }, {
       "resourceType": "DocumentReference",
       "id": "pdf1",
       "status": "current",
@@ -386,13 +385,13 @@
   ],
   "id": "PQC1",
   "extension": [{
-      "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-AdverseEvent-reporterType",
+      "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/AdverseEvent-reporterType",
       "valueString": "0"
     }, {
-      "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-AdverseEvent-programNumber",
+      "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/AdverseEvent-programNumber",
       "valueString": "prog12345"
     }, {
-      "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/astrazeneca.fhir.ig.ae-AdverseEvent-AZEmployeeReporter",
+      "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/AdverseEvent-AZEmployeeReporter",
       "valueString": "0"
     }
   ],
