@@ -1,0 +1,37 @@
+description: Defines AZ constraints and extensions on the Communication resource
+name: "AZCommunicationProfile"
+status: active
+fhirVersion: '4.0.1'
+kind: resource
+abstract: false
+type: Communication
+baseDefinition: "http://hl7.org/fhir/StructureDefinition/Communication"
+derivation: constraint
+title: 'AZ Communication Profile'
+experimental: false
+date: "2020-09-30"
+publisher: "AstraZeneca"
+
+elements:
+  extension:
+    location:
+      type: Reference
+      description: AZ location
+      title: AZ location Extension
+    reporterType:
+      type: string
+      description: Reporter Type
+      title: AZ Reporter Type Extension
+    employeeVendor:
+      description: employee Vendor
+      type: string
+      title: AZ employee VendorExtension
+    AZEmployeeReporter:
+      description: AZ Employee Reporter
+      type: string
+      title: AZ Employee Reporter Extension
+    congressAttended:
+      description: congress Attended
+      type: CodeableConcept
+      title: AZ congress Attended Extension
+    
