@@ -35,10 +35,10 @@ elements:
       experimental: false
       date: "2020-12-18"
       publisher: AstraZeneca
-    localReference:
-      description: Local Ref No
+    localReferenceNumber:
+      description: Local Reference Number
       type: string
-      title: AZ Local Ref No Extension
+      title: AZ Local Reference Number Extension
       experimental: false
       date: "2020-12-18"
       publisher: AstraZeneca
@@ -95,3 +95,7 @@ elements:
               experimental: false
               date: "2020-12-18"
               publisher: AstraZeneca
+            causalDrug:
+              type: string
+              description: Causality Drug
+              title: AZ Causality Drug Extension
