@@ -1,5 +1,8 @@
 {
   "resourceType": "QuestionnaireResponse",
+  "meta": {
+    "profile": ["https://healthsamurai.github.io/ig-ae/StructureDefinition/QuestionnaireResponse"]
+  },
   "contained": [{
       "resourceType": "Consent",
       "id": "consent01",

@@ -1,5 +1,8 @@
 {
   "resourceType": "Communication",
+  "meta": {
+    "profile": ["https://healthsamurai.github.io/ig-ae/StructureDefinition/Communication"]
+  },
   "contained": [{
       "resourceType": "Location",
       "id": "location",
