@@ -108,16 +108,16 @@
         "reference": "#patient"
       },
       "name": [{
-          "family": "Williams",
-          "given": ["Sean"]
+          "family": "Doe",
+          "given": ["John"]
         }
       ],
       "telecom": [{
           "system": "phone",
-          "value": "07920 112233"
+          "value": "07432 123123"
         }, {
           "system": "email",
-          "value": "sean.williams@astrazeneca.com"
+          "value": "john.doe@test.com"
         }
       ],
       "address": [{
