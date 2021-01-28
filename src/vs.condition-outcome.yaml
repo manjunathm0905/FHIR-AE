@@ -14,3 +14,5 @@ concepts:
     display: Fatal
   - code: unknown
     display: Unknown
+  - code: recovered
+    display: Recovered

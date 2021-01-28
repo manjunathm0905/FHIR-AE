@@ -54,3 +54,31 @@ elements:
         id: condition-outcome
         description: The value should be from the valueset detailed-ethnicity
       description: Condition Outcome
+    resultingConditionDeath:
+      type: boolean
+      description: Resulting Condition Death
+      title: AZ Resulting Condition Death Extension
+    resultingConditionLifeThreat:
+      type: boolean
+      description: Resulting Condition Life Threat
+      title: AZ Resulting Condition Life Threat Extension
+    resultingConditionBirthDefect:
+      type: boolean
+      description: Resulting Condition Birth Defect
+      title: AZ Resulting Condition Birth Defect Extension
+    resultingConditionHospitalization:
+      type: boolean
+      description: Resulting Condition Hospitalization
+      title: AZ Resulting Condition Hospitalization Extension
+    resultingConditionDisability:
+      type: boolean
+      description: Resulting Condition Disability
+      title: AZ Resulting Condition Disability Extension
+    resultingConditionImportantMedicalEvent:
+      type: boolean
+      description: Resulting Condition Important Medical Event
+      title: AZ Resulting Condition Important Medical Event Extension
+    resultingConditionRequiredIntervention:
+      type: boolean
+      description: Resulting Condition Required Intervention
+      title: AZ Resulting Condition Required Intervention Extension

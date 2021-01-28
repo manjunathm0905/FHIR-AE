@@ -1,5 +1,8 @@
 {
   "resourceType": "AdverseEvent",
+  "meta": {
+    "profile": ["https://healthsamurai.github.io/ig-ae/StructureDefinition/AdverseEvent"]
+  },
   "id": "example",
   "text": {
     "status": "generated",

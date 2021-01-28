@@ -24,6 +24,30 @@ elements:
       experimental: false
       date: "2020-12-18"
       publisher: AstraZeneca 
+    vendorName:
+      description: Practitioner vendor Name Extension
+      type: string
+      title: AZ Practitioner vendor Name Extension 
+    programNumber:
+      description: Practitioner program Number Extension
+      type: string
+      title: AZ Practitioner program Number Extension 
+    relationship:
+      description: Practitioner relationship Extension
+      type: string
+      title: AZ Practitioner relationship Extension 
+    callbackMedicalAffairs:
+      description: Practitioner callback Medical Affairs Extension
+      type: boolean
+      title: AZ Practitioner callback Medical Affairs Extension
+    dateDueCustomer:
+      description: Practitioner date Due Customer Extension
+      type: date
+      title: AZ Practitioner date Due Customer Extension
+    callback:
+      description: Practitioner callback Extension
+      type: boolean
+      title: AZ Practitioner callback Extension
   name:
     profile: HumanName
   address:
