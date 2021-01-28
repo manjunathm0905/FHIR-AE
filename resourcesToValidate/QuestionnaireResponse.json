@@ -13,7 +13,8 @@
       "scope": {
         "coding": [{
             "code": "research",
-            "system": "http://terminology.hl7.org/CodeSystem/consentscope"
+            "system": "http://terminology.hl7.org/CodeSystem/consentscope",
+            "display": "Research"
           }
         ],
         "text": "PPPConsent1"
@@ -50,7 +51,8 @@
       "scope": {
         "coding": [{
             "code": "research",
-            "system": "http://terminology.hl7.org/CodeSystem/consentscope"
+            "system": "http://terminology.hl7.org/CodeSystem/consentscope",
+            "display": "Research"
           }
         ],
         "text": "PPPConsent2"

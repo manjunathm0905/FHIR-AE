@@ -15,11 +15,12 @@
       },
       "code": [{
           "coding": [{
-              "display": "Médical",
-              "code": "Medical"
+              "display": "Medical doctor",
+              "system": "http://snomed.info/sct",
+              "code": "112247003"
             }
           ],
-          "text": "Medical"
+          "text": "Medical doctor"
         }
       ],
       "identifier": [{
@@ -43,8 +44,9 @@
               "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/HumanName-salutation",
               "valueCodeableConcept": {
                 "coding": [{
-                    "code": "MR.",
-                    "display": "Mr"
+                    "code": "Mr",
+                    "system": "https://healthsamurai.github.io/ig-ae/CodeSystem/humanname-salutation",
+                    "display": "MR."
                   }
                 ],
                 "text": "Mr."
@@ -73,7 +75,8 @@
       },
       "code": [{
           "coding": [{
-              "display": "médecin",
+              "display": "Medical doctor",
+              "system": "http://snomed.info/sct",
               "code": "112247003"
             }
           ],
@@ -82,7 +85,8 @@
       ],
       "specialty": [{
           "coding": [{
-              "display": "médecine diabétique",
+              "display": "Diabetic medicine",
+              "system": "http://snomed.info/sct",
               "code": "408475000"
             }
           ],
@@ -114,8 +118,9 @@
               "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/HumanName-salutation",
               "valueCodeableConcept": {
                 "coding": [{
-                    "code": "DR.",
-                    "display": "Dr"
+                    "code": "Dr",
+                    "system": "https://healthsamurai.github.io/ig-ae/CodeSystem/humanname-salutation",
+                    "display": "DR."
                   }
                 ],
                 "text": "Dr."
@@ -143,10 +148,11 @@
               "valueCodeableConcept": {
                 "coding": [{
                     "code": "CHE",
-                    "display": "Le Cheshire"
+                    "system": "https://healthsamurai.github.io/ig-ae/CodeSystem/address-region",
+                    "display": "Cheshire"
                   }
                 ],
-                "text": "Cheshire"
+                "text": "Le Cheshire"
               }
             }
           ],
@@ -213,11 +219,12 @@
   ],
   "medium": [{
       "coding": [{
-          "display": "Emaile",
+          "display": "email",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationMode",
           "code": "EMAILWRIT"
         }
       ],
-      "text": "Email"
+      "text": "Emaile"
     }
   ],
   "about": [{

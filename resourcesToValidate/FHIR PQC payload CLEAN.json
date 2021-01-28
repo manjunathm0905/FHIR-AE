@@ -24,6 +24,7 @@
               "valueCodeableConcept": {
                 "coding": [{
                     "code": "Mr",
+                    "system": "https://healthsamurai.github.io/ig-ae/CodeSystem/humanname-salutation",
                     "display": "Monsieur"
                   }
                 ],
@@ -53,6 +54,7 @@
               "valueCodeableConcept": {
                 "coding": [{
                     "code": "01",
+                    "system": "https://healthsamurai.github.io/ig-ae/CodeSystem/address-region",
                     "display": "Middlesex"
                   }
                 ],
@@ -80,6 +82,7 @@
               "valueCodeableConcept": {
                 "coding": [{
                     "code": "Mr",
+                    "system": "https://healthsamurai.github.io/ig-ae/CodeSystem/humanname-salutation",
                     "display": "Monsieur"
                   }
                 ],
@@ -105,6 +108,7 @@
               "valueCodeableConcept": {
                 "coding": [{
                     "code": "01",
+                    "system": "https://healthsamurai.github.io/ig-ae/CodeSystem/address-region",
                     "display": "Middlesex"
                   }
                 ],
@@ -127,8 +131,9 @@
       "id": "practRoleAssist",
       "code": [{
           "coding": [{
-              "display": "Medical office worker locLang",
-              "code": "224608005"
+              "display": "Administrative healthcare staff",
+              "code": "224608005",
+              "system": "http://snomed.info/sct"
             }
           ],
           "text": "Medical office worker EN"
@@ -146,6 +151,7 @@
               "valueCodeableConcept": {
                 "coding": [{
                     "code": "Miss",
+                    "system": "https://healthsamurai.github.io/ig-ae/CodeSystem/humanname-salutation",
                     "display": "Madame"
                   }
                 ],
@@ -162,7 +168,7 @@
       "id": "practRoleHCP",
       "code": [{
           "coding": [{
-              "display": "Doctor local language",
+              "display": "Medical doctor",
               "code": "112247003"
             }
           ],
@@ -172,7 +178,8 @@
       "specialty": [{
           "coding": [{
               "display": "Emergency Medicine",
-              "code": "773568002"
+              "code": "773568002",
+              "system": "http://snomed.info/sct"
             }
           ],
           "text": "Emergency Medicine English"
@@ -202,7 +209,9 @@
               "valueCodeableConcept": {
                 "coding": [{
                     "code": "Dr",
+                    "system": "https://healthsamurai.github.io/ig-ae/CodeSystem/humanname-salutation",
                     "display": "Docteur"
+
                   }
                 ],
                 "text": "Dr."
@@ -230,6 +239,7 @@
               "valueCodeableConcept": {
                 "coding": [{
                     "code": "CHE",
+                    "system": "https://healthsamurai.github.io/ig-ae/CodeSystem/address-region",
                     "display": "Cheshire"
                   }
                 ],
@@ -316,7 +326,9 @@
           "valueCodeableConcept": {
             "coding": [{
                 "code": "mg",
-                "display": "mg"
+                "display": "mg",
+                "system": "http://unitsofmeasure.org"
+
               }
             ],
             "text": "mg EN"

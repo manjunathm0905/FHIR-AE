@@ -349,7 +349,8 @@
       "code": {
         "coding": [{
             "code": "10164-2",
-            "system": "http://loinc.org"
+            "system": "http://loinc.org",
+            "display": "History of Present illness Narrative"
 
           }
         ]
@@ -361,7 +362,8 @@
       "code": {
         "coding": [{
             "code": "8302-2",
-            "system": "http://loinc.org"
+            "system": "http://loinc.org",
+            "display": "Body height"
           }
         ]
       },
@@ -376,7 +378,8 @@
       "code": {
         "coding": [{
             "code": "29463-7",
-            "system": "http://loinc.org"
+            "system": "http://loinc.org",
+            "display": "Body weight"
           }
         ]
       },
@@ -413,7 +416,9 @@
       "code": {
         "coding": [{
             "code": "85699-7",
-            "system": "http://loinc.org"
+            "system": "http://loinc.org",
+            "display": "Autopsy was performed"
+
           }
         ]
       },
@@ -435,7 +440,8 @@
           "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/Condition-outcome",
           "valueCodeableConcept": {
             "coding": [{
-                "code": "FHIR code",
+                "code": "recovered",
+                "system": "https://healthsamurai.github.io/ig-ae/CodeSystem/condition-outcome",
                 "display": "Recovered"
               }
             ],
@@ -508,12 +514,12 @@
           "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/Condition-outcome",
           "valueCodeableConcept": {
             "coding": [{
-                "code": "resolved",
+                "code": "recovered",
                 "system": "https://healthsamurai.github.io/ig-ae/CodeSystem/condition-outcome",
-                "display": "Resolved"
+                "display": "Recovered"
               }
             ],
-            "text": "Resolved"
+            "text": "Recovered"
           }
         }, {
           "url": "https://healthsamurai.github.io/ig-ae/StructureDefinition/Condition-resultingConditionDeath",
