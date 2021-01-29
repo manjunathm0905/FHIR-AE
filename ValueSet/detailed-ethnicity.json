@@ -1,0 +1,27 @@
+{
+  "compose" : {
+    "include" : [ {
+      "system" : "urn:CodeSystem:detailed-ethnicity",
+      "concept" : [ {
+        "code" : "white",
+        "display" : "White"
+      }, {
+        "code" : "african",
+        "display" : "African"
+      }, {
+        "code" : "caribbean",
+        "display" : "Caribbean"
+      }, {
+        "code" : "N/A",
+        "display" : "Not prepared to say"
+      } ]
+    } ]
+  },
+  "resourceType" : "ValueSet",
+  "id" : "detailed-ethnicity",
+  "url" : "https://healthsamurai.github.io/ig-ae/ValueSet/nulldetailed-ethnicity",
+  "name" : "DetailedEthnicity",
+  "title" : "detailed ethnicity",
+  "status" : "active",
+  "date" : "2021-01-29T02:52:47Z"
+}

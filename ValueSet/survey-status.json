@@ -1,0 +1,21 @@
+{
+  "compose" : {
+    "include" : [ {
+      "system" : "urn:CodeSystem:survey-status",
+      "concept" : [ {
+        "code" : "req-det",
+        "display" : "Requested detailed investigation"
+      }, {
+        "code" : "N/A",
+        "display" : "No further cooperation is available"
+      } ]
+    } ]
+  },
+  "resourceType" : "ValueSet",
+  "id" : "survey-status",
+  "url" : "https://healthsamurai.github.io/ig-ae/ValueSet/nullsurvey-status",
+  "name" : "SurveyStatus",
+  "title" : "survey status",
+  "status" : "active",
+  "date" : "2021-01-29T02:52:47Z"
+}

@@ -1,0 +1,27 @@
+{
+  "compose" : {
+    "include" : [ {
+      "system" : "urn:CodeSystem:intelligent-source",
+      "concept" : [ {
+        "code" : "spont",
+        "display" : "Spontaneous"
+      }, {
+        "code" : "usage",
+        "display" : "Usage Record Survey"
+      }, {
+        "code" : "spec",
+        "display" : "Specific Use Survey"
+      }, {
+        "code" : "other",
+        "display" : "Others"
+      } ]
+    } ]
+  },
+  "resourceType" : "ValueSet",
+  "id" : "intelligent-source",
+  "url" : "https://healthsamurai.github.io/ig-ae/ValueSet/nullintelligent-source",
+  "name" : "IntelligentSource",
+  "title" : "intelligent source",
+  "status" : "active",
+  "date" : "2021-01-29T02:52:47Z"
+}
